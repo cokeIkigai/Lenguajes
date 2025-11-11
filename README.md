@@ -2,4 +2,4 @@
 
 ## 📚 Categorías
 
-- [JAVA](java/)
+- [JAVA](java)
