@@ -1,4 +1,4 @@
 # JAVA
 
 - [variables](docs/variables.md)
-- [variables](docs/condicionales.md)
+- [condicionales](docs/condicionales.md)
