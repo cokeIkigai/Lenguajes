@@ -27,7 +27,7 @@ Puede **retornar un valor** o **no retornar nada**.
 - `return` → devuelve un valor (solo si el método no es void).
 
 
-### Método que NO retorna valor (void)
+### 2. Método que NO retorna valor (void)
 
 Se usa para acciones que solo hacen algo, sin devolver datos.
 
@@ -50,7 +50,7 @@ Uso:
 saludar("Coke");
 ```
 
-### Método que Sí retorna un valor
+### 3. Método que Sí retorna un valor
 
 Devuelve un resultado al código que lo llama.
 ```java
@@ -73,14 +73,14 @@ Uso:
 int resultado = sumar(5, 3); // resultado = 8 
 ```
 
-### Ejemplo con retorno tipo String
+### 4. Ejemplo con retorno tipo String
 ```java
 public String obtenerSaludo(String nombre) {
     return "Hola " + nombre;
 }
 ```
 
-### 1. Diferenciar Devolver e imprimir por consola
+### 5 . Diferenciar Devolver e imprimir por consola
 
 ```java
 public void sumar(int numero1, int numero2) {
