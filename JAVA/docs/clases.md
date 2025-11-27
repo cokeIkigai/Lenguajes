@@ -1,4 +1,4 @@
-#📜 Resumen: Clases en Java
+# 📜 Resumen: Clases en Java
 
 Una **clase** es el modelo o plantilla que se usa para crear objetos.  
 Define **atributos** (datos) y **métodos** (acciones).  
