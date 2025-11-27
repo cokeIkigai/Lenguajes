@@ -1,4 +1,4 @@
-# Resumen: Clases en Java
+#📜 Resumen: Clases en Java
 
 Una **clase** es el modelo o plantilla que se usa para crear objetos.  
 Define **atributos** (datos) y **métodos** (acciones).  
@@ -7,7 +7,7 @@ Por cada clase creada será un archivo (recomendable)
 
 ---
 
-# 1. ¿Qué es una clase?
+# 🔨 1. ¿Qué es una clase?
 
 - Es una **estructura** que describe cómo serán los objetos.
 - Cada objeto creado a partir de una clase se llama **instancia**.
@@ -68,7 +68,7 @@ public class Main{
 }
 ```
 
-##  Creación del Objeto Persona en Main
+##  🔨 Creación del Objeto Persona en Main
 Desde la Clase Main se le llama a la clase Persona y se le instancia. Pasa de clase a objeto.
 - Persona.java (archivo)
 ```java
@@ -114,7 +114,7 @@ public class Main{
     }
 }
 ```
-# 2. Modificadores de acceso (resumen)
+# 2. 🔨 Modificadores de acceso (resumen)
 
 `public` Accesible desde **cualquier lugar**.
 
