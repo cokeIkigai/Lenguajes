@@ -14,32 +14,32 @@ Por cada clase creada será un archivo (recomendable)
 
 ### Ejemplo básico
 ```
-[Modificador de acceso] [tipo] [identificador/nombre de la clase]{
+[Modificador] [tipo] [identificador/nombreclase]{
     Atributos
-    [Modificador de acceso] [tipo] [identificador]
+    [Modificador] [tipo] [identificador/nombreAtributo]
 
-    Constructor                               (Argumentos)
-    [tipo] [identificador/nombre del Contructor]([Tipo][nombre del argumento]){
-        this.[nombre de atributo] = [nombre del argumento]
+    Constructor                 (Argumentos)
+    [tipo] [identificador]([Tipo][nombreArgumento]){
+        this.[nombreAtributo] = [nombreArgumento]
     }
 
     Métodos
-    [Modificador de acceso] [tipo] [identificador/nombre de la clase]
+    [Modificador] [tipo] [identificador/nombreClase]
 }
 ```
 ```java
 // Crear Clase:
-//  [Modificador de acceso] [tipo] [identificador/nombre de la clase] {
+//  [Modificador] [tipo] [identificador/nombreClase] {
 public class Persona {
     // Atributos:
 
-    //[Modificador de acceso] [tipo] [identificador]
+    //[Modificador] [tipo] [identificador]
     private String nombre;   // atributo
     private int edad;        // atributo
 
 //  Constructor:
 
-//  [tipo] [identificador/nombre del Contructor]([Tipo][nombre del argumento])
+//  [tipo] [identificador]([Tipo][nombreArgumento])
     class Persona(String nombre, int edad){
         this.nombre = nombre;
         this.edad = edad;
@@ -47,7 +47,7 @@ public class Persona {
 
 //  Método:
 
-//  [Modificador de acceso] [tipo] [identificador/nombre del método]([Tipo][nombre del argumento]){
+//  [Modificador] [tipo] [identificador]([Tipo][nombre del argumento]){
     public void saludar() {   
         System.out.println("Hola, soy " + nombre);
     }
@@ -63,7 +63,7 @@ Hay una línea de código que le dice al compilador donde debe fijarse y es:
 public class Main{
     // Esta líne es donde arranca y se llama línea de la lógica
     public static void main(String[] args){
- // Código
+         // Código
     }
 }
 ```
