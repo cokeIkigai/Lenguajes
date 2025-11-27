@@ -54,7 +54,7 @@ public class Persona {
 }
 ```
 
-## Clase Main
+## 📄 Clase Main
 
 La clase `Main` es la clase donde arranque o decimos que arranque el programa.
 Hay una línea de código que le dice al compilador donde debe fijarse y es:
@@ -91,7 +91,7 @@ public class Persona {
     }
 }
 ```
-- Main.java (archivo)
+- 📄 Main.java (archivo)
 ```java
 public class Main{
     public static void main(String[] args){
