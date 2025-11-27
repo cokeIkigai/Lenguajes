@@ -2,4 +2,4 @@
 
 ## 📚 Categorías
 
-- [variables](docs/variables.md)
+- [variables](JAVA/docs/variables.md)
