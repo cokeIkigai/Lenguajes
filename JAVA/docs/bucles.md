@@ -12,7 +12,8 @@ Se usa cuando sabes **cuántas veces** quieres repetir algo.
 for (inicio del contador; condicion; incremento) {
     // Código si cumple la condicion
 }
-
+```
+```java
 for (int i = 0; i < 5; i++) {
     System.out.println("i vale: " + i);
 }
