@@ -1,4 +1,4 @@
-# Scanner en Java
+# 🖨️ Scanner en Java
 
 `Scanner` es una clase que permite **leer datos del usuario** desde el teclado. Se usa mucho para ejercicios de introducción.
 
