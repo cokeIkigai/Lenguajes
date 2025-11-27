@@ -10,7 +10,7 @@ Puede **retornar un valor** o **no retornar nada**.
 ```java
 [modificador] [tipoRetorno] [nombreMetodo](parámetros) {
     // código
-    return valor; // solo si el método debe devolver algo
+    return valor; -> solo si el método debe devolver algo
 }
 ```
 
