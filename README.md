@@ -2,5 +2,5 @@
 
 ## 📚 Categorías
 
-- [JAVA](JAVA/docs/javaReadme.md)
+- [JAVA](JAVA/Readmeinicio.md)
 
