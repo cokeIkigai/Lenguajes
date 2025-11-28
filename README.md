@@ -9,11 +9,6 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
 
 - ### 🧪 Ejercicios
 
-- ### 💻 Ejemplos de código
-
-- ### 📘 Mini–proyectos
-
-- ### 🔧 Lenguajes disponibles
   
 ## ☕ [JAVA](JAVA/ReadmeTemas.md)
 
