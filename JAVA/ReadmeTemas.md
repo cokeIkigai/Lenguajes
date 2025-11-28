@@ -1,3 +1,5 @@
-# JAVA: Por bloques
+# JAVA: 
+Selecciona el Temario por bloques
 
-[Inicio](docs/javaReadme.md)
+[Inicio](docs/javaReadme.md) 
+  []
