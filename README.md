@@ -1,6 +1,27 @@
-# Lenguajes
+# Lenguajes de Programación 🚀
 
-## 📚 Categorías
+Repositorio con ejemplos, ejercicios y recursos de distintos lenguajes.
+Cada carpeta contiene material organizado para practicar y aprender de forma rápida.
 
-- [JAVA](JAVA/ReadmeTemas.md)
+## 📁 Estructura
+
+- ### ✨ Teoría básica
+
+- ### 🧪 Ejercicios
+
+- ### 💻 Ejemplos de código
+
+- ### 📘 Mini–proyectos
+
+- ### 🔧 Lenguajes disponibles
+  
+## ☕ [JAVA](JAVA/ReadmeTemas.md)
+
+- Fundamentos, POO, colecciones, métodos, clases y ejercicios prácticos.
+
+## 🆕 Próximos lenguajes
+
+- Se irán añadiendo más carpetas como: Python, C#, SQL, JavaScript, Bash…
+
+
 
