@@ -8,4 +8,5 @@ Selecciona el Temario por bloques
   - 📚[Arrays](docs/inicio/arrays.md)
   - 🧩[Clases](docs/inicio/clases.md)
   - ⚙️[Métodos](docs/inicio/metodos.md)
+  
 [Bloque 1](docs/1.bloque/javaReadme.md) 
