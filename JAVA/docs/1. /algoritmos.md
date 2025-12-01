@@ -1,41 +1,33 @@
-# Parte 2: Algoritmos (Versión Extendida y Actualizada)
+# 🔢 Algoritmos
 
-## 1. Concepto general de algoritmo
+## 🚩 1. Concepto general de algoritmo
 
-Un **algoritmo** es una secuencia finita y ordenada de pasos diseñada para resolver un problema específico. Es una estructura universal: sirve en informática, matemáticas, logística, inteligencia artificial y cualquier proceso que requiera precisión y repetibilidad.
+Un **algoritmo** es una secuencia `finita` y `ordenada` de pasos diseñada para resolver un problema específico. 
 
-Un algoritmo convierte **datos de entrada** en **resultados útiles** siguiendo una lógica clara.
 
-### Propiedades fundamentales
 
-1. **Claridad**: Cada instrucción es inequívoca.
-2. **Finitud**: Debe terminar.
-3. **Determinismo**: Para la misma entrada, produce la misma salida.
-4. **Estructura**: Entrada → Proceso → Salida.
-5. **Eficiencia**: Minimiza tiempo y recursos.
+Un **algoritmo** convierte datos de entrada en resultados útiles siguiendo una lógica clara.
 
----
+### 📍 Propiedades fundamentales
 
-## 2. Importancia real en el mundo moderno
+1️⃣ **Claridad**: Cada instrucción es inequívoca.
 
-Los algoritmos son esenciales porque:
+2️⃣ **Finitud**: Debe terminar.
 
-- **Gestionan grandes volúmenes de información** (buscadores, redes sociales).
-- **Predicen** (clima, recomendaciones, detección de fraude).
-- **Optimizan** (rutas, costes, tiempos).
-- **Automatizan** (tareas repetitivas, flujos empresariales).
-- **Permiten aprendizaje automático** (algoritmos que mejoran con datos).
+3️⃣ **Determinismo**: Para la misma entrada, produce la misma salida.
 
-Sin algoritmos no existirían Google, Spotify, GPS, IA, videojuegos, sistemas bancarios o robots.
+4️⃣ **Estructura**: Entrada → Proceso → Salida.
+
+5️⃣ **Eficiencia**: Minimiza tiempo y recursos.
 
 ---
 
-## 3. Componentes modernos de un algoritmo
+## 🚩 2. Componentes modernos de un algoritmo
 
-### Entrada
+### 📍 Entrada
 Datos proporcionados por el usuario, sensores o sistemas.
 
-### Procesamiento
+### 📍 Procesamiento
 Transformación mediante operaciones como:
 - Cálculo matemático.
 - Comparación lógica.
@@ -44,15 +36,44 @@ Transformación mediante operaciones como:
 - Estructuras de control (bucles, decisiones).
 - Algoritmos recursivos.
 
-### Salida
+### 📍 Salida
 Resultado final: texto, número, acción, gráfico, mensaje, decisión automatizada.
 
 ---
 
-## 4. Representación de algoritmos
+## 🚩 3. Representación de algoritmos
 
 ### A. Pseudocódigo
 Lenguaje híbrido que facilita el diseño previo al código.
 
-Ejemplo:
+#### Saludar según la hora del día
+
+```console
+INICIO
+LEER hora
+
+SI hora < 12 ENTONCES
+ESCRIBIR "Buenos días"
+SINO SI hora < 20 ENTONCES
+ESCRIBIR "Buenas tardes"
+SINO
+ESCRIBIR "Buenas noches"
+FIN SI
+FIN
+```
+
+#### Decidir si una persona puede entrar a un local
+
+```console
+INICIO
+LEER edad
+
+SI edad >= 18 ENTONCES
+ESCRIBIR "Puedes entrar"
+SINO
+ESCRIBIR "No puedes entrar"
+FIN SI
+FIN
+```
+---
 
