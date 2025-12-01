@@ -71,75 +71,141 @@ REST define funciones claras para cada método HTTP dentro de esta colección.
 
 **PUT, PATCH, DELETE** se usan sobre elementos, no sobre colecciones.
 
-#### 1. Acceso a todos los elementos
+---
 
-El endpoint de colección permite obtener la lista completa de un recurso.
+#### GET — Obtener datos 📥
 
-Ejemplo:
-GET /usuarios devuelve todos los usuarios registrados.
+El método `GET` en un endpoint de colección sirve para leer todos los elementos de un recurso.
 
-Esto es esencial para:
+No modifica nada, solo `consulta` información.
 
-Mostrar tablas o listados en la interfaz.
+Similar a un `SELECT *` en bases de datos.
 
-Hacer búsquedas y filtros.
+*Ejemplos:* /usuarios, /productos, /pedidos
 
-Obtener datos para dropdowns o selects.
+🔎 **Características:**
 
-2. Es el lugar donde se crean nuevos recursos
+- Devuelve todos los registros.
 
-REST define que los nuevos elementos se crean haciendo un POST sobre la colección.
+- Permite filtros, búsquedas, ordenaciones y paginación.
 
-Ejemplo:
-POST /usuarios crea un usuario nuevo dentro de esa colección.
+- Solo lectura, sin cambios en el sistema.
 
-Esto:
+*Ejemplo con filtros:* /usuarios?rol=admin&page=2
 
-Mantiene la API ordenada.
 
-Evita rutas confusas como /crearUsuario.
+📄 **Usos comunes:**
 
-Asegura un diseño estándar y predecible.
+- Mostrar tablas o listados completos.
 
-3. Homogeneidad y claridad en el diseño
+- Cargar dropdowns o selects.
 
-Los endpoints de colección aseguran un diseño coherente, donde siempre sabes:
+- Buscar usuarios, productos o pedidos.
 
-/recurso → conjunto
+- Cargar datos iniciales en pantallas.
 
-/recurso/{id} → elemento
+- Actualizar componentes visuales.
 
-Esta estructura consistente:
+---
 
-Facilita el aprendizaje.
+#### POST — Crear nuevos elementos ✨
 
-Reduce errores del cliente (frontend o apps).
+`POST` se usa en un endpoint de colección para crear un recurso nuevo.
 
-Permite a herramientas automáticas generar documentación o SDKs.
+`Envía` datos desde el cliente hacia el servidor.
 
-4. Permiten operaciones globales
+*Ejemplo:* POST /usuarios
 
-En /usuarios puedes permitir:
+🔎 **Características:**
 
-filtros: /usuarios?rol=admin
+- `Inserta` un nuevo elemento en la colección.
 
-paginación: /usuarios?page=2
+- `Evitar` rutas como /crearUsuario.
 
-búsquedas: /usuarios?nombre=ana
 
-Esto evita sobrecargar los endpoints individuales.
+📝 **Usos comunes:**
 
-5. Escalabilidad y mantenimiento
+- `Registrar` nuevos usuarios.
 
-Diseñar correctamente las colecciones facilita:
+- `Añadir` productos.
 
-Extender la API sin romper nada.
+- `Crear` pedidos.
 
-Añadir nuevos métodos o parámetros.
+- `Enviar` formularios desde un frontend.
 
-Integrar nuevas aplicaciones cliente.
+- `Generar` nuevos elementos desde la aplicación.
 
-Ejemplo: si mañana necesitas filtrar por estado:
-GET /pedidos?estado=pendiente
+#### 🔄 PUT — Reemplazar un elemento completo 
 
-No necesitas nuevos endpoints.
+`PUT` se utiliza para `actualizar` por completo un recurso existente.
+
+Debe enviarse `toda` la información del elemento, no solo una parte.
+
+*Ejemplo:* PUT /usuarios/5
+
+🔎 **Características:**
+
+- `Reemplaza` por completo el recurso.
+
+- Si faltan campos, se pueden `sobrescribir` con valores vacíos.
+
+- Se usa `sobre elementos`, no sobre colecciones.
+
+📝 **Usos comunes:**
+
+- `Actualizar` totalmente un registro.
+
+- Guardar datos `completos` de un formulario.
+
+- `Sustituir` un elemento antiguo por uno nuevo.
+  
+---
+
+#### PATCH — Actualizar parcialmente ✂️
+
+`PATCH` permite `modificar` solo los campos necesarios de un elemento.
+
+Ideal para `actualizaciones` pequeñas.
+
+*Ejemplo:* PATCH /usuarios/5
+
+🔎 **Características:**
+
+- `Cambia` únicamente los campos enviados.
+
+- No altera el resto de datos del recurso.
+
+- Se usa siempre sobre un `elemento`, nunca sobre colecciones.
+
+📝**Usos comunes:**
+
+- Cambiar solo el `email` o la `contraseña`.
+
+- Actualizar el `estado` de un pedido.
+
+- Ajustar pequeñas `partes` de un recurso.
+
+#### DELETE — Eliminar un elemento ❌
+
+`DELETE` elimina un recurso concreto.
+
+Una vez eliminado, no debería seguir existiendo en la colección.
+
+*Ejemplo:* DELETE /usuarios/5
+
+🔎 **Características:**
+
+- `Borra` el elemento indicado.
+
+- Acción `definitiva` (no reversible).
+
+- Siempre sobre `elementos` , no sobre colecciones.
+
+**Usos comunes:**
+
+- `Borrar` usuarios o productos.
+
+- `Cancelar` pedidos.
+
+- `Limpiar` datos del sistema.
+
