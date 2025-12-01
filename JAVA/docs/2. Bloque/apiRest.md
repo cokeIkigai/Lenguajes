@@ -38,7 +38,7 @@ Así, la estructura siempre es:
 
 - **ENDPOINT** → qué se solicita dentro del servidor http://localhost:8080/usuarios/3
 --- 
-### ENDPOINTS
+### 🔛 ENDPOINTS
 
 Son los caminos específicos donde se piden los datos o se realizan acciones:
 
@@ -54,7 +54,22 @@ Son los caminos específicos donde se piden los datos o se realizan acciones:
   
   --- 
 
-### El diseño REST es clave por varias razones:
+### ❗El diseño REST es clave 
+
+REST define funciones claras para cada método HTTP dentro de esta colección.
+| Método     | Uso en la colección                                              | Ejemplo 
+| ---------- | --- | ------------------ | 
+| **GET** | Obtener todos los elementos | `GET /usuarios` | Lista completa del recurso  |
+| **POST**   | Crear un nuevo elemento  | `POST /usuarios`| Inserta un nuevo usuario en la colección |
+| **PUT**    | Reemplazar toda la colección | `PUT /usuarios`| Rara vez usado, no práctico              |
+| **PATCH**  | Actualizar parcialmente toda la colección | `PATCH /usuarios`  | Inusual                                  |
+| **DELETE** | Borrar toda la colección                  | `DELETE /usuarios` | Muy raro y peligroso  |
+
+--- 
+
+**GET y POST** son los métodos principales en una colección.
+
+**PUT, PATCH, DELETE** se usan sobre elementos, no sobre colecciones.
 
 #### 1. Acceso a todos los elementos
 
