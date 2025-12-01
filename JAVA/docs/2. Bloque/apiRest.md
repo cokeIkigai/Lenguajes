@@ -20,4 +20,4 @@ Es un estilo de arquitectura basado en estos principios:
 
 - **Recursos**: Todo se trata como un recurso (usuarios, pedidos, productos…).
 
-[.../.../img/apiRest1.png]
+<img src="../../img/apiRest1.png" alt="API_REST" width="600" />
