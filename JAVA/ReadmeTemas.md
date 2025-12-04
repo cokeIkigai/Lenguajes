@@ -9,4 +9,4 @@ Selecciona el Temario por bloques
   - 🧩[Clases](docs/inicio/clases.md)
   - ⚙️[Métodos](docs/inicio/metodos.md)
   
-[Bloque 1](docs/1.bloque/javaReadme.md) 
+[Bloque 1](docs/1.bloque/readme.md) 
