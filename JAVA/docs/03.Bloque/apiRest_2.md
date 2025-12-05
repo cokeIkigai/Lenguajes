@@ -70,7 +70,42 @@ public class Usuario {
 ---
 
 ### Relaciones entre tablas
+**Uno a Uno**
+```java
+@Entity
+@Table(name = "users")
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+    //... 
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address address;
+
+    // ... getters and setters
+}
+```
+```java
+@Entity
+@Table(name = "address")
+public class Address {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+    //...
+
+    @OneToOne(mappedBy = "address")
+    private User user;
+
+    //... getters and setters
+}
+```
 **Uno a Muchos (1:N)**
 ```java
 @Entity
