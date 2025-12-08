@@ -32,6 +32,39 @@ Para instalar postgre en múltiples Sistemas operativos debes descargarlo del in
 - **Ejecutar** el instalador y seleccionar: `PostgreSQL Server` y `pgAdmin4`
 - **pgAdmin4** es la herramienta visual para que no se haga todo desde la `consola` y permite realizar múltiples acciones sin comandos.
 - **Puerto** → 5432.
+
+#### Durante la instalación en el stack Builder:
+
+**Add-ons, tools and utilities**
+- `pgAgent`: Servicio para programar tareas automáticas dentro de PostgreSQL.
+- `pgBouncer`: Pool de conexiones para mejorar el rendimiento de aplicaciones que se conectan mucho a la BD.
+
+**Database Drivers**
+- `Npgsql`: Driver para conectar aplicaciones .NET con PostgreSQL.
+- `pgJDBC`: Driver JDBC oficial para conectar Java con PostgreSQL.
+- `psqlODBC`: Driver ODBC para conectar PostgreSQL con herramientas que usen ODBC (Excel, BI, aplicaciones antiguas).
+
+**Database Server**
+Permiten instalar otras versiones del motor PostgreSQL si necesitas compatibilidad; si ya tienes PostgreSQL 18 instalado, no es necesario marcar nada.
+
+`PostgreSQL`: 13 / 14 / 15 / 16 / 17 / **18**
+
+**EnterpriseDB Tools**
+- `Migration Toolkit`: Herramienta para migrar bases de datos desde otros motores (Oracle, MySQL, SQL Server…).
+- `Postgres Enterprise Manager Agent`: Sistema de monitorización avanzada de PostgreSQL para entornos empresariales.
+- `Replication Server`: Herramienta para montar réplicas y sistemas de alta disponibilidad.
+
+**Spatial Extensions**
+- `PostGIS 3.6`: Extensión geoespacial que añade soporte para mapas, coordenadas y datos GIS.
+
+**Web Development**
+- `PEM-HTTPD`: Servidor Apache especializado para Postgres Enterprise Manager.
+*Recomendación si solo quieres conectar desde Java*
+
+Selecciona únicamente:
+
+✔ pgJDBC
+
 ---
 
 ### <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" width="80" /> ¿Qué es MySQL?
