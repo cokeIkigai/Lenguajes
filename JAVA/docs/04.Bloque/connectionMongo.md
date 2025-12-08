@@ -176,6 +176,6 @@ public class Main {
     }
 }
 ```
+<img src="../img/Compass.PNG">
 
-[Compass](../img/Compass.PNG)
-[]()
+
