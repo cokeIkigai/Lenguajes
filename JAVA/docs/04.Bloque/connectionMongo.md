@@ -176,6 +176,8 @@ public class Main {
     }
 }
 ```
-<img src=".../img/Compass.PNG">
+
+<img src="../../img/Compass.PNG" alt="Logo Java" height="150">
+
 
 
