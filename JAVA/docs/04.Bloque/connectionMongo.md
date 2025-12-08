@@ -185,7 +185,7 @@ Se da click al icono + para añadir la Base de datos nueva.
 - Se pueden ver todas las demás Bases de datos creadas con anterioridad.
 - Si selecionas una de ellas, aparecerán sus documentos con su forma JSON {clave:valor} 
 
-<img src="../../img/Compass.PNG" alt="Compass" height="750">
+<img src="../../img/Compass.PNG" alt="Compass" height="950">
 
 ### Insertar un nuevo Documento
 Utilizando el formato de JSON, se le irán añadiendo clave y valor de los mismos.
