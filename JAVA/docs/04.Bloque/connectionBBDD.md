@@ -61,10 +61,6 @@ Permiten instalar otras versiones del motor PostgreSQL si necesitas compatibilid
 - `PEM-HTTPD`: Servidor Apache especializado para Postgres Enterprise Manager.
 *Recomendación si solo quieres conectar desde Java*
 
-Selecciona únicamente:
-
-✔ pgJDBC
-
 ---
 
 ### <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" width="80" /> ¿Qué es MySQL?
