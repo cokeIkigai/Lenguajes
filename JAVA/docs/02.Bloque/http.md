@@ -1,3 +1,11 @@
+# HTTP
+HTTP es el protocolo que define cómo un cliente (normalmente un navegador o una aplicación) solicita recursos a un servidor y cómo este responde.
+Funciona mediante peticiones (GET, POST, PUT, DELETE…) y respuestas que incluyen un código de estado (200, 404, 500…).
+
+La siguiente funcionalidad es reocger o pedir informacdión a una API y manjear y controlar la información.
+
+**pom.xml**:
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -24,8 +32,9 @@
     </dependencies>
 
 </project>
+```
 
-Main 
+**Main:** 
 ```java
 package org.example;
 
@@ -47,7 +56,7 @@ public class Main {
 }
 
 ```
-
+**HttpClientPokemon**
 ```java
 package org.example;
 
@@ -98,6 +107,5 @@ public class HttpClientPokemon {
         List<Pokemon> results;
     }
 }
-
 ```
 
