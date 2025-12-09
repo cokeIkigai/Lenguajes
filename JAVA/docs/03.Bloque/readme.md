@@ -2,7 +2,7 @@
 
 Aprender a crear una APIREST con la organización y librería de SpringBoot
 
-[¿Qué es una apiRest](apiRest.md)
+[¿Qué es una apiRest?](apiRest.md)
 
 [Swagger](swagger.md)
 
