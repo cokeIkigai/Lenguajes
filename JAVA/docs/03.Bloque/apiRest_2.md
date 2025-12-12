@@ -89,23 +89,7 @@ public class User {
     // ... getters and setters
 }
 ```
-```java
-@Entity
-@Table(name = "address")
-public class Address {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
-    //...
-
-    @OneToOne(mappedBy = "address")
-    private User user;
-
-    //... getters and setters
-}
-```
 **Uno a Muchos (1:N)**
 ```java
 @Entity
