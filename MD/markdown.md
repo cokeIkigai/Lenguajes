@@ -29,8 +29,11 @@ La tipografía puede ser modificada para darle un poco de forma y estilo.
 Ejemplos: 
 
 **Negrita**
+
 *Cursiva*
+
 ~~Tachado~~
+
 `código en línea`
 
 ---
