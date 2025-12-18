@@ -26,7 +26,7 @@ La tipografía puede ser modificada para darle un poco de forma y estilo.
 `código en línea`
 
 Ejemplos: 
->**Negrita**
+**Negrita**
 *Cursiva*
 ~~Tachado~~
 `código en línea`
