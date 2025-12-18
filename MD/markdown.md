@@ -2,7 +2,7 @@
 # Markdown
 
 Markdown es un lenguaje de marcado ligero para escribir texto estructurado de forma rápida y legible, muy usado en GitHub, documentación técnica y proyectos de programación.
-Para más información en esta página: [MarkDown](https://tutorialmarkdown.com/emojis)
+Para más información en esta página: [MarkDown](https://tutorialmarkdown.com/markdown)
 
 ## Títulos y secciones
 
