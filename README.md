@@ -14,7 +14,7 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
 
 - Fundamentos, POO, colecciones, métodos, clases y ejercicios prácticos.
 
-## [MD](MD/readme.md)
+## [MARKDOWN](MD/markdown.md)
 - MarkDown, lenguaje ligero para readme más atractivos de leer.
 
 ## 🆕 Próximos lenguajes
