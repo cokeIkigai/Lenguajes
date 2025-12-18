@@ -20,12 +20,14 @@ Dependiendo de la cantidad de `#` que se le añada será de menor tamaño e impo
 
 La tipografía puede ser modificada para darle un poco de forma y estilo.
 
->**Negrita**
+```md
+**Negrita**
 *Cursiva*
 ~~Tachado~~
 `código en línea`
-
+```
 Ejemplos: 
+
 **Negrita**
 *Cursiva*
 ~~Tachado~~
