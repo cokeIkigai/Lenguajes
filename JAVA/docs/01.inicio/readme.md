@@ -1,8 +1,8 @@
 # JAVA
 
 - 💾[Variables](variables.md)
-- ❓[Condicionales](docs/condicionales.md)
-- ♻️[Bucles](docs/bucles.md)
-- 📚[Arrays](docs/arrays.md)
-- 🧩[Clases](docs/clases.md)
-- ⚙️[Métodos](docs/metodos.md)
+- ❓[Condicionales](condicionales.md)
+- ♻️[Bucles](bucles.md)
+- 📚[Arrays](arrays.md)
+- 🧩[Clases](clases.md)
+- ⚙️[Métodos](metodos.md)
