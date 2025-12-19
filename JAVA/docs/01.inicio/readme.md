@@ -1,6 +1,6 @@
 # JAVA
 
-- 💾[Variables](docs/variables.md)
+- 💾[Variables](docs/01.inicio/variables.md)
 - ❓[Condicionales](docs/condicionales.md)
 - ♻️[Bucles](docs/bucles.md)
 - 📚[Arrays](docs/arrays.md)
