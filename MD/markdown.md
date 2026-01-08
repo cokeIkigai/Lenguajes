@@ -105,7 +105,12 @@ Lenguajes habituales: `java`, `sql`, `bash`, `json`, `xml`, `html`, `css`.
 ---
 
 ### 8. Tablas
-
+```
+| Campo | Tipo | Descripción |
+|------|------|-------------|
+| *[Github](https://github.com)*  | web  | Identificador |
+| name | text | Nombre |
+```
 | Campo | Tipo | Descripción |
 |------|------|-------------|
 | *[Github](https://github.com)*  | web  | Identificador |
@@ -116,6 +121,7 @@ Lenguajes habituales: `java`, `sql`, `bash`, `json`, `xml`, `html`, `css`.
 
 ### 10. Separadores
 ---
+___
 
 ### 11. Checklists (muy usado en GitHub)
 - [x] Proyecto creado
@@ -123,6 +129,8 @@ Lenguajes habituales: `java`, `sql`, `bash`, `json`, `xml`, `html`, `css`.
 - [ ] Documentación
 
 ### 12. Comentarios ocultos
+```< !-- Esto no se ve en el render -->
+```
 <!-- Esto no se ve en el render -->
 
 Útil para instrucciones internas o marcas de corrección.
