@@ -79,7 +79,7 @@ Permite hacer enlaces de referenciar a url, imágenes de archivo o desde el repo
 
 2. Imágenes
 ```mad
-![Texto alternativo](../Imágenes/2021-2022/IMG20210525173219.jpg)
+![Texto alternativo](../JAVA/img/Compass.PNG)
 ```
 ![Compass](../JAVA/img/Compass.PNG)
 Ejemplo en repositorio:
