@@ -1,9 +1,13 @@
 # Conectar a MongoDB desde Java
 
 **1.** Creamos un proyecto desde IntelliJ con `Maven`.
+
 **2.** Debemos tener una base de datos `testDB` y una colección `prodcutos`.
+
 **3.** Tendremos un Main que ejecutará `lecturas`, inserciones, borrados y actualizaciones.
+
 **4.** Crearemos la clase `Usuario` donde estará el CRUD.
+
 **5.** Crearemos una clase de conexión MongoConnection para conectarnos a MongoDB.
 
 
