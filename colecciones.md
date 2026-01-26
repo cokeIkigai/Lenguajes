@@ -324,16 +324,16 @@ public class StackDemo {
 }
 ```
 
-## RESUMEN RÁPIDO ¿CUÁNDO USAR CADA UNO?
+## 📊 Colecciones Java - Guía Rápida
 
-| **Colección** | **Para usarla cuando...** | **Operación Rápida** |**Ejemplo Real** |
-|---|---|---|---|
-| **ArrayList** | **Accedes mucho por índice** | **get(index)** | **Lista de estudiantes por número **|
-| **LinkedList** | Insertas/eliminas mucho en medio | add(index, element) | Lista de reproducción que editas |
-| **HashSet** | Necesitas verificar existencia rápido | contains(element)| Verificar si usuario ya existe |
-| **TreeSet** | Necesitas elementos únicos y ordenados | first(), last() | Ranking ordenado |
-| **Queue** | Procesas en orden de llegada (FIFO) | poll(), peek() | Fila de atención |
-| **PriorityQueue**	| Procesas por importancia | poll()	| Sala de emergencias |
-| **HashMap** | Buscas valores por clave rápido | get(key) | Diccionario búsqueda rápida |
-| **TreeMap** | Necesitas claves ordenadas	| Navegación ordenada |Directorio telefónico ordenado |
-| **Stack** | Sigues orden LIFO | pop(), push() | Historial navegación (atrás) |
+| Colección | Para usarla cuando... | Operación Rápida | Ejemplo Real |
+|-----------|----------------------|------------------|--------------|
+| **ArrayList** | Accedes mucho por índice | `get(index)` | Lista de estudiantes por número |
+| **LinkedList** | Insertas/eliminas mucho en medio | `add(index, element)` | Lista de reproducción que editas |
+| **HashSet** | Necesitas verificar existencia rápido | `contains(element)` | Verificar si usuario ya existe |
+| **TreeSet** | Necesitas elementos únicos y ordenados | `first()`, `last()` | Ranking ordenado |
+| **Queue** | Procesas en orden de llegada (FIFO) | `poll()`, `peek()` | Fila de atención |
+| **PriorityQueue** | Procesas por importancia | `poll()` | Sala de emergencias |
+| **HashMap** | Buscas valores por clave rápido | `get(key)` | Diccionario búsqueda rápida |
+| **TreeMap** | Necesitas claves ordenadas | Navegación ordenada | Directorio telefónico ordenado |
+| **Stack** | Sigues orden LIFO | `pop()`, `push()` | Historial navegación (atrás) |
