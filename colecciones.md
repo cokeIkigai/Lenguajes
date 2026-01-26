@@ -9,22 +9,25 @@ Java nos ofrece una biblioteca completa en el paquete java.util que incluye toda
 
 ## 🌈 Tipos de Colecciones Disponibles
 
-### 📋 List (Listas) - Como tu playlist favorita 🎵
+### 📋 List, LinkedList (Listas) - Como tu playlist favorita 🎵
 
 - Mantienen el orden de inserción
 
 - Permiten elementos duplicados
 
 - Acceso por posición/index
+- 
+---
 
-**LIST:**
+### LIST
+
+Cuando necesitas acceso frecuente por posición
 
 ```java
-//  USO: Cuando necesitas acceso frecuente por posición
 import java.util.*;
-
 public class ArrayListDemo {
     public static void main(String[] args) {
+        
         // Crear lista
         List<String> lista = new ArrayList<>();
         
@@ -35,26 +38,24 @@ public class ArrayListDemo {
         
         // ACCEDER por índice (MUY RÁPIDO)
         System.out.println("Elemento en posición 1: " + lista.get(1)); // Banana
-        
+    
         // RECORRER
         for (String fruta : lista) {
             System.out.println("- " + fruta);
         }
-        
         // ELIMINAR por índice
         lista.remove(0); // Elimina "Manzana"
-        
     }
 }
 ```
-
 ---
 
-**LinkedList**: Cuando agregas/eliminas mucho en medio de la lista
+### LinkedList
+
+Cuando agregas/eliminas mucho en medio de la lista
 
 ```java
 import java.util.*;
-
 public class EjemploLinkedList {
     public static void main(String[] args) {
     
@@ -84,22 +85,25 @@ public class EjemploLinkedList {
     }
 }
 ```
+
 ---
 
 ### 🎯 Sets (Conjuntos) - Como una lista de invitados únicos.
 
+- HashSet, TreeSet
 - NO permiten duplicados
-
 - Garantizan unicidad de elementos
-
 - Ideal para eliminar repetidos
 
-### HashSet 
-Para verificación rápida de existencia
-```java
-// 🎯 USO: Cuando necesitas saber rápido si algo existe, sin duplicados
-import java.util.*;
+---
 
+### HashSet 
+
+- Para verificación rápida de existencia
+- Cuando necesitas saber rápido si algo existe, sin duplicados
+
+```java
+import java.util.*;
 public class HashSetDemo {
     public static void main(String[] args) {
         // Crear conjunto
@@ -111,27 +115,26 @@ public class HashSetDemo {
         emails.add("ana@email.com"); // NO se agrega
         
         // VERIFICAR existencia (SUPER RÁPIDO)
-        System.out.println("¿Existe ana@email.com? " + 
-                          emails.contains("ana@email.com")); // true
+        System.out.println("¿Existe ana@email.com? " + emails.contains("ana@email.com")); // true
         
         // TAMAÑO (sin duplicados)
         System.out.println("Usuarios únicos: " + emails.size()); // 2
         
         // ELIMINAR
         emails.remove("pedro@email.com");
-        
-        System.out.println("Emails finales: " + emails);
     }
 }
 ```
 
-### 4. TreeSet 
+--- 
 
-Para conjunto ordenado automáticamente
+### TreeSet 
+
+- Para conjunto ordenado automáticamente
+- Cuando necesitas elementos únicos Y ordenados
+  
 ```java
-// USO: Cuando necesitas elementos únicos Y ordenados
 import java.util.*;
-
 public class TreeSetDemo {
     public static void main(String[] args) {
         // Crear conjunto ordenado
@@ -162,15 +165,13 @@ public class TreeSetDemo {
 ### 🎪 Colas (Queues) - Como la fila del supermercado 🛒
 
 - Comportamiento FIFO (First-In, First-Out)
-
 - Perfectas para procesamiento por orden de llegada
+- Cuando procesas elementos en orden de llegada (primero en entrar, primero en salir)
 
-**Queue:**
+### Queue
 
-```java
-// 🎯 USO: Cuando procesas elementos en orden de llegada (primero en entrar, primero en salir)
+```java 
 import java.util.*;
-
 public class QueueDemo {
     public static void main(String[] args) {
         // Crear cola
@@ -190,13 +191,11 @@ public class QueueDemo {
         // VER siguiente sin sacar
         String siguiente = cola.peek();
         System.out.println("Siguiente: " + siguiente);
-        
-        System.out.println("Cola restante: " + cola);
     }
 }
 ``` 
 
-**PriorityQueue:**
+### PriorityQueue
 
 Para procesamiento por prioridad
 
@@ -235,30 +234,30 @@ public class PriorityQueueDemo {
 
 **HashMap:** 
 
-Para búsqueda rápida por clave.
-
+- Para búsqueda rápida por clave.
+- Cuando necesitas buscar/almacenar valores por una clave única
+  
 ```java
-// 🎯 USO: Cuando necesitas buscar/almacenar valores por una clave única
-import java.util.*;
 
+import java.util.*;
 public class HashMapDemo {
     public static void main(String[] args) {
         // Crear mapa clave-valor
         Map<String, Integer> edades = new HashMap<>();
         
-        // 📌 AGREGAR
+        // AGREGAR
         edades.put("Ana", 25);
         edades.put("Pedro", 30);
         edades.put("Luis", 28);
         
-        // 📌 BUSCAR por clave (SUPER RÁPIDO)
+        // BUSCAR por clave (SUPER RÁPIDO)
         Integer edadAna = edades.get("Ana");
         System.out.println("Edad de Ana: " + edadAna);
         
-        // 📌 VERIFICAR si clave existe
+        // VERIFICAR si clave existe
         System.out.println("¿Existe Pedro? " + edades.containsKey("Pedro"));
         
-        // 📌 RECORRER
+        // RECORRER
         for (Map.Entry<String, Integer> entry : edades.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
@@ -266,58 +265,58 @@ public class HashMapDemo {
 }
 ```
 
-**TreeMap** 
+---
 
-Para mapa ordenado por clave
+### TreeMap
+
+- Para mapa ordenado por clave.
+- Cuando necesitas clave-valor ordenado por clave.
 
 ```java
-// 🎯 USO: Cuando necesitas clave-valor ordenado por clave
 import java.util.*;
-
 public class TreeMapDemo {
     public static void main(String[] args) {
         // Crear mapa ordenado
         Map<String, String> diccionario = new TreeMap<>();
         
-        // 📌 AGREGAR (se ordenan por clave automáticamente)
+        // AGREGAR (se ordenan por clave automáticamente)
         diccionario.put("zorro", "animal");
         diccionario.put("apple", "fruta");
         diccionario.put("ball", "objeto");
         
         // ¡Se ordenan alfabéticamente por clave!
         System.out.println("Diccionario ordenado:");
-        diccionario.forEach((k, v) -> 
-            System.out.println(k + " -> " + v));
+        diccionario.forEach((k, v) -> System.out.println(k + " -> " + v));
         // apple -> fruta, ball -> objeto, zorro -> animal
     }
 }
 ```
 
-**Stack:** 
+### Stack
 
-Para LIFO (último en entrar, primero en salir)
+- Para LIFO (último en entrar, primero en salir)
+- Cuando necesitas comportamiento de pila (historial, deshacer)
 
 ```java
-// 🎯 USO: Cuando necesitas comportamiento de pila (historial, deshacer)
-import java.util.*;
 
+import java.util.*;
 public class StackDemo {
     public static void main(String[] args) {
         // Crear pila
         Stack<String> historial = new Stack<>();
         
-        // 📌 APILAR (push)
+        // APILAR (push)
         historial.push("Página 1");
         historial.push("Página 2");
         historial.push("Página 3");
         
         System.out.println("Pila: " + historial);
         
-        // 📌 DESAPILAR (pop) - saca el último que entró
+        // DESAPILAR (pop) - saca el último que entró
         String ultimo = historial.pop(); // Saca "Página 3"
         System.out.println("Desapilando: " + ultimo);
         
-        // 📌 VER tope sin sacar
+        // VER tope sin sacar
         String tope = historial.peek();
         System.out.println("Tope actual: " + tope);
     }
