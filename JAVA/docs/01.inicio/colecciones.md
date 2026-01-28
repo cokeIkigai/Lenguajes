@@ -16,7 +16,7 @@ Java nos ofrece una biblioteca completa en el paquete java.util que incluye toda
 - Permiten elementos duplicados
 
 - Acceso por posición/index
-- 
+
 ---
 
 ### LIST
