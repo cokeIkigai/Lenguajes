@@ -9,6 +9,16 @@
   
 ---
 
+## 😀 HEAD
+
+**HEAD** es el puntero que indica el commit actual donde estás trabajando.
+Marca tu posición en el historial.
+```
+main: A — B — C              A — B — C — D              feature: A — B — c — d — e               feature: A — b 
+              ↑  — commit —>             ↑  — switch —>                          ↑  — reset —>                ↑
+            HEAD                       HEAD                                    HEAD                         HEAD
+```
+--- 
 ## 🎋RAMAS
 
 <img src="imgs/ramas1.png" width="450" height="250"  align="right">
