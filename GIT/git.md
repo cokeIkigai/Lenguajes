@@ -196,44 +196,43 @@ git push                         : # Ya funciona siempre
 ```bash
 ⚙️ Configuración inicial (una sola vez)
 
-git config --global user.name "TuNombre"      : # Configura tu nombre de autor.
-git config --global user.email "tu@email.com" : # Configura tu correo de autor.
-git config --list                             : # Muestra toda la configuración actual. 
+git config --global user.name "TuNombre"        : # Configura tu nombre de autor.
+git config --global user.email "tu@email.com"   : # Configura tu correo de autor.
+git config --list                               : # Muestra toda la configuración actual. 
 
 📁 Crear / obtener repositorio
 
-git init                                     : # crear repo nuevo
-git clone URL                                : # clonar repo remoto
+git init                                       : # crear repo nuevo
+git clone URL                                  : # clonar repo remoto
 
 🔎 Estado e historial
 
-git status                                   : # ver estado actual (🟢 stagged/ 🔴 no stagged)
-git log                                      : # historial completo
-git log --oneline --graph --all              : # historial compacto visual
-git diff                                     : # ver cambios no confirmados
+git status                                     : # ver estado actual (🟢 stagged/ 🔴 no stagged)
+git log                                        : # historial completo
+git log --oneline --graph --all                : # historial compacto visual
+git diff                                       : # ver cambios no confirmados
 
 🌿 Ramas
 
-git branch                                   : # listar ramas
-git branch new-rama                          : # crear rama
-git switch new-rama / git checkout new-rama  : # cambiar de rama
-git switch -c new / git checkout -b new      : # crear y cambiar
-git branch -d rama                           : # borrar rama
+git branch                                     : # listar ramas
+git branch new-rama                            : # crear rama
+git switch new-rama / git checkout new-rama    : # cambiar de rama
+git switch -c new / git checkout -b new        : # crear y cambiar
+git branch -d rama                             : # borrar rama
 
 ☁️ Sincronizar con remoto
 
-git fetch                                    : # traer cambios sin mezclar
-git pull                                     : # traer y fusionar (fetch + merge)
-git push                                     : # subir commits
-git push -u origin rama                      : # subir rama nueva y fijar upstream
+git fetch                                      : # traer cambios sin mezclar
+git pull                                       : # traer y fusionar (fetch + merge)
+git push                                       : # subir commits
+git push -u origin rama                        : # subir rama nueva y fijar upstream
 
 🧹 Trabajo temporal y limpieza
 
-git stash                                    : # guardar cambios temporales (sin commit)
-git stash list                               : # muestra la lista de stash  
-git stash pop                                : # recuperar esos cambios
-git stash apply stash@{1}                    : # recupera el stash@{1}
-git clean -fd                                : # borrar archivos/carpetas no trackeados (cuidado)
-
+git stash                                      : # guardar cambios temporales (sin commit)
+git stash list                                 : # muestra la lista de stash  
+git stash pop                                  : # recuperar esos cambios / recupera siempre el stash@{0} (último)
+git stash apply stash@{1}                      : # recupera el stash@{1}
+git clean -fd                                  : # borrar archivos/carpetas no trackeados (cuidado)
 
 ```
