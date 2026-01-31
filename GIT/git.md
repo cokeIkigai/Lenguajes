@@ -18,3 +18,14 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
 - Tiene su propio `historial`
 - No `afecta` a otras ramas
 - Puede `fusionarse` (merge) o `eliminarse`
+
+<img src="imgs/merge1.jpg" width="450" height="250">
+<img src="imgs/merge2.png" width="450" height="250">
+
+---
+
+## FASES Y ESTADOS DE GIT PARA HACER UN COMMIT
+
+Git funciona como un sistema de 3 zonas por las que pasan tus archivos antes de guardarse definitivamente.
+
+<img src="imgs/estados.png" width="450" height="250">
