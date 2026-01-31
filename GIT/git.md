@@ -81,6 +81,8 @@ Git funciona como un sistema de 3 zonas por las que pasan tus archivos antes de 
 
 ### REVERTIR ESTADOS
 
+<img src="imgs/flowgit.png" width="450" height="250">
+
 ### 🟥 1. Working Directory (Modificado)
 
 - Cuando aún no has hecho add, pero has modificado el archivo de alguna manera.
@@ -107,18 +109,24 @@ git reset archivo.java
 - Cuando ya hiciste commit y el cambio está guardado en el historial local.
 - Permite deshacer o rehacer commits
   
+A-B-C (HEAD) -> A-B-C´ REESCRIBES C. Olvidas añadir un archivo o el mensaje está mal.
+
 ```git
-
-// A-B-C (HEAD) -> A-B-C´ REESCRIBES C. Olvidas añadir un archivo o el mensaje está mal.
 git commit --amend              # modifica el último commit
+```
+Hiciste commit demasiado pronto y quieres rehacerlo. A — B — C -> A — B (HEAD); staged listos para commit
 
-// Hiciste commit demasiado pronto y quieres rehacerlo. A — B — C -> A — B (HEAD); staged listos para commit
+```git
 git reset --soft HEAD~1         # deshace commit pero mantiene cambios staged
+```
+Por defecto: Deshace commit y deja archivos modificados. A — B — C -> A — B (HEAD); modified (NO staged)
 
-// Por defecto: Deshace commit y deja archivos modificados. A — B — C -> A — B (HEAD); modified (NO staged)
+```git
 git reset --mixed HEAD~1        # deshace commit y deja cambios modificados
+```
 
-// Borra commit y también los cambios. A — B — C -> A — B (HEAD); Borrado el C.
+Borra commit y también los cambios. A — B — C -> A — B (HEAD); Borrado el C.
+```git
 git reset --hard HEAD~1         # borra commit y cambios (peligroso)
 ```
 
