@@ -11,6 +11,8 @@
 
 ## RAMAS
 
+<img src="imgs/merge2.png" width="450" height="250">
+
 Una rama (branch) es una línea de trabajo independiente que nace desde un punto del historial del proyecto y permite desarrollar cambios sin modificar la versión principal.
 Una rama es una copia lógica del estado actual del proyecto donde puedes trabajar con libertad.
 
@@ -19,7 +21,7 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
 - No `afecta` a otras ramas
 - Puede `fusionarse` (merge) o `eliminarse`
 
-<img src="imgs/merge1.jpg" width="450" height="250"> <img src="imgs/merge2.png" width="450" height="250">
+<img src="imgs/merge1.jpg" width="450" height="250"> 
 
 ---
 
