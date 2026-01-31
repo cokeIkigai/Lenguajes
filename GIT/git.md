@@ -109,7 +109,7 @@ git reset archivo.java
 
 ### 🟩 4. Remote (Push)
 
-**Cuando ya hiciste push y los cambios están en el servidor compartido:** Requiere cuidado porque afecta a otros | Se recomienda revertir, no borrar historia |
+Cuando ya hiciste push y los cambios están en el servidor compartido: Requiere cuidado porque afecta a otros | Se recomienda revertir, no borrar historia |
   
 ```git
 git revert HEAD                 # crea commit inverso (seguro)
@@ -119,6 +119,28 @@ git pull                        # sincroniza antes de seguir trabajando
 
 --- 
 
+## FUSIONAR RAMAS
 
-<img src="imgs/merge1.jpg" width="450" height="250"> 
-<img src="imgs/merge2.png" width="450" height="250">
+<img src="imgs/merge1.jpg" width="400" height="250"  align="right"> 
+
+**GIT MERGE 1:** 
+Es el mecanismo que permite integrar en una `rama principal` el trabajo que se ha `desarrollado` de forma aislada en otra:
+- `Nadie trabaja` directamente sobre *main* (cualquier error afectara a todo el equipo) 
+- Se desarrolla en una `rama independiente` *desarrollo*.
+- Esa rama funciona como un espacio seguro donde puedes `programar`, `probar`, `romper` y `rehacer` sin comprometer la estabilidad del proyecto.
+
+---
+
+<img src="imgs/merge2.png" width="400" height="250"  align="right">
+
+**GIT MERGE 2:** 
+- Toma todos los `**commits**` de esa rama y los **une al historial** de la rama destino.
+- No se trata de copiar archivos manualmente, sino de **combinar historias** completas de cambios.
+- Git `analiza` qué se ha modificado en cada lado y construye un nuevo estado común:
+  - Si nadie tocó las mismas partes del código, la `unión es automática`;
+  - Si dos personas cambiaron lo mismo, Git te pide que resuelvas el conflicto para decidir qué versión conservar.
+
+---
+
+
+
