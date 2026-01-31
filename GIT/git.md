@@ -123,7 +123,7 @@ git pull                        # sincroniza antes de seguir trabajando
 
 <img src="imgs/merge1.jpg" width="400" height="250"  align="right"> 
 
-⭕ **GIT MERGE 1:** 
+⭕ **GIT MERGE I:** 
 - Es el mecanismo que permite integrar en una `rama principal` el trabajo que se ha `desarrollado` de forma aislada en otra:
 - `Nadie trabaja` directamente sobre *main* (cualquier error afectara a todo el equipo) 
 - Se desarrolla en una `rama independiente` *desarrollo*.
@@ -133,14 +133,81 @@ git pull                        # sincroniza antes de seguir trabajando
 
 <img src="imgs/merge2.png" width="400" height="250"  align="right">
 
-⭕ **GIT MERGE 2:** 
+⭕ **GIT MERGE II:** 
 - Toma todos los `commits` de esa rama y los **une al historial** de la rama destino.
 - No se copia los archivos manualmente, sino de **combinar historias** completas de cambios.
 - Git `analiza` qué se ha modificado en cada lado y construye un nuevo estado:
   - Si nadie tocó las mismas partes del código, la `unión es automática`;
   - Si dos personas cambiaron lo mismo, Git te pide que resuelvas el conflicto para decidir qué versión conservar.
+    
+---
+
+#### Comando merge LOCAL:
+
+```bash
+git commit -m'mensaje'          : # Primero tener todo commit
+git switch main                 : # Después ir a la rama destino
+git merge feature               : # Se fusiona la rama
+```
+#### Comando merge "REMOTO":
+
+Cuando trabajas con remoto (GitHub), el flujo tiene 2 fases:
+1. fusionas en local
+2. subes el resultado al remoto
+   Escenario: maiun(remoto) y feature (local)
+
+```bash
+git switch main                 : # Después ir a la rama destino
+git pull                        : # sincronizas tu main local con el remoto
+git merge feature               : # Se fusiona la rama
+¿?                              : # Se Resuelven conflictos si hay
+git push                        : # ahora el remoto tiene el merge
+```
+---
+
+## 🧰 Comandos esenciales de Git
 
 ---
 
+## ⚙️ Configuración inicial (una sola vez)
+```bash
+git config --global user.name "TuNombre"
+git config --global user.email "tu@email.com"
+git config --list
+```
+
+## 📁 Crear / obtener repositorio
+git init                 # crear repo nuevo
+git clone URL            # clonar repo remoto
 
 
+🔎 Estado e historial
+git status                        # ver estado actual
+git log                           # historial completo
+git log --oneline --graph --all   # historial compacto visual
+git diff                          # ver cambios no confirmados
+
+🌿 Ramas
+git branch                        # listar ramas
+git branch nueva-rama             # crear rama
+git switch nueva-rama             # cambiar de rama
+git switch -c nueva               # crear y cambiar
+git branch -d rama                # borrar rama
+
+☁️ Sincronizar con remoto
+git fetch                         # traer cambios sin mezclar
+git pull                          # traer y fusionar (fetch + merge)
+git push                          # subir commits
+git push -u origin rama           # subir rama nueva y fijar upstream
+
+🧹 Trabajo temporal y limpieza
+git stash                         # guardar cambios temporales (sin commit)
+git stash pop                     # recuperar esos cambios
+git clean -fd                     # borrar archivos/carpetas no trackeados (cuidado)
+
+✅ Workflow diario recomendado
+git status
+git add .
+git commit -m "mensaje"
+git pull
+git push
