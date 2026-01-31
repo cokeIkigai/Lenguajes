@@ -19,8 +19,7 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
 - No `afecta` a otras ramas
 - Puede `fusionarse` (merge) o `eliminarse`
 
-<img src="imgs/merge1.jpg" width="450" height="250">
-<img src="imgs/merge2.png" width="450" height="250">
+<img src="imgs/merge1.jpg" width="450" height="250"> <img src="imgs/merge2.png" width="450" height="250">
 
 ---
 
@@ -29,3 +28,23 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
 Git funciona como un sistema de 3 zonas por las que pasan tus archivos antes de guardarse definitivamente.
 
 <img src="imgs/estados.png" width="450" height="250">
+
+### 🟥 1. Working Directory (Modificado)
+
+- Donde editas archivos
+- Cambias código
+- Creas/borras ficheros
+- Git detecta cambios
+
+### 🟧 2. Staging Area / Index (Preparado)
+
+- Zona intermedia de selección
+- Decides qué cambios entran al commit
+- No todo tiene que guardarse
+
+### 🟩 3. Repository (.git) (Confirmado)
+
+- Historial permanente
+- Se crea un commit
+- Queda registrado para siempre
+- Puedes volver a él cuando quieras
