@@ -6,6 +6,7 @@
 - `Permite` volver atrás si algo falla.
 - `Facilita` trabajo en equipo sin pisarse el código.
 - Usa ramas (branches) para `desarrollar` nuevas funciones sin romper lo estable.
+  
 ---
 
 ## RAMAS
@@ -17,7 +18,3 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
 - Tiene su propio `historial`
 - No `afecta` a otras ramas
 - Puede `fusionarse` (merge) o `eliminarse`
-
-  
-
-  
