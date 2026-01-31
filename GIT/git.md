@@ -59,7 +59,7 @@ Git funciona como un sistema de 3 zonas por las que pasan tus archivos antes de 
   git commit -m "mensaje"
 ```
 
-### 🟦 (Extra). Remote Repository (Push)
+### 🟦 Remote Repository (Push)
 
 **Servidor compartido** (ej: GitHub, GitLab): `publicas` tus commits | `sincronizas` con el equipo | `copia` de seguridad externa
 
@@ -92,34 +92,24 @@ git reset archivo.java
 
 ### 🟨 3. Local Repository (Commit)
 
-Cuando ya hiciste commit y el cambio está guardado en el historial local. Permite deshacer o rehacer commits
-  
-A-B-C (HEAD) -> A-B-C´ REESCRIBES C. Olvidas añadir un archivo o el mensaje está mal.
+##### ✏️ git commit --amend
+    # Modifica/reescribe el último commit A — B — C → A — B — C'
+    # Permite corregir mensaje o añadir archivos olvidados
 
-```git
-git commit --amend              # modifica el último commit
-```
-Hiciste commit demasiado pronto y quieres rehacerlo. A — B — C -> A — B (HEAD); staged listos para commit
+##### 🔁 git reset --soft HEAD~1 
+    # Deshace commit pero mantiene cambios staged: A — B — C → A — B (HEAD)
+    # Hiciste commit demasiado pronto y quieres rehacerlo
 
-```git
-git reset --soft HEAD~1         # deshace commit pero mantiene cambios staged
-```
-Por defecto: Deshace commit y deja archivos modificados. A — B — C -> A — B (HEAD); modified (NO staged)
+##### 🧹 git reset --mixed HEAD~1        
+    # Deshace commit y deja archivos modificados (NO staged): A — B — C → A — B (HEAD)
+    # Limpia staging (Default)
 
-```git
-git reset --mixed HEAD~1        # deshace commit y deja cambios modificados
-```
-
-Borra commit y también los cambios. A — B — C -> A — B (HEAD); Borrado el C.
-```git
-git reset --hard HEAD~1         # borra commit y cambios (peligroso)
-```
+##### 💣 git reset --hard HEAD~1         
+    # Borra commit y cambios completamente (peligroso): A — B — C → A — B (HEAD)
 
 ### 🟩 4. Remote (Push)
 
-- Cuando ya hiciste push y los cambios están en el servidor compartido
-- Requiere cuidado porque afecta a otros
-- Se recomienda revertir, no borrar historia
+**Cuando ya hiciste push y los cambios están en el servidor compartido:** Requiere cuidado porque afecta a otros | Se recomienda revertir, no borrar historia |
   
 ```git
 git revert HEAD                 # crea commit inverso (seguro)
