@@ -9,16 +9,6 @@
   
 ---
 
-## 😀 HEAD
-
-**HEAD** es el puntero que indica el commit actual donde estás trabajando.
-Marca tu posición en el historial.
-```
-main: A — B — C              A — B — C — D              feature: A — B — c — d — e               feature: A — b 
-              ↑  — commit —>             ↑  — switch —>                          ↑  — reset —>                ↑
-            HEAD                       HEAD                                    HEAD                         HEAD
-```
---- 
 ## 🎋RAMAS
 
 <img src="imgs/ramas1.png" width="450" height="250"  align="right">
@@ -33,6 +23,16 @@ Una rama es una copia lógica del estado actual del proyecto donde puedes trabaj
   
 ---
 
+## 😀 HEAD
+
+**HEAD** es el puntero que indica el commit actual donde estás trabajando.
+Marca tu posición en el historial.
+```
+main: A — B — C              A — B — C — D              feature: A — B — C — d — e               feature: A — b 
+              ↑  — commit —>             ↑  — switch —>                          ↑  — reset —>                ↑
+            HEAD                       HEAD                                    HEAD                         HEAD
+```
+--- 
 ## FASES Y ESTADOS DE GIT PARA HACER UN COMMIT
 
 Git funciona como un sistema de 3 zonas por las que pasan tus archivos antes de guardarse definitivamente.
