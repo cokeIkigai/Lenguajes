@@ -29,7 +29,7 @@ Estos patrones están diseñados para la **instanciación de clases**. Se enfoca
 
 **Patrones principales:**
 
-  * **Singleton** - Garantiza una única instancia de una clase.
+  * [**Singleton**](singleton.md) - Garantiza una única instancia de una clase.
   * **Factory Method** - Define una interfaz para crear objetos, pero deja que las subclases decidan qué clase instanciar.
   * **Abstract Factory** - Proporciona una interfaz para crear familias de objetos relacionados.
   * **Builder** - Separa la construcción de un objeto complejo de su representación
