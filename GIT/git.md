@@ -78,7 +78,7 @@ Cuando aún **no has hecho add**, pero has `modificado` el archivo de alguna man
 
 ```git
 git restore archivo.java
-git restore.
+git restore .
 ```
 
 ### 🟧 2. Staging Area (Preparado / Staged)
