@@ -145,9 +145,9 @@ git pull                        # sincroniza antes de seguir trabajando
 ### 💻 Comando merge LOCAL:
 
 ```bash
-git commit -m'mensaje'          : # Primero tener todo commit
-git switch main                 : # Después ir a la rama destino
-git merge feature               : # Se fusiona la rama
+git commit -m'mensaje' (feature)   : # Primero tener todo commit
+git switch main (main)             : # Después ir a la rama destino
+git merge feature (main)           : # Se fusiona la rama
 
 # recomendación borrar la rama
 ```
