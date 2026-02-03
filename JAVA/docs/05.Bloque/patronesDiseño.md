@@ -29,11 +29,11 @@ Estos patrones están diseñados para la **instanciación de clases**. Se enfoca
 
 **Patrones principales:**
 
-  * **Singleton** - Garantiza una única instancia de una clase
-  * **Factory Method** - Define una interfaz para crear objetos, pero deja que las subclases decidan qué clase instanciar
-  * **Abstract Factory** - Proporciona una interfaz para crear familias de objetos relacionados
+  * **Singleton** - Garantiza una única instancia de una clase.
+  * **Factory Method** - Define una interfaz para crear objetos, pero deja que las subclases decidan qué clase instanciar.
+  * **Abstract Factory** - Proporciona una interfaz para crear familias de objetos relacionados.
   * **Builder** - Separa la construcción de un objeto complejo de su representación
-  * **Prototype** - Crea nuevos objetos copiando un objeto existente (prototipo)
+  * **Prototype** - Crea nuevos objetos copiando un objeto existente (prototipo).
 
 *Para recordar: Creacionales = "¿Cómo CREO objetos?"*
 
@@ -45,13 +45,13 @@ Estos patrones están diseñados con respecto a la `estructura` y `composición`
 
 **Patrones principales:**
 
-* **Adapter** - Permite que interfaces incompatibles trabajen juntas
-* **Bridge** - Separa una abstracción de su implementación
-* **Composite** - Permite tratar objetos individuales y composiciones de objetos de manera uniforme
-* **Decorator** - Añade responsabilidades adicionales a un objeto dinámicamente
-* **Facade** - Proporciona una interfaz simplificada a un subsistema complejo
-* **Flyweight** - Minimiza el uso de memoria compartiendo tanto como sea posible
-*Proxy - Proporciona un sustituto o representante de otro objeto
+* **Adapter** - Permite que interfaces incompatibles trabajen juntas.
+* **Bridge** - Separa una abstracción de su implementación.
+* **Composite** - Permite tratar objetos individuales y composiciones de objetos de manera uniforme.
+* **Decorator** - Añade responsabilidades adicionales a un objeto dinámicamente.
+* **Facade** - Proporciona una interfaz simplificada a un subsistema complejo.
+* **Flyweight** - Minimiza el uso de memoria compartiendo tanto como sea posible.
+*Proxy - Proporciona un sustituto o representante de otro objeto.
 
 Para recordar: Estructurales = "¿Cómo ENSAMBLO objetos?"
 
@@ -61,16 +61,16 @@ Estos patrones están diseñados según `cómo los objetos se comunican` e inter
 
 **Patrones principales:**
 
-* **Chain of Responsibility** - Permite que más de un objeto maneje una solicitud
-* **Command** - Encapsula una solicitud como un objeto
-* **Interpreter** - Define una representación para la gramática de un lenguaje
-* **Iterator** - Proporciona una forma de acceder secuencialmente a los elementos de una colección
-* **Mediator** - Define un objeto que encapsula cómo interactúan otros objetos
-* **Memento** - Captura y externaliza el estado interno de un objeto
-* **Observer** - Define una dependencia uno-a-muchos entre objetos
-* **State** - Permite que un objeto altere su comportamiento cuando cambia su estado interno
-* **Strategy** - Define una familia de algoritmos, encapsula cada uno y los hace intercambiables
-* **Template Method** - Define el esqueleto de un algoritmo en una operación
-* **Visitor** - Representa una operación a realizar sobre elementos de una estructura de objetos
+* **Chain of Responsibility** - Permite que más de un objeto maneje una solicitud.
+* **Command** - Encapsula una solicitud como un objeto.
+* **Interpreter** - Define una representación para la gramática de un lenguaje.
+* **Iterator** - Proporciona una forma de acceder secuencialmente a los elementos de una colección.
+* **Mediator** - Define un objeto que encapsula cómo interactúan otros objetos.
+* **Memento** - Captura y externaliza el estado interno de un objeto.
+* **Observer** - Define una dependencia uno-a-muchos entre objetos.
+* **State** - Permite que un objeto altere su comportamiento cuando cambia su estado interno.
+* **Strategy** - Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+* **Template Method** - Define el esqueleto de un algoritmo en una operación.
+* **Visitor** - Representa una operación a realizar sobre elementos de una estructura de objetos.
 
 *Para recordar: Comportamiento = "¿Cómo se COMPORTAN y COMUNICAN los objetos?"*
