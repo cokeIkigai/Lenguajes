@@ -1,3 +1,37 @@
+
+**datos.xml:**
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<personas>
+    <persona id="1">
+        <nombre>Juan Pérez</nombre>
+        <edad>30</edad>
+        <email>juan.perez@email.com</email>
+        <ciudad>Madrid</ciudad>
+        <profesion>Desarrollador</profesion>
+    </persona>
+    
+    <persona id="2">
+        <nombre>María García</nombre>
+        <edad>25</edad>
+        <email>maria.garcia@email.com</email>
+        <ciudad>Barcelona</ciudad>
+        <profesion>Diseñadora</profesion>
+    </persona>
+    
+    <persona id="3">
+        <nombre>Carlos López</nombre>
+        <edad>35</edad>
+        <email>carlos.lopez@email.com</email>
+        <ciudad>Valencia</ciudad>
+        <profesion>Analista</profesion>
+    </persona>
+</personas
+```
+
+**Main.java:**
+
 ```java
 package org.example;
 import org.w3c.dom.Document;
