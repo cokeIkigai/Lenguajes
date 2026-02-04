@@ -1,7 +1,7 @@
 
 **datos.xml:**
 
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <personas>
     <persona id="1">
