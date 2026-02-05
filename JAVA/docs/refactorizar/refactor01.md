@@ -9,31 +9,13 @@ Transformar el mismo programa en una versión más limpia, modular y profesional
 
 ### Enunciados
 
-1. Mejorar legibilidad y eliminar código duplicado:
-  > Renombrar variables, ordenar bloques, borrar repeticiones evidentes y simplificar prints.
-
+1. Mejorar legibilidad y eliminar código duplicado (Renombrar variables, ordenar bloques, borrar repeticiones evidentes y simplificar prints)
 2. Separar responsabilidades en métodos (menú, lectura, validaciones y listado)
-  > Extraer código a métodos sin cambiar la lógica.
-  > → Solo mover código, no rediseñar.
-
 3. Centralizar validaciones en métodos reutilizables
-  > Crear métodos como leerEdadValida(), leerCorreoValido().
-  > → Reduce if repetidos y limpia el flujo.
-
-4. Repetir solo el campo inválido, no volver al menú
-  > Añadir bucles por campo (while(!valido)).
-  > → Mejora UX y obliga a usar bien los métodos del paso anterior.
-
+4. Repetir solo el campo inválido, no volver al menu
 5. El main debe tener máximo 15 líneas (solo flujo principal)
-  > Tras extraer métodos, dejar main como orquestador: menú → llamada → fin.
-  > → Refactor sencillo cuando todo ya está modularizado.
-
 6. Sustituir listas paralelas por una estructura única de alumno
-> Crear class Alumno y usar ArrayList<Alumno>.
-> → Cambio estructural más grande, mejor hacerlo cuando el resto ya esté limpio.
-
 7. Mantener la misma funcionalidad (insertar, listar y salir)
-> Verificación final: probar todo y asegurar que nada se ha roto.
 
 ```java
 package org.example;
