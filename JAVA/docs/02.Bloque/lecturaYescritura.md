@@ -120,25 +120,24 @@ public class Main {
 | 7	| Elección de Clase	 | Usar la misma para todo	              | Elegir según necesidad	                    | FileReader→texto, Scanner→parsing              |
 | 8 | Modo Escritura	   | Siempre sobrescribir	                  | Usar append cuando corresponda              |	new FileWriter(archivo, true)                  |
 | 9	| Excepciones	       | Capturar Exception genérico	          | Capturar excepciones específicas	          | catch (FileNotFoundException)                  |
-
-
 | 10 | Memoria	         | Acumular todo en listas	              | Procesar línea por línea	                  | while ((linea = br.readLine()) != null)        |
 
-| #	| Categoría	         | Mala Práctica ❌	                    | Buena Práctica ✅	                          | Código Ejemplo |
-|---|--------------------|----------------------------------------|---------------------------------------------|------------------------------------------------|
-| 11 | Archivos          | Grandes Buffer por defecto	            | Buffer personalizado para grandes archivos	| new char[8192] (8KB)                           |
-| 12 | Testing	         | Probar solo casos normales	            | Probar casos extremos	                      | Vacío, grande, caracteres especiales           |
-| 13 | Logging	         | Usar System.out.println	              | Usar sistema de logging	                    | LOGGER.info("Procesando...")                   |
-| 14 | Validación        | Datos	Procesar sin validar	          | Validar datos de entrada	                  | if (linea == null || linea.trim().isEmpty())   |
-| 15 | Mantenibilidad	   | Strings literales repetidos	          | Usar constantes para nombres	              | final String ARCHIVO = "datos.txt"             |
+| #	| Categoría	         | Buena Práctica ✅	                          | Código Ejemplo |
+|---|--------------------|----------------------------------------------|------------------------------------------------|
+| 11 | Archivos          | Buffer personalizado para grandes archivos	| new char[8192] (8KB)                           |
+| 12 | Testing	         | Probar casos extremos	                      | Vacío, grande, caracteres especiales           |
+| 13 | Logging	         | Usar sistema de logging	                    | LOGGER.info("Procesando...")                   |
+| 14 | Validación        | Validar datos de entrada	                  | if (linea == null || linea.trim().isEmpty())   |
+| 15 | Mantenibilidad	 | Usar constantes para nombres	              | final String ARCHIVO = "datos.txt"             |
 
-| #	| Categoría	         | Mala Práctica ❌	                    | Buena Práctica ✅	                          | Código Ejemplo |
-|---|--------------------|----------------------------------------|---------------------------------------------|------------------------------------------------|
-| 16 | Seguridad	       | Confiar en rutas de usuario	          | Validar rutas de entrada	                  | Verificar que no salga de directorio permitido |
-| 17 | Archivos Temp	   | Dejar archivos temporales	            | Limpiar recursos temporales	                | finally { tempFile.delete() }                  |
-| 18 | Documentación	   | Sin comentarios sobre formato	        | Documentar supuestos del archivo	          | Formato: nombre,edad,ciudad                    |
-| 19 | Monitoreo	       | Sin control de recursos	              | Monitorear uso de memoria	                  | Runtime.getRuntime().totalMemory()             |
-| 20 | Escalabilidad	   | Cargar archivos gigantes en memoria	  | Considerar alternativas	                    | Procesamiento por lotes, bases de datos        |
+
+| #	| Categoría	         | Buena Práctica ✅	                       | Código Ejemplo                                 |
+|---|--------------------|---------------------------------------------|------------------------------------------------|
+| 16 | Seguridad	     | Validar rutas de entrada	                   | Verificar que no salga de directorio permitido |
+| 17 | Archivos Temp	 | Limpiar recursos temporales	               | finally { tempFile.delete() }                  |
+| 18 | Documentación	 | Documentar supuestos del archivo	           | Formato: nombre,edad,ciudad                    |
+| 19 | Monitoreo	     | Monitorear uso de memoria	               | Runtime.getRuntime().totalMemory()             |
+| 20 | Escalabilidad	 | Considerar alternativas	                   | Procesamiento por lotes, bases de datos        |
 
 
 
