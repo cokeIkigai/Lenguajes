@@ -11,13 +11,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    // Añade los métodos
-    }
-// -------------------------------------------------
+        calculadoraDescuento(8.2, false);
+        validarEmail(qwerty@gmail.com);
+        validarTelefono("6313121312");
+        validarNombre("Zoe");
+        calcularImpuesto(130000,6);
+        // + Metodos
+}
+// -----------------------------------------------------------------------------------------
 // Ejercicio 1:
 
-        public void CalculadoraDescuento {
-            public double calcularPrecioFinal(double precio, boolean esClienteVip) {
+        public double calculadoraDescuento(double precio, boolean esClienteVip) {
                 double descuento;
                 if (esClienteVip) {
                     descuento = precio * 0.20;
@@ -33,10 +37,8 @@ public class Main {
             }
         }   
     
-// -------------------------------------------------
+// -----------------------------------------------------------------------------------------
 // Ejercicio 2:
-
-        public void Validador {
             public boolean validarEmail(String email) {
                 if (email == null || email.length() == 0) {
                     return false;
@@ -51,7 +53,7 @@ public class Main {
                 if (telefono == null || telefono.length() == 0) {
                     return false;
                 }
-                if (telefono.length() > 15) {
+                if (telefono.length() > 9) {
                     return false;
                 }
                 return telefono.matches("\\d+");
@@ -66,11 +68,10 @@ public class Main {
                 }
                 return nombre.matches("[a-zA-Z ]+");
             }
-        }
-// -------------------------------------------------
+        
+// -----------------------------------------------------------------------------------------
 //  Ejercicio 3:
 
-        public void CalculadoraImpuestos {
             public double calcularImpuesto(double ingreso, int dependientes) {
                 if (ingreso < 10000) {
                     if (dependientes == 0) {
@@ -99,8 +100,8 @@ public class Main {
                 }
                 return 0;
             }
-        }
-// -------------------------------------------------
+        
+// -----------------------------------------------------------------------------------------
 //  Ejercicio 4:
 
         public void Producto {
@@ -141,7 +142,7 @@ public class Main {
                 this.stock = stock;
             }
         }
-// -------------------------------------------------
+// ------------------------------------------------------------------------------------------
 //  Ejercicio 5:
 
         public void Configuracion {
