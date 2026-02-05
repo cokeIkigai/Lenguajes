@@ -112,16 +112,28 @@ public class Main {
 | 3	| Validación	       | Asumir que el archivo existe	          | Verificar existencia y permisos             |	archivo.exists() && archivo.canRead()          |
 | 4	| Rutas	             | Rutas absolutas (no portables)	        | Usar rutas relativas cuando sea posible	    | new File("datos/archivo.txt")                  |
 | 5	| Orden de Cierre	   | Cerrar en cualquier orden	            | Último en abrir, primero en cerrar	        | br.close() (cierra FileReader también)         |
+
+
+| #	| Categoría	         | Mala Práctica ❌	                    | Buena Práctica ✅	                          | Código Ejemplo |
+|---|--------------------|----------------------------------------|---------------------------------------------|------------------------------------------------|
 | 6	| Rendimiento	       | Sin buffer para archivos grandes	      | Siempre usar buffering	                    | BufferedReader, BufferedWriter                 |
 | 7	| Elección de Clase	 | Usar la misma para todo	              | Elegir según necesidad	                    | FileReader→texto, Scanner→parsing              |
-| 8 |	Modo Escritura	   | Siempre sobrescribir	                  | Usar append cuando corresponda              |	new FileWriter(archivo, true)                  |
+| 8 | Modo Escritura	   | Siempre sobrescribir	                  | Usar append cuando corresponda              |	new FileWriter(archivo, true)                  |
 | 9	| Excepciones	       | Capturar Exception genérico	          | Capturar excepciones específicas	          | catch (FileNotFoundException)                  |
+
+
 | 10 | Memoria	         | Acumular todo en listas	              | Procesar línea por línea	                  | while ((linea = br.readLine()) != null)        |
+
+| #	| Categoría	         | Mala Práctica ❌	                    | Buena Práctica ✅	                          | Código Ejemplo |
+|---|--------------------|----------------------------------------|---------------------------------------------|------------------------------------------------|
 | 11 | Archivos          | Grandes Buffer por defecto	            | Buffer personalizado para grandes archivos	| new char[8192] (8KB)                           |
 | 12 | Testing	         | Probar solo casos normales	            | Probar casos extremos	                      | Vacío, grande, caracteres especiales           |
 | 13 | Logging	         | Usar System.out.println	              | Usar sistema de logging	                    | LOGGER.info("Procesando...")                   |
 | 14 | Validación        | Datos	Procesar sin validar	          | Validar datos de entrada	                  | if (linea == null || linea.trim().isEmpty())   |
 | 15 | Mantenibilidad	   | Strings literales repetidos	          | Usar constantes para nombres	              | final String ARCHIVO = "datos.txt"             |
+
+| #	| Categoría	         | Mala Práctica ❌	                    | Buena Práctica ✅	                          | Código Ejemplo |
+|---|--------------------|----------------------------------------|---------------------------------------------|------------------------------------------------|
 | 16 | Seguridad	       | Confiar en rutas de usuario	          | Validar rutas de entrada	                  | Verificar que no salga de directorio permitido |
 | 17 | Archivos Temp	   | Dejar archivos temporales	            | Limpiar recursos temporales	                | finally { tempFile.delete() }                  |
 | 18 | Documentación	   | Sin comentarios sobre formato	        | Documentar supuestos del archivo	          | Formato: nombre,edad,ciudad                    |
