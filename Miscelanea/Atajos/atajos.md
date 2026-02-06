@@ -1,6 +1,18 @@
 # Atajos de teclado de IntelliJ IDEA 
 
-### 🏆 TOP 10 ESENCIALES (Aprender primero)
+ESQUEMA:
+
+- [TOP 10 ESENCIALES](#top-10-esenciales)
+- [CODIFICACIÓN RÁPIDA](#codificación-rápida)
+- [NAVEGACIÓN Y BÚSQUEDA](#navegación-y-búsqueda)
+- [REFACTORIZACIÓN](#refactorización)
+- [DEBUGGING](#debugging)
+- [VENTANAS Y HERRAMIENTAS](#ventanas-y-herramientas)
+- [Acciones importantes](#acciones-importantes)
+- [Herramientas avanzadas](#herramientas-avanzadas)
+
+ 
+### TOP 10 ESENCIALES
 
 |**Atajo**|**Descripción**|
 |---------|---------------|
@@ -15,7 +27,7 @@
 |Ctrl + /	                        | Comentar/descomentar línea |
 |Ctrl + D	                        | Duplicar línea |
 
-### 🚀 MODULO: CODIFICACIÓN RÁPIDA
+### CODIFICACIÓN RÁPIDA
 
 |**Atajo**|**Descripción**|
 |---------|---------------|
@@ -27,7 +39,7 @@
 |Ctrl + Shift + J	                |Unir líneas|
 |Ctrl + Alt + O	                  |Organizar imports|
 
-### 🔍 MODULO: NAVEGACIÓN Y BÚSQUEDA|
+### NAVEGACIÓN Y BÚSQUEDA
 
 |**Atajo**|**Descripción**|
 |---------|---------------|
@@ -39,7 +51,8 @@
 |Ctrl + F12	                  | Ver estructura del archivo|
 |Ctrl + Shift + A	            | Buscar acción/comando|
 
-### 🛠️ MODULO: REFACTORIZACIÓN
+### REFACTORIZACIÓN
+
 |**Atajo**|**Descripción**|
 |---------|---------------|
 |Shift + F6	            | Renombrar (variable/clase/método)|
@@ -48,7 +61,8 @@
 |Ctrl + Alt + P	        |Extraer parámetro|
 |Alt + Insert	          |Generar código (getters, constructores)|
 
-## 🐛 MODULO: DEBUGGING
+###  DEBUGGING
+
 |**Atajo**|**Descripción**|
 |---------|---------------|
 |Shift + F9	        |Iniciar debug|
@@ -58,7 +72,8 @@
 |Alt + F8	          |Evaluar expresión|
 |Ctrl + F2	        |Detener ejecución|
 
-### 📁 MODULO: VENTANAS Y HERRAMIENTAS
+### VENTANAS Y HERRAMIENTAS
+
 |**Atajo**|**Descripción**|
 |---------|---------------|
 |Alt + 1	          |Mostrar/ocultar panel Project|
@@ -68,7 +83,7 @@
 |Ctrl + Shift + F12	|Maximizar editor|
 |Esc	              | Volver al editor|
 
-## ⚡ CONTROL + SHIFT (Acciones importantes)
+### Acciones importantes
 
 |**Atajo**|**Descripción**|**Categoría**|
 |---------|---------------|-------------|
@@ -81,7 +96,8 @@
 |Ctrl + Shift + Alt + J	  |Seleccionar TODAS ocurrencias	    |Selección|
 |Ctrl + Shift + Backspace	|Ir a último cambio	                |Navegación|
 
-## ⭐ CONTROL + ALT (Herramientas avanzadas)
+### Herramientas avanzadas
+
 |**Atajo**|**Descripción**|**Categoría**|
 |---------|---------------|-------------|
 |Ctrl + Alt + L	    |Formatear código	              |Formato|
