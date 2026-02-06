@@ -2,12 +2,12 @@
 
 ESQUEMA:
 
-- [TOP 10 ESENCIALES](#top-10-esenciales)
-- [CODIFICACIÓN RÁPIDA](#codificación-rápida)
-- [NAVEGACIÓN Y BÚSQUEDA](#navegación-y-búsqueda)
-- [REFACTORIZACIÓN](#refactorización)
-- [DEBUGGING](#debugging)
-- [VENTANAS Y HERRAMIENTAS](#ventanas-y-herramientas)
+- [Top 10 esenciales](#top-10-esenciales)
+- [Codificación rápida](#codificación-rápida)
+- [Navegación y búsqueda](#navegación-y-búsqueda)
+- [Refactorización](#refactorización)
+- [Debugging](#debugging)
+- [Ventanas y herramientas](#ventanas-y-herramientas)
 - [Acciones importantes](#acciones-importantes)
 - [Herramientas avanzadas](#herramientas-avanzadas)
 
