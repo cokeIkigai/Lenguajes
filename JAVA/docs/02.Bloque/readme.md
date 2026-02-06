@@ -1,5 +1,5 @@
 # 1. Bloque
 
-[Algoritmos](algoritmos.md)
+📱 [Algoritmos](algoritmos.md)
 
-[Scanner](scanner.md)
+📠 [Scanner](scanner.md)
