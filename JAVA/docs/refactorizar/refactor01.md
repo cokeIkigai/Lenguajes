@@ -1,12 +1,12 @@
 # 🧩 Refactorización – Gestión de alumnos en consola (Java)
 
-Se te entrega un programa que **gestiona alumnos** desde consola: permite insertar y listar datos con validaciones básicas.
-Funciona, pero el código está desordenado, repetitivo y poco mantenible.
-Revisa previamente que ejecuta y comienza tus dotes de refactorización.
+- Se te entrega un programa que **gestiona alumnos** desde consola: permite insertar y listar datos con validaciones básicas.
+- Funciona, pero el código está desordenado, repetitivo y poco mantenible.
+- Revisa previamente que ejecuta y comienza tus dotes de refactorización.
+- Transformar el mismo programa en una versión más limpia, modular y profesional, como si fuese código preparado para ampliarse en el futuro. 
+- Dejarlo todo en la Clase Main.
 
-**Tu objetivo es refactorizar, no rehacer:** 
-
-Transformar el mismo programa en una versión más limpia, modular y profesional, como si fuese código preparado para ampliarse en el futuro. Dejarlo todo en la Clase Main
+*Tu objetivo es refactorizar, no rehacer*
 
 ### Enunciados
 
