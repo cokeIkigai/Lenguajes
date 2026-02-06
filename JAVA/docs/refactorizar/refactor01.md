@@ -1,7 +1,8 @@
 # 🧩 Refactorización – Gestión de alumnos en consola (Java)
 
 Se te entrega un programa que **gestiona alumnos** desde consola: permite insertar y listar datos con validaciones básicas.
-Funciona, pero el código está desordenado, repetitivo y poco mantenible (todo está en main, listas paralelas, validaciones mezcladas y mala experiencia de usuario).
+Funciona, pero el código está desordenado, repetitivo y poco mantenible.
+Revisa previamente que ejecuta y comienza tus dotes de refactorización.
 
 **Tu objetivo es refactorizar, no rehacer:** 
 
@@ -9,13 +10,16 @@ Transformar el mismo programa en una versión más limpia, modular y profesional
 
 ### Enunciados
 
-1. Mejorar legibilidad y eliminar código duplicado (Renombrar variables, ordenar bloques, borrar repeticiones evidentes y simplificar prints)
-2. Separar responsabilidades en métodos (menú, lectura, validaciones y listado)
-3. Centralizar validaciones en métodos reutilizables
-4. Repetir solo el campo inválido, no volver al menu
-5. El main debe tener máximo 15 líneas (solo flujo principal)
-6. Sustituir listas paralelas por una estructura única de alumno
-7. Mantener la misma funcionalidad (insertar, listar y salir)
+1. Mejorar `legibilidad` y eliminar código duplicado.
+2. `Separar` responsabilidades en métodos (menú, lectura, validaciones y listado).
+3. `Centralizar` validaciones en métodos reutilizables.
+4. `Repetir` solo el campo inválido, no volver al menu.
+5. El main debe tener máximo `15 líneas`.
+6. `Mantener` la mismas funcionalidades (insertar, listar y salir).
+
+---
+
+**Archivo main.java:**
 
 ```java
 package org.example;
