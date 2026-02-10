@@ -14,7 +14,14 @@ HTTP funciona siempre siguiendo un modelo de **petición–respuesta:** el clien
 
 ## 👏 PETICIONES
 
-Las `peticiones` HTTP se realizan mediante distintos **métodos** que indican la acción que se desea llevar a cabo:
+- Una **PETICIÓN** HTTP es la forma en la que el navegador o una aplicación solicita algo al servidor. Esta petición incluye varios elementos importantes:
+
+  - `Versión`: indica la **VERSIÓN** del protocolo que se está utilizando. (*HTTP/1.1 o HTTP/2*)
+  - `URL`: es la **DIRECCIÓN** exacta del recurso que se solicita. *https://www.example.com/about.*
+  - `Método`: indica qué **ACCIÓN** se desea realizar, como GET para obtener información o POST para enviar datos.
+  - `Headers`: contienen información adicional, como el **tipo de navegador**, el **formato de datos** esperado o información de **autenticación**.
+
+  - **Cuerpo de la petición (Body):** en algunos casos, la petición incluye datos, por ejemplo cuando se envía un formulario o información en formato JSON.
 
 - `Método GET` se utiliza para obtener información.
 - `Método POST` para enviar nuevos datos.
