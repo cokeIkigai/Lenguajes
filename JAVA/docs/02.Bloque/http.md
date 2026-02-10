@@ -22,22 +22,39 @@ Las `peticiones` HTTP se realizan mediante distintos **métodos** que indican la
 
 Cuando el servidor `responde`, incluye un código de estado HTTP que indica el resultado de la operación:
 
-- Respuesta `200` cuando la petición se ha realizado correctamente,
-- Respuesta `404` cuando el recurso no existe o
-- Respuesta `500` cuando se produce un error interno en el servidor.
+## Tipos de respuestas en una API REST (HTTP) 
+
+| Categoría | Código | Nombre | Uso habitual |
+|---------|-------|--------|-------------|
+| ✅ Éxito | 200 | OK | Petición correcta, devuelve datos (GET) |
+| ✅ Éxito | 201 | Created | Recurso creado correctamente (POST) |
+| ✅ Éxito | 204 | No Content | Operación correcta sin contenido (DELETE / PUT) |
+| ❌ Cliente | 400 | Bad Request | Datos incorrectos o petición mal formada |
+| ❌ Cliente | 401 | Unauthorized | Falta autenticación o es incorrecta |
+| ❌ Cliente | 403 | Forbidden | Sin permisos para acceder al recurso |
+| ❌ Cliente | 404 | Not Found | Recurso no encontrado |
+| ❌ Cliente | 409 | Conflict | Conflicto con el estado del recurso |
+| ⚠️ Servidor | 500 | Internal Server Error | Error genérico del servidor |
+| ⚠️ Servidor | 502 | Bad Gateway | Error al comunicarse con otro servidor |
+| ⚠️ Servidor | 503 | Service Unavailable | Servicio no disponible temporalmente |
+| 🔁 Redirección | 301 | Moved Permanently | Recurso movido de forma permanente |
+| 🔁 Redirección | 302 | Found | Redirección temporal |
+| ℹ️ Informativo | 100 | Continue | Continuar con el envío de la petición |
+
+[httpCats](https://http.cat/)
 
 ---
 
-### API
+### 🏢 API
 
 **HTTP** se utiliza principalmente para `consumir APIs`. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. 
 
 - Estas APIs suelen devolver los datos en `formato JSON`.
 - Un formato de texto estructurado muy común en aplicaciones modernas por su simplicidad y facilidad de uso.
 
-
- <img src="../../img/HTPP.gif" width="500" height="250">
-
+<p align="center">
+ <img src="../../img/HTTP.gif" width="500" height="250">
+</p>
 ---
 
 La siguiente funcionalidad es reocger o pedir informacdión a una API y manjear y controlar la información.
