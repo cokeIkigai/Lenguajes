@@ -12,6 +12,8 @@ HTTP funciona siempre siguiendo un modelo de **petición–respuesta:** el clien
   <img src="../../img/http2.png" width="500" height="250">
 </p>
 
+---
+
 ## 👏 PETICIÓN y RESPUESTA
 
 Una **PETICIÓN** HTTP es la forma en la que el navegador o una aplicación solicita algo al servidor. Esta petición incluye varios elementos importantes:
@@ -67,7 +69,11 @@ Una **RESPUESTA** HTTP es la contestación del servidor a la petición realizada
 </p>
 ---
 
-La siguiente funcionalidad es reocger o pedir informacdión a una API y manjear y controlar la información.
+## APIPOKEMON
+
+Es una API donde se puede hacer peticiones y tiene una documentación para cada endpoint que llames. Te dice que tipo de información estará en tu respuesta.
+Para el endpoint `https://pokeapi.co/api/v2/`, la información que nos llega si lo ponemos en la url de nuestro navegador nos saldrá esto:
+
 
 **pom.xml**:
 ```xml
@@ -154,7 +160,7 @@ public class HttpClientPokemon {
         HttpResponse<String> response =
                 client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        // Parseo del JSON
+        // Parseo del JSON con la Clase con la misma estructura que la información de dentro
         Gson gson = new Gson();
         PokemonResponse data = gson.fromJson(response.body(), PokemonResponse.class);
 
