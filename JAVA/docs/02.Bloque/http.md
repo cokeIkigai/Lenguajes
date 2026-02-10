@@ -12,20 +12,26 @@ HTTP funciona siempre siguiendo un modelo de **petición–respuesta:** el clien
   <img src="../../img/http2.png" width="500" height="250">
 </p>
 
-## 👏 PETICIONES
+## 👏 PETICIÓN y RESPUESTA
 
-- Una **PETICIÓN** HTTP es la forma en la que el navegador o una aplicación solicita algo al servidor. Esta petición incluye varios elementos importantes:
+Una **PETICIÓN** HTTP es la forma en la que el navegador o una aplicación solicita algo al servidor. Esta petición incluye varios elementos importantes:
 
   - `Versión`: indica la **VERSIÓN** del protocolo que se está utilizando. (*HTTP/1.1 o HTTP/2*)
-  - `URL`: es la **DIRECCIÓN** exacta del recurso que se solicita. *https://www.example.com/about.*
-  - `Método`: indica qué **ACCIÓN** se desea realizar, como GET para obtener información o POST para enviar datos.
-  - `Headers`: contienen información adicional, como el **tipo de navegador**, el **formato de datos** esperado o información de **autenticación**.
+  - `URL`: es la **DIRECCIÓN** exacta del recurso que se solicita. `https://www.example.com/about`.
+  - `Método`: indica qué **ACCIÓN** se desea realizar
+    - `GET` se utiliza para obtener información.
+    - `POST` para enviar nuevos datos.
+    - `PUT` para modificar información existente y DELETE para eliminar recursos.
+  - `Headers`: contienen información adicional, como la información de **autenticación**.
+  - `Body`: en algunos casos, la petición **incluyen** datos. (formato JSON)
 
-  - **Cuerpo de la petición (Body):** en algunos casos, la petición incluye datos, por ejemplo cuando se envía un formulario o información en formato JSON.
+ ---
+ 
+Una **RESPUESTA** HTTP es la contestación del servidor a la petición realizada por el cliente. Esta respuesta también tiene una estructura definida:
 
-- `Método GET` se utiliza para obtener información.
-- `Método POST` para enviar nuevos datos.
-- `Método PUT` para modificar información existente y DELETE para eliminar recursos.
+- `Código de estado HTTP`: es un **número** que indica si la petición se ha procesado correctamente o si se ha producido un error. [ResponsesCats](https://http.cat/)
+- `Headers`: proporcionan **información** sobre la respuesta, como el tipo de contenido que se envía.
+- `Body`: contiene los **datos** reales que el servidor devuelve.
 
 Cuando el servidor `responde`, incluye un código de estado HTTP que indica el resultado de la operación:
 
@@ -48,7 +54,7 @@ Cuando el servidor `responde`, incluye un código de estado HTTP que indica el r
 | 🔁 Redirección | 302 | Found | Redirección temporal |
 | ℹ️ Informativo | 100 | Continue | Continuar con el envío de la petición |
 
-[ResponsesCats](https://http.cat/)
+
 
 ---
 
