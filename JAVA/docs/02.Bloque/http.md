@@ -12,7 +12,7 @@ HTTP funciona siempre siguiendo un modelo de **petición–respuesta:** el clien
   <img src="../../img/http2.png" width="500" height="250">
 </p>
 
-### 👏 PETICIONES
+## 👏 PETICIONES
 
 Las `peticiones` HTTP se realizan mediante distintos **métodos** que indican la acción que se desea llevar a cabo:
 
@@ -22,7 +22,7 @@ Las `peticiones` HTTP se realizan mediante distintos **métodos** que indican la
 
 Cuando el servidor `responde`, incluye un código de estado HTTP que indica el resultado de la operación:
 
-## Tipos de respuestas en una API REST (HTTP) 
+## 🗣️ Tipos de respuestas en una API REST (HTTP) 
 
 | Categoría | Código | Nombre | Uso habitual |
 |---------|-------|--------|-------------|
@@ -41,11 +41,11 @@ Cuando el servidor `responde`, incluye un código de estado HTTP que indica el r
 | 🔁 Redirección | 302 | Found | Redirección temporal |
 | ℹ️ Informativo | 100 | Continue | Continuar con el envío de la petición |
 
-[httpCats](https://http.cat/)
+[ResponsesCats](https://http.cat/)
 
 ---
 
-### 🏢 API
+## 🏢 API
 
 **HTTP** se utiliza principalmente para `consumir APIs`. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. 
 
