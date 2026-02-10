@@ -1,14 +1,34 @@
-# Comunicación HTTP y Consumo de APIs en Java
+# 🌐 Comunicación HTTP y Consumo de APIs en Java
 
-## ¿Qué es HTTP?
+<img src="../../img/http1.jpg" width=950 height=250>
 
-**HTTP** *(HyperText Transfer Protocol)* es el protocolo que permite la comunicación entre aplicaciones a través de Internet. Define cómo un cliente, como un navegador web o una aplicación Java, puede solicitar información a un servidor y cómo este responde a dicha solicitud. 
+## ❓Qué es HTTP
 
-HTTP funciona siempre siguiendo un modelo de petición–respuesta: el cliente envía una petición y el servidor devuelve una respuesta con un código de estado y, en muchos casos, datos asociados.
+**HTTP** *(HyperText Transfer Protocol)* es el protocolo que `permite la comunicación` entre aplicaciones a través de Internet. Define cómo un cliente, como un navegador web o una aplicación Java, puede solicitar información a un servidor y cómo este responde a dicha solicitud. 
 
-Las peticiones HTTP se realizan mediante distintos métodos que indican la acción que se desea llevar a cabo. El método GET se utiliza para obtener información, POST para enviar nuevos datos, PUT para modificar información existente y DELETE para eliminar recursos. Cuando el servidor responde, incluye un código de estado HTTP que indica el resultado de la operación, como 200 cuando la petición se ha realizado correctamente, 404 cuando el recurso no existe o 500 cuando se produce un error interno en el servidor.
+HTTP funciona siempre siguiendo un modelo de **petición–respuesta:** el cliente envía una petición y el servidor devuelve una respuesta con un código de estado y, en muchos casos, datos asociados.
+  
+<p align="center">
+  <img src="../../img/http2.png" width="500" height="250">
+</p>
 
-En el contexto de la programación, HTTP se utiliza principalmente para consumir APIs. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. Estas APIs suelen devolver los datos en formato JSON, un formato de texto estructurado muy común en aplicaciones modernas por su simplicidad y facilidad de uso.
+### 👏 PETICIONES
+
+Las `peticiones` HTTP se realizan mediante distintos **métodos** que indican la acción que se desea llevar a cabo:
+
+- `Método GET` se utiliza para obtener información.
+- `Método POST` para enviar nuevos datos.
+- `Método PUT` para modificar información existente y DELETE para eliminar recursos.
+
+Cuando el servidor `responde`, incluye un código de estado HTTP que indica el resultado de la operación:
+
+- Respuesta `200` cuando la petición se ha realizado correctamente,
+- Respuesta `404` cuando el recurso no existe o
+- Respuesta `500` cuando se produce un error interno en el servidor.
+
+### En el contexto de la programación
+
+HTTP se utiliza principalmente para `consumir APIs`. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. Estas APIs suelen devolver los datos en formato JSON, un formato de texto estructurado muy común en aplicaciones modernas por su simplicidad y facilidad de uso.
 
 El objetivo de este bloque es aprender a recoger información de una API desde Java, procesar la respuesta recibida y trabajar con los datos de forma controlada dentro del programa. Para ello, se utiliza el cliente HTTP incorporado en Java, que permite construir peticiones, enviarlas a un servidor y recibir la respuesta correspondiente.
 
