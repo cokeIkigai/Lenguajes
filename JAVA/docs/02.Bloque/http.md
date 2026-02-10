@@ -33,9 +33,7 @@ Una **RESPUESTA** HTTP es la contestación del servidor a la petición realizada
 - `Headers`: proporcionan **información** sobre la respuesta, como el tipo de contenido que se envía.
 - `Body`: contiene los **datos** reales que el servidor devuelve.
 
-Cuando el servidor `responde`, incluye un código de estado HTTP que indica el resultado de la operación:
-
-## 🗣️ Tipos de respuestas en una API REST (HTTP) 
+### 🗣️ Tipos de respuestas en una API REST (HTTP) 
 
 | Categoría | Código | Nombre | Uso habitual |
 |---------|-------|--------|-------------|
@@ -53,7 +51,6 @@ Cuando el servidor `responde`, incluye un código de estado HTTP que indica el r
 | 🔁 Redirección | 301 | Moved Permanently | Recurso movido de forma permanente |
 | 🔁 Redirección | 302 | Found | Redirección temporal |
 | ℹ️ Informativo | 100 | Continue | Continuar con el envío de la petición |
-
 
 
 ---
