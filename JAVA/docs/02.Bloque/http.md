@@ -1,6 +1,10 @@
 # Comunicación HTTP y Consumo de APIs en Java
 
-**HTTP** *(HyperText Transfer Protocol)* es el protocolo que permite la comunicación entre aplicaciones a través de Internet. Define cómo un cliente, como un navegador web o una aplicación Java, puede solicitar información a un servidor y cómo este responde a dicha solicitud. HTTP funciona siempre siguiendo un modelo de petición–respuesta: el cliente envía una petición y el servidor devuelve una respuesta con un código de estado y, en muchos casos, datos asociados.
+## ¿Qué es HTTP?
+
+**HTTP** *(HyperText Transfer Protocol)* es el protocolo que permite la comunicación entre aplicaciones a través de Internet. Define cómo un cliente, como un navegador web o una aplicación Java, puede solicitar información a un servidor y cómo este responde a dicha solicitud. 
+
+HTTP funciona siempre siguiendo un modelo de petición–respuesta: el cliente envía una petición y el servidor devuelve una respuesta con un código de estado y, en muchos casos, datos asociados.
 
 Las peticiones HTTP se realizan mediante distintos métodos que indican la acción que se desea llevar a cabo. El método GET se utiliza para obtener información, POST para enviar nuevos datos, PUT para modificar información existente y DELETE para eliminar recursos. Cuando el servidor responde, incluye un código de estado HTTP que indica el resultado de la operación, como 200 cuando la petición se ha realizado correctamente, 404 cuando el recurso no existe o 500 cuando se produce un error interno en el servidor.
 
