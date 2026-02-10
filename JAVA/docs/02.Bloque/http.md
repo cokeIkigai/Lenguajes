@@ -54,7 +54,6 @@ Una **RESPUESTA** HTTP es la contestación del servidor a la petición realizada
 | 🔁 Redirección | 302 | Found | Redirección temporal |
 | ℹ️ Informativo | 100 | Continue | Continuar con el envío de la petición |
 
-
 ---
 
 ## 🏢 API
@@ -74,6 +73,26 @@ Una **RESPUESTA** HTTP es la contestación del servidor a la petición realizada
 Es una API donde se puede hacer peticiones y tiene una documentación para cada endpoint que llames. Te dice que tipo de información estará en tu respuesta.
 Para el endpoint `https://pokeapi.co/api/v2/`, la información que nos llega si lo ponemos en la url de nuestro navegador nos saldrá esto:
 
+<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/7f1e961d-9892-4d64-9f66-21a083a32ec2" />
+
+Para poder luego almacenar esa información en JAVA, es necesario crear una clase por cada estructura que haya, para el ejemplo anterior sería algo así:
+
+```java
+public static class Pokemon {
+
+   String ability",
+   String berry,
+   String berry-firmness,
+   String berry-flavor,
+   String characteristic,
+   String contest-effect,
+   String contest-type
+   
+   ..........más............
+
+   -- GETTER y SETTERS --
+}
+```
 
 **pom.xml**:
 ```xml
