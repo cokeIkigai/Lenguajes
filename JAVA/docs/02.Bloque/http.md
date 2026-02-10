@@ -26,15 +26,17 @@ Cuando el servidor `responde`, incluye un código de estado HTTP que indica el r
 - Respuesta `404` cuando el recurso no existe o
 - Respuesta `500` cuando se produce un error interno en el servidor.
 
-### En el contexto de la programación
+---
 
-HTTP se utiliza principalmente para `consumir APIs`. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. Estas APIs suelen devolver los datos en formato JSON, un formato de texto estructurado muy común en aplicaciones modernas por su simplicidad y facilidad de uso.
+### API
 
-El objetivo de este bloque es aprender a recoger información de una API desde Java, procesar la respuesta recibida y trabajar con los datos de forma controlada dentro del programa. Para ello, se utiliza el cliente HTTP incorporado en Java, que permite construir peticiones, enviarlas a un servidor y recibir la respuesta correspondiente.
+**HTTP** se utiliza principalmente para `consumir APIs`. Una API es un servicio que expone información o funcionalidades a través de URLs accesibles mediante peticiones HTTP. 
 
-En este proyecto se emplea Maven para la gestión de dependencias, lo que permite incorporar librerías externas de forma sencilla. En concreto, se utiliza la librería Gson, que facilita la conversión de datos en formato JSON a objetos Java. Gracias a Gson, el JSON recibido desde la API puede transformarse directamente en clases Java, evitando tener que procesar manualmente el contenido de la respuesta.
+- Estas APIs suelen devolver los datos en `formato JSON`.
+- Un formato de texto estructurado muy común en aplicaciones modernas por su simplicidad y facilidad de uso.
 
-El programa realiza una petición HTTP de tipo GET a una API pública, recibe la respuesta en formato JSON y la convierte en objetos Java mediante Gson. A partir de esos objetos, la aplicación puede acceder a la información recibida y mostrarla o procesarla según sea necesario. Este flujo reproduce un escenario real de comunicación entre aplicaciones y sienta las bases para el trabajo con servicios web, APIs REST y aplicaciones backend más avanzadas.
+
+ <img src="../../img/HTPP.gif" width="500" height="250">
 
 ---
 
