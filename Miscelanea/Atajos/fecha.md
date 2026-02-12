@@ -39,30 +39,56 @@ Estas clases son inmutables, legibles y facilitan cálculos, comparaciones y for
 
 ---
 
-
-## “Now” y creación de fechas
+### “Now” y creación de fechas
 ```java
-  LocalDate hoy = LocalDate.now();  --  2026-02-12
-  LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12
-  LocalDate fecha = LocalDate.of(2026, 2, 12); -- 2026-02-12
-  LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30); -- 2026-02-12T10:30
-  Instant ahoraUtc = Instant.now(); -- 2026-02-12T10:15:32.458Z
-  ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12T11:15:32.460+01:00[Europe/Madrid]
-```
-
-4) Sumar/restar y comparar
 import java.time.*;
 
-LocalDate d = LocalDate.of(2026, 2, 12);
+public class Main {
+    public static void main(String[] args) {
+      LocalDate hoy = LocalDate.now();  --  2026-02-12
+      LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12
+      LocalDate fecha = LocalDate.of(2026, 2, 12); -- 2026-02-12
+      LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30); -- 2026-02-12T10:30
+      Instant ahoraUtc = Instant.now(); -- 2026-02-12T10:15:32.458Z
+      ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12T11:15:32.460+01:00[Europe/Madrid]
+   }
+}
+```
+### Comparación de Fechas
 
-LocalDate mas7 = d.plusDays(7);
-LocalDate menos2Meses = d.minusMonths(2);
+```java
+public class Main {
+    public static void main(String[] args) {
 
-boolean antes = d.isBefore(LocalDate.now());
-boolean despues = d.isAfter(LocalDate.now());
-boolean igual = d.isEqual(LocalDate.now());
+        LocalDate d = LocalDate.of(2026, 2, 12);
+        LocalDate mas7 = d.plusDays(7);
+        LocalDate menos2Meses = d.minusMonths(2);
+        boolean antes = d.isBefore(LocalDate.now());
+        boolean despues = d.isAfter(LocalDate.now());
+        boolean igual = d.isEqual(LocalDate.now());
+        System.out.println("d: " + d);
+        System.out.println("mas7: " + mas7);
+        System.out.println("menos2Meses: " + menos2Meses);
+        System.out.println("antes: " + antes);
+        System.out.println("despues: " + despues);
+        System.out.println("igual: " + igual);
+    }
+}
+```
 
-5) Diferencias: Period vs Duration
+- Consola:
+
+```
+d: 2026-02-12
+mas7: 2026-02-19
+menos2Meses: 2025-12-12
+antes: false
+despues: false
+igual: true
+```
+
+### Diferencias: Period vs Duration
+```java
 import java.time.*;
 
 LocalDate a = LocalDate.of(2026, 2, 1);
@@ -76,17 +102,19 @@ LocalDateTime y = LocalDateTime.of(2026, 2, 12, 12, 30);
 
 Duration dur = Duration.between(x, y); // 2h 30m exactos
 long minutos = dur.toMinutes();
+```
 
-6) Zonas horarias y cambios de hora (muy importante)
+### Zonas horarias y cambios de hora (muy importante)
 
-Para “hora real” en el mundo: no uses LocalDateTime si hay zona implicada.
+Para “hora real” en el mundo, es mejor no usar `LocalDateTime` si hay zona implicada.
 
+```java
 import java.time.*;
 
 ZoneId madrid = ZoneId.of("Europe/Madrid");
 ZonedDateTime z = ZonedDateTime.of(2026, 3, 29, 2, 30, 0, 0, madrid); 
 // OJO: en cambios de hora, algunas horas no existen o se duplican.
-
+```
 
 Recomendación:
 
@@ -94,7 +122,8 @@ Guardar en BBDD como Instant o OffsetDateTime (UTC/offset).
 
 Mostrar al usuario con ZonedDateTime en su zona.
 
-7) Convertir entre tipos (tabla típica)
+### Convertir entre tipos (tabla típica)
+```java
 LocalDate → LocalDateTime
 LocalDate d = LocalDate.now();
 LocalDateTime inicioDia = d.atStartOfDay();
@@ -107,9 +136,10 @@ Instant instant = ldt.atZone(zone).toInstant();
 Instant → ZonedDateTime
 Instant i = Instant.now();
 ZonedDateTime z = i.atZone(ZoneId.of("Europe/Madrid"));
+```
 
-8) Formateo y parsing (String ↔ Date)
-Formateo
+### Formateo y parsing (String ↔ Date)
+```java
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
@@ -122,23 +152,28 @@ String s2 = d.format(es); // 12/02/2026
 Parsing
 LocalDate d1 = LocalDate.parse("2026-02-12");
 LocalDate d2 = LocalDate.parse("12/02/2026", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+```
 
-9) Truncar / redondear (quitar minutos/segundos)
+### Truncar / redondear (quitar minutos/segundos)
+```java
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
 LocalDateTime ldt = LocalDateTime.now();
 LocalDateTime sinSegundos = ldt.truncatedTo(ChronoUnit.MINUTES);
+```
 
-10) Date legado ↔ java.time (cuando haya librerías antiguas)
+### Date legado ↔ java.time (cuando haya librerías antiguas)
+```java
 import java.time.*;
 import java.util.Date;
 
 Date old = new Date();
 Instant i = old.toInstant();
 Date back = Date.from(i);
+```
 
-11) Errores típicos (para enseñar en clase)
+11) Errores típicos 
 
 Usar LocalDateTime para “hora real global” (pierdes zona/offset).
 
