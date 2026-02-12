@@ -13,61 +13,42 @@ Aquí aparecen tipos más claros y seguros según la necesidad:
 - `LocalDate` para solo fecha, 
 - `LocalDateTime` para fecha y hora sin zona, 
 - `ZonedDateTime` cuando intervienen zonas horarias.
-- 
+
 Estas clases son inmutables, legibles y facilitan cálculos, comparaciones y formateo.
 
 ---
 
-Regla práctica:
+## 🕒 Tipos principales de fechas y tiempos en `java.time`
 
-Solo fecha (sin hora): LocalDate
+| Tipo | Ejemplo | Qué representa | Cuándo usarlo |
+|---|---|---|---|
+| `LocalDate` | 2026-02-12 | Solo fecha (sin hora ni zona) | Cumpleaños, días de evento, calendarios |
+| `LocalTime` | 10:30:15 | Solo hora (sin fecha ni zona) | Horarios diarios, aperturas, alarmas |
+| `LocalDateTime` | 2026-02-12T10:30:15 | Fecha + hora sin zona | Apps locales donde no importa el país/zona |
+| `ZoneId` | "Europe/Madrid" | Identificador de zona horaria | Convertir horas entre países |
+| `ZonedDateTime` | 2026-02-12T10:30:15+01:00[Europe/Madrid] | Fecha + hora + zona completa | Sistemas internacionales, cambios de hora (DST) |
+| `OffsetDateTime` | 2026-02-12T10:30:15+01:00 | Fecha + hora con offset fijo | APIs REST, JSON, comunicación entre sistemas |
+| `Instant` | 2026-02-12T09:30:15Z | Punto exacto en UTC | Guardar en BBDD, logs, timestamps universales |
+| `Period` | P1Y2M3D | Diferencia en años/meses/días | Edad, días entre fechas calendario |
+| `Duration` | PT2H30M | Diferencia exacta en tiempo | Tiempos técnicos, segundos/minutos reales |
+| `Year` | 2026 | Solo año | Filtros anuales, informes |
+| `YearMonth` | 2026-02 | Año + mes | Facturación mensual, estadísticas |
+| `MonthDay` | --02-12 | Día y mes sin año | Cumpleaños recurrentes |
+| `Clock` | systemUTC() | Fuente de tiempo configurable | Testing, simulaciones de tiempo |
+| `DateTimeFormatter` | dd/MM/yyyy | Formateo y parsing | Mostrar fechas al usuario |
 
-Fecha + hora (sin zona): LocalDateTime
+---
 
-Fecha + hora + zona: ZonedDateTime
 
-Timestamp universal (UTC): Instant
-
-2) Las clases clave (mapa mental)
-Fechas “humanas”
-
-LocalDate → 2026-02-12
-
-LocalTime → 10:30:15
-
-LocalDateTime → 2026-02-12T10:30:15
-
-Con zona / universal
-
-ZoneId → "Europe/Madrid"
-
-ZonedDateTime → fecha-hora en una zona (maneja cambios de hora)
-
-OffsetDateTime → fecha-hora con offset (+01:00, +02:00)
-
-Instant → punto en el tiempo (UTC)
-
-Duraciones y periodos
-
-Period → años/meses/días (calendario)
-
-Duration → horas/minutos/segundos (tiempo exacto)
-
-Formateo y parsing
-
-DateTimeFormatter → patrones y parseo seguro
-
-3) “Now” y creación de fechas
-import java.time.*;
-
-LocalDate hoy = LocalDate.now();
-LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid"));
-
-LocalDate fecha = LocalDate.of(2026, 2, 12);
-LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30);
-
-Instant ahoraUtc = Instant.now();
-ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid"));
+## “Now” y creación de fechas
+```java
+  LocalDate hoy = LocalDate.now();  --  2026-02-12
+  LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12
+  LocalDate fecha = LocalDate.of(2026, 2, 12); -- 2026-02-12
+  LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30); -- 2026-02-12T10:30
+  Instant ahoraUtc = Instant.now(); -- 2026-02-12T10:15:32.458Z
+  ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12T11:15:32.460+01:00[Europe/Madrid]
+```
 
 4) Sumar/restar y comparar
 import java.time.*;
