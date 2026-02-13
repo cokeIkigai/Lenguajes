@@ -108,7 +108,7 @@ import java.time.*;
 
 ZoneId madrid = ZoneId.of("Europe/Madrid");
 ZonedDateTime z = ZonedDateTime.of(2026, 3, 29, 2, 30, 0, 0, madrid); 
-// OJO: en cambios de hora, algunas horas no existen o se duplican.
+
 ```
 
 Recomendación:
@@ -168,52 +168,12 @@ Instant i = old.toInstant();
 Date back = Date.from(i);
 ```
 
-11) Errores típicos 
+### Errores típicos 
 
-Usar LocalDateTime para “hora real global” (pierdes zona/offset).
+- Usar LocalDateTime para “hora real global” (pierdes zona/offset).
+- Guardar timestamps como String sin formato estándar.
+- Mezclar Period y Duration sin entender que no miden lo mismo.
+- No especificar Locale al formatear nombres de meses/días (si aplica).
+- Ignorar cambios de hora (DST).
 
-Guardar timestamps como String sin formato estándar.
 
-Mezclar Period y Duration sin entender que no miden lo mismo.
-
-No especificar Locale al formatear nombres de meses/días (si aplica).
-
-Ignorar cambios de hora (DST).
-
-12) Mini-proyecto de clase (para dominar TODO)
-
-Objetivo: agenda de eventos con:
-
-Entrada por consola: dd/MM/yyyy HH:mm y zona “Europe/Madrid”
-
-Guardar internamente como Instant
-
-Listar en Madrid y también en otra zona (por ejemplo “America/New_York”)
-
-Calcular:
-
-días hasta el evento (Period)
-
-horas exactas hasta el evento (Duration)
-
-si cae en fin de semana
-
-13) Índice propuesto del “Tema”
-
-Problema histórico (Date/Calendar) y solución (java.time)
-
-Tipos principales y cuándo usar cada uno
-
-Operaciones (sumas/restas, comparaciones)
-
-Period vs Duration
-
-Zonas horarias y DST
-
-Formateo y parsing
-
-Conversiones con legado
-
-Ejercicios + mini-proyecto
-
-Si quieres, te lo convierto a un tema listo para entregar (con teoría + ejercicios + soluciones) orientado a FP: dificultad progresiva, checklist de evaluación y 10-12 ejercicios típicos (parseo, formateo, diferencias, zonas, etc.).
