@@ -9,11 +9,6 @@
 - Además, es mutable, tiene métodos confusos y obliga a usar clases como `Calendar` para operaciones básicas, lo que complica el código y aumenta la probabilidad de errores.
 
 Desde `Java 8` se introdujo el paquete `java.time`, diseñado para sustituir a Date. 
-Aquí aparecen tipos más claros y seguros según la necesidad: 
-- `LocalDate` para solo fecha, 
-- `LocalDateTime` para fecha y hora sin zona, 
-- `ZonedDateTime` cuando intervienen zonas horarias.
-
 Estas clases son inmutables, legibles y facilitan cálculos, comparaciones y formateo.
 
 ---
@@ -45,7 +40,7 @@ import java.time.*;
 
 public class Main {
     public static void main(String[] args) {
-      LocalDate hoy = LocalDate.now();                                      //  2026-02-12
+      LocalDate hoy = LocalDate.now();                                      // 2026-02-12
       LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid"));      // 2026-02-12
       LocalDate fecha = LocalDate.of(2026, 2, 12);                          // 2026-02-12
       LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30);      // 2026-02-12T10:30
