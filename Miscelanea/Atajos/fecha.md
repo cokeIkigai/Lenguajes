@@ -45,12 +45,12 @@ import java.time.*;
 
 public class Main {
     public static void main(String[] args) {
-      LocalDate hoy = LocalDate.now();  --  2026-02-12
-      LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12
-      LocalDate fecha = LocalDate.of(2026, 2, 12); -- 2026-02-12
-      LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30); -- 2026-02-12T10:30
-      Instant ahoraUtc = Instant.now(); -- 2026-02-12T10:15:32.458Z
-      ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid")); -- 2026-02-12T11:15:32.460+01:00[Europe/Madrid]
+      LocalDate hoy = LocalDate.now();                                      //  2026-02-12
+      LocalDate hoyMadrid = LocalDate.now(ZoneId.of("Europe/Madrid"));      // 2026-02-12
+      LocalDate fecha = LocalDate.of(2026, 2, 12);                          // 2026-02-12
+      LocalDateTime fechaHora = LocalDateTime.of(2026, 2, 12, 10, 30);      // 2026-02-12T10:30
+      Instant ahoraUtc = Instant.now();                                     // 2026-02-12T10:15:32.458Z
+      ZonedDateTime madrid = ZonedDateTime.now(ZoneId.of("Europe/Madrid")); // 2026-02-12T11:15:32.460+01:00[Europe/Madrid]
    }
 }
 ```
