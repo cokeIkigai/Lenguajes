@@ -55,12 +55,12 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
 
-        LocalDate d = LocalDate.of(2026, 2, 12);      --2026-02-12
-        LocalDate mas7 = d.plusDays(7);               -- 2026-02-19
-        LocalDate menos2Meses = d.minusMonths(2);     -- 2025-12-12
-        boolean antes = d.isBefore(LocalDate.now());  -- false
-        boolean despues = d.isAfter(LocalDate.now()); -- false
-        boolean igual = d.isEqual(LocalDate.now());   -- true
+        LocalDate d = LocalDate.of(2026, 2, 12);      // 2026-02-12
+        LocalDate mas7 = d.plusDays(7);               // 2026-02-19
+        LocalDate menos2Meses = d.minusMonths(2);     // 2025-12-12
+        boolean antes = d.isBefore(LocalDate.now());  // false
+        boolean despues = d.isAfter(LocalDate.now()); // false
+        boolean igual = d.isEqual(LocalDate.now());   // true
     }
 }
 ```
