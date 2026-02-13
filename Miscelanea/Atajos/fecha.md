@@ -153,11 +153,11 @@ Date back = Date.from(i);
 
 ### Errores típicos 
 
-- Usar LocalDateTime para “hora real global” (pierdes zona/offset).
-- Guardar timestamps como String sin formato estándar.
-- Mezclar Period y Duration sin entender que no miden lo mismo.
-- No especificar Locale al formatear nombres de meses/días (si aplica).
-- Ignorar cambios de hora (DST).
+- Usar `LocalDateTime` para “hora real global” (pierdes zona/offset).
+- Guardar `timestamps` como String sin formato estándar.
+- Mezclar `Period y Duration` sin entender que no miden lo mismo.
+- No especificar Locale al `formatear` nombres de meses/días (si aplica).
+- `Ignorar cambios` de hora (DST).
 
 --- 
 
