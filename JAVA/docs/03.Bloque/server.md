@@ -98,7 +98,7 @@ public class Main {
     }
 }
 ```
-## Proyecto con una organizaciónde carpetas mucho más organizada.
+## Proyecto con una organización de carpetas mucho más organizada.
 ### Main:
 
 ```java
@@ -236,7 +236,7 @@ Partiendo del endpoint:
 
 `https://dog.ceo/api/breeds/list/all`
 
-debéis transformar la respuesta original en un **JSON más cómodo** que luego permita generar llamadas específicas como:
+Debéis transformar la respuesta original en un **JSON más cómodo** que luego permita generar llamadas específicas como:
 
 `https://dog.ceo/api/breed/affenpinscher/images/random`
 
