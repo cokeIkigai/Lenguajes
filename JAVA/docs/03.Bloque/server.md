@@ -1,6 +1,6 @@
 # Server
 
-´´´java
+```java
 package org.example;
 
 import com.sun.net.httpserver.HttpServer;
@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Servidor iniciado en http://localhost:8080");
     }
 }
-´´´
+```
 ### Router:
 
 ```java
