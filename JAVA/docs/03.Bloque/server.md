@@ -1,5 +1,4 @@
-# Server
-
+# 🌐 Server
 
 ### Main:
 
