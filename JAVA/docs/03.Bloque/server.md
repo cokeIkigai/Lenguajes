@@ -235,61 +235,23 @@ public class DogsController {
 Partiendo del endpoint:
 
 `https://dog.ceo/api/breeds/list/all`
+
 Crear con ese endpoint de la apiDogs lo siguiente:
 1. Devuelva todas los nombre de las razas.
 2. Devuelva los nombres solo de los que no tienen subRazas
 3. Devuela los nombres de los que tengan subRazas
 
-Debéis transformar la respuesta original en un **JSON más cómodo** que luego permita generar llamadas específicas como:
+Debéis transformar la respuesta original en un **JSON más cómodo**.
+Para el siguiente debéis usar estos endpoints que recoge
 
+`https://dog.ceo/api/breeds/image/random`
 `https://dog.ceo/api/breed/affenpinscher/images/random`
 
-La idea es que vuestro servidor NO solo reenvíe datos, sino que **procese y prepare información útil** para futuras rutas.
+1. Devuelva una imagen random
+2. Devuelva 5 imágenes de perros random
+3. Devuleva n cantiad de perros radom añadidos. 
 
----
 
-## ✅ Parte 1 — Normalizar el JSON de razas
-
-La API devuelve algo parecido a:
-
-```json
-{
-  "affenpinscher": [],
-  "bulldog": ["boston","english","french"]
-}
-```
-
-**Pasarlo a algo asi:**
-
-```json
-{
-  "breeds": [
-    { "name": "affenpinscher" },
-    { "name": "bulldog-boston" },
-    { "name": "bulldog-english" },
-    { "name": "bulldog-french" }
-  ]
-}
-```
-
-## ✅ Parte 2 — Endpoint dinámico
-
-Usando el JSON creado antes, implementar:
-```
-GET /dogs/random/{breed}
-``` 
-
-**Ejemplo:**
-
-```
-/dogs/random/affenpinscher
-```
-
-**Debe construir automáticamente:**
-
-```
-https://dog.ceo/api/breed/affenpinscher/images/random
-```
 
 ## ✅ Parte 3 — Lógica adicional
 
