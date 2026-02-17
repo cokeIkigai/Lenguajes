@@ -229,12 +229,16 @@ public class DogsController {
 
 --- 
 
-## 🧪 Ejercicio: Crear un JSON propio para construir rutas dinámicas
+## 🧪 Ejercicio: Crear un JSON
 
 ### 🎯 Objetivo
 Partiendo del endpoint:
 
 `https://dog.ceo/api/breeds/list/all`
+Crear con ese endpoint de la apiDogs lo siguiente:
+1. Devuelva todas los nombre de las razas.
+2. Devuelva los nombres solo de los que no tienen subRazas
+3. Devuela los nombres de los que tengan subRazas
 
 Debéis transformar la respuesta original en un **JSON más cómodo** que luego permita generar llamadas específicas como:
 
