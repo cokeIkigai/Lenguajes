@@ -96,12 +96,11 @@ Muy visual si vienen de Java.
 Debemos diferenciar entre los siguientes operadores o asigandores.
 
 - **Para cuando es `=`:** lo que se está haciendo es una asignación de los valores, no se está igualando o comprando a otra cosa.
+- En este caso, la variable a, no se está preguntando si ¿a es igual cero?, es la afirmación o la asignación del valor. Se está diciendo que ahora a `tiene` el valor 0.
 
 ```js
 let a = 0;         
 ```
-
-En este caso, la variable a, no se está preguntando si ¿a es igual cero?, es la afirmación o la asignación del valor. Se está diciendo que ahora a `tiene` el valor 0.
 
 - **Para cuando es `==`:** lo que se está haciendo es comparar los dos valores, donde te devuelve un booleano, true o false. Se le llama comparador débil debido a que compara el valor y no tiene encuenta el tipo. JavaScript intenta convertir los valores antes de comparar.
 
@@ -115,7 +114,7 @@ console.log(true === 1);  // false
 ```
 ---
 
-### 🛒 COMPARADOR
+### 🛒 COMPARADOR II (Diferentes Casos)
 
 ```js
 console.log(false == 0);          // true
