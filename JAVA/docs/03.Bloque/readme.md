@@ -8,6 +8,6 @@ Aprender a crear una APIREST con la organización y librería de SpringBoot
 
 - 📒 [SpringBoot](apiRest_2.md)
 
-- 🌐 [SpringBoot](server.md)
+- 🌐 [Server](server.md)
 
 
