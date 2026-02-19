@@ -8,6 +8,8 @@ Los operadores permiten realizar operaciones con valores y variables.
 - Operadores lógicos
 - Operador de concatenación
 
+---
+
 ### 🔹 1. Operadores aritméticos
 
 Se usan con números.
@@ -26,6 +28,7 @@ Se usan con números.
   console.log(a--);    // decremento
 ```
 
+--- 
 
 ### 🔹 2. Operadores de asignación
 
@@ -41,6 +44,8 @@ Modifican el valor de una variable.
 
 Esto conecta muy bien con variables.
 
+--- 
+
 ###🔹 3. Operadores de comparación
 
 Devuelven true o false.
@@ -53,9 +58,7 @@ Devuelven true o false.
   console.log(edad === 18);   // compara valor y tipo
 ```
 
-Aquí puedes introducir la idea clave:
-
-=== es más estricto que ==
+--- 
 
 ###🔹 4. Operadores lógicos
 
@@ -68,6 +71,9 @@ Se usan muchísimo en condiciones.
   console.log(activo || admin); // OR
   console.log(!activo);         // NOT
 ```
+
+---  
+
 ###🔹 5. Operador de concatenación
 
 Muy visual si vienen de Java.
