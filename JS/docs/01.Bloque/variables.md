@@ -45,7 +45,7 @@ let decimal = 3.14;                 // number
 let activo = true;                  // boolean
 let indefinido;                     // undefined
 let vacio = null;                   // null
-let grande = 1234567890123456789n; // bigint
+let grande = 1234567890123456789n;  // bigint
 let simbolo = Symbol("id");         // symbol
 
 // 🔹 Objetos (referencia)
@@ -53,8 +53,8 @@ let objeto = { nombre: "Ana", edad: 30 }; // object
 let array = [1, 2, 3];                    // object (array)
 let funcion = function () {};             // function (object)
 
-console.log(typeof null);      // "object"  ← comportamiento histórico
-console.log(typeof []);        // "object"
+console.log(typeof null);         // "object"  ← comportamiento histórico
+console.log(typeof []);           // "object"
 console.log(typeof function(){}); // "function"
 
 ```
@@ -187,7 +187,7 @@ console.log(valor); // 1
       let bloque = "solo bloque";
       console.log(global);
       console.log(local);
-      console.log(bloque);
+      console.log(bloque);  
     }
    console.log(local)
    console.log(bloque); // error
