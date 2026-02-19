@@ -46,7 +46,7 @@ Esto conecta muy bien con variables.
 
 --- 
 
-###🔹 3. Operadores de comparación
+### 🔹 3. Operadores de comparación
 
 Devuelven true o false.
 ```js
@@ -60,7 +60,7 @@ Devuelven true o false.
 
 --- 
 
-###🔹 4. Operadores lógicos
+### 🔹 4. Operadores lógicos
 
 Se usan muchísimo en condiciones.
 ```js
@@ -74,7 +74,7 @@ Se usan muchísimo en condiciones.
 
 ---  
 
-###🔹 5. Operador de concatenación
+### 🔹 5. Operador de concatenación
 
 Muy visual si vienen de Java.
 ```js
