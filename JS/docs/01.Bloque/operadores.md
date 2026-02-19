@@ -118,37 +118,31 @@ console.log(true === 1);  // false
 ### 🛒 COMPARADOR
 
 ```js
+console.log(false == 0);          // true
+console.log(false == []);         // true
+console.log(true == 1);           // true
+console.log([] == 0);             // true
+console.log([] == false);         // true
+console.log(null == undefined);   // true
 
+// 🔹 COMPARACIONES QUE DAN FALSE
+console.log(false == {});         // false
+console.log(false == null);       // false
+console.log(false == undefined);  // false
 
-// 🔹 Comparaciones con false
-console.log(false == 0);         // true
-console.log(false == []);        // true
-console.log(false == {});        // false
-console.log(false == null);      // false
-console.log(false == undefined); // false
+console.log(true == []);          // false
+console.log(true == {});          // false
+console.log(true == undefined);   // false
 
+console.log({} == 0);             // false
 
-// 🔹 Comparaciones con true
-console.log(true == 1);   // true
-console.log(true == []);  // false
-console.log(true == {});  // false
-console.log(true == undefined); // false
-console.log({} == 0);        // false
+console.log([] == true);          // false
+console.log([] == null);          // false
+console.log([] == undefined);     // false
 
-// 🔹 Comparaciones con []
-console.log([] == 0);         // true
-console.log([] == false);     // true
-console.log([] == true);      // false
-console.log([] == null);      // false
-console.log([] == undefined); // false
+console.log(null == false);       // false
+console.log(undefined == false);  // false
 
-// 🔹 Comparaciones especiales
-console.log(null == undefined); // true
-console.log(null == false);     // false
-console.log(undefined == false);// false
-
-// 🔹 Comparaciones con 0
-
-console.log(0 == null);      // false
-console.log(0 == undefined); // false
+console.log(0 == null);           // false
+console.log(0 == undefined);      // false
 ```
