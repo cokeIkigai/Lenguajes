@@ -110,7 +110,7 @@ console.log(n1, n2, n3);
 
 El scope es el ámbito de visibilidad de una variable. Define dónde puedes acceder a ella dentro del código.
 
-### 🌏 GLOBAL
+### 🌏1. GLOBAL
 
 Variable creada fuera de bloques o funciones. Normalmente se declara al inicio del programa y tienes acceso en todo él.
 
@@ -119,7 +119,7 @@ let nombre = "Ana";
 console.log(nombre); // accesible
 ```
 
-### 🏙️ BLOQUE {}
+### 🏙️ 2. BLOQUE {}
 
 Está dentro de funciones o de condiciones.
 
@@ -131,17 +131,8 @@ if (true) {
 console.log(edad); // ❌ error
 ```
 
-**Resuelve**
-```js
-let edad;
-if (true) {
-  edad = 40;
-  console.log(edad); // OK
-}
-console.log(edad); // OK
-```
 
-### 🛞 FUNCIÓN
+### 🛞 3. FUNCIÓN
 
 ```js
 function saludar() {
@@ -152,7 +143,7 @@ saludar();
 console.log(mensaje); // ❌ error
 ```
 
-### 🤼 VAR vs LET
+### 🤼 4. VAR vs LET
 
 Aunque ya `var` está en deshuso, es necesario comprender cómo funciona.
 
@@ -171,7 +162,7 @@ if (true) {
 console.log(y); // ❌ error
 ```
 
-### Shadowing
+### 🌑 5. Shadowing 
 
 Una variable interna puede “tapar” otra.
 
@@ -184,7 +175,7 @@ if (true) {
 console.log(valor); // 1
 ```
 
-### Resumen Scopes
+### 🟢 Resumen Scopes
 
 ```js
   let global = "soy global";
