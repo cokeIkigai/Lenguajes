@@ -251,12 +251,3 @@ Para el siguiente debéis usar estos endpoints que recoge
 2. Devuelva 5 imágenes de perros random
 3. Devuleva n cantiad de perros radom añadidos. 
 
-
-
-## ✅ Parte 3 — Lógica adicional
-
-Si la raza no existe en vuestro JSON → devolver error.
-
-No se permite escribir las razas a mano.
-
-Todo debe salir del endpoint list/all.
