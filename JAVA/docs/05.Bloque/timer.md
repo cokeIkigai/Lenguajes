@@ -12,7 +12,7 @@
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class EjemploBasico {
+public class Main {
     public static void main(String[] args) {
         // 1. Crear el despertador
         Timer timer = new Timer();
@@ -43,7 +43,7 @@ public class EjemploBasico {
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ContadorSegundos {
+public class Main {
     private static int contador = 0;
     
     public static void main(String[] args) {
@@ -77,7 +77,7 @@ public class ContadorSegundos {
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class CuentaAtras {
+public class Main {
     private static int segundosRestantes = 10;
     
     public static void main(String[] args) {
@@ -108,7 +108,7 @@ public class CuentaAtras {
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MultiplesTareas {
+public class Main {
         public static void main(String[] args) {
         Timer timer = new Timer();
 
@@ -154,7 +154,7 @@ public class MultiplesTareas {
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class UnaVez {
+public class Main {
     public static void main(String[] args) {
         Timer timer = new Timer();
         
@@ -181,7 +181,7 @@ public class UnaVez {
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TemporizadorHHMMSS {
+public class Main {
     private static int horas = 0;
     private static int minutos = 0;
     private static int segundos = 0;
@@ -225,7 +225,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Scanner;
 
-public class PararTimer {
+public class Main {
     private static Timer timer;
     
     public static void main(String[] args) {
