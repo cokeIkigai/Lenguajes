@@ -71,7 +71,7 @@ public class ContadorSegundos {
 
 ---
 
-## ⏲️ EJEMPLO 3: Temporizador con cuenta atrás (muy útil)
+## ⏲️ EJEMPLO 3: Temporizador con cuenta atrás.
 
 ```java
 import java.util.Timer;
@@ -109,39 +109,39 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MultiplesTareas {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Timer timer = new Timer();
-        
-        // Tarea 1: Cada 2 segundos
+
+        // Tarea 1: Cada 10 segundos
         TimerTask tarea1 = new TimerTask() {
             @Override
             public void run() {
-                System.out.println(" Tarea 1: Cada 2 segundos");
+                System.out.println(" Tarea 1: Servidor correcto (10s)");
             }
         };
-        
+
         // Tarea 2: Cada 3 segundos
         TimerTask tarea2 = new TimerTask() {
             @Override
             public void run() {
-                System.out.println(" Tarea 2: Cada 3 segundos");
+                System.out.println(" Tarea 2: Limpieza de cache (3s)");
             }
         };
-        
+
         // Tarea 3: Cada 5 segundos
         TimerTask tarea3 = new TimerTask() {
             @Override
             public void run() {
-                System.out.println(" Tarea 3: Cada 5 segundos");
+                System.out.println(" Tarea 3: enviar Backup (5s)");
             }
         };
-        
+
         // Programar todas
-        timer.scheduleAtFixedRate(tarea1, 0, 2000);
+        timer.scheduleAtFixedRate(tarea1, 0, 10000);
         timer.scheduleAtFixedRate(tarea2, 0, 3000);
         timer.scheduleAtFixedRate(tarea3, 0, 5000);
-        
-        System.out.println(" 3 tareas ejecutándose simultáneamente");
+
+        System.out.println(" 3 tareas ejecutÃ¡ndose simultáneamente");
     }
 }
 ```
@@ -212,7 +212,7 @@ public class TemporizadorHHMMSS {
             }
         };
         
-        System.out.println("🎮 Temporizador iniciado: 00:00:05 (5 segundos)");
+        System.out.println(" Temporizador iniciado: 00:00:05 (5 segundos)");
         timer.scheduleAtFixedRate(tarea, 0, 1000);
     }
 }
@@ -250,5 +250,25 @@ public class PararTimer {
     }
 }
 ```
+
+---
+
+## EJERCICIO
+
+Crea un programa que muestre por consola: 
+1. Inicio: "🕒 AHORA: [fecha y hora actual]"
+2. Inicio2 "🕒 HORA ESPERADA: [fecha y hora que debería ser (ahora + x tiempo)]"
+3. Cuando se ejecute la tarea, debe mostrar:
+    - "¡Ha pasado X "tiempo"!"
+    - "HORA DE EJECUCIÓN: [fecha y hora de la ejecución]"
+   
+- Fecha y hora dentro de 1 minuto
+- Fecha y hora dentro de 2 horas
+- Fecha y hora dentro de 1 día
+- Fecha y hora dentro de 1 semana
+- Fecha y hora dentro de 1 mes
+- Fecha y hora dentro de 1 año
+
+
 
 
