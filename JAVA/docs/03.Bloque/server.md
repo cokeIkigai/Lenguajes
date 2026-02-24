@@ -249,5 +249,5 @@ Para el siguiente debéis usar estos endpoints que recoge
 
 1. Devuelva una imagen random
 2. Devuelva 5 imágenes de perros random
-3. Devuleva n cantiad de perros radom añadidos. 
+3. Devulevan n cantidad de perros radom añadidos. 
 
