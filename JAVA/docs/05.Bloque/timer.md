@@ -2,7 +2,7 @@
 
 **Timer y TimerTask** es como un "despertador" para programas. Le dices "ejecuta esto cada X tiempo" y él lo hace automáticamente.
 
-> Ejemplo de la vida real: Un despertador suena a las 7:00 AM cada día → ESO ES CRON
+> Ejemplo de la vida real: Un despertador suena a las 7:00 AM cada día 
 
 ---
 
