@@ -7,3 +7,5 @@ Crea un método que intercambie cada letra de un texto de mínimo 5 frases cambi
 Transforma tu DNI en un ASCII
  char letra = 'A';
 int ascii = (int) letra; 
+
+# ENUNCIADO 3: PASAR un PASSWORD que tenga relación a la hora que se ha creado y si despues de un minuto no se desencripta que diga que ha expirado.
