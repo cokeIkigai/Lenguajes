@@ -40,3 +40,7 @@ Id de un caracter en caracter paracambiar a ASCII
 
 Crea un método donde tenga relación a la hora que se ha creado y si después de un minuto no se desencripta que diga que ha expirado.
 
+# ENUNCIADO 4: VERIFICAR SI UN DNI ES VÁLIDO
+
+Se puede usar un Scanner o una cadena predeterminada directamente.
+
