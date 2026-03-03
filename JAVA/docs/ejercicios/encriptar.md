@@ -38,7 +38,10 @@ Id de un caracter en caracter paracambiar a ASCII
 
 # ENUNCIADO 3: PASAR un PASSWORD 
 
-Crea un método donde tenga relación a la hora que se ha creado y si después de un minuto no se desencripta que diga que ha expirado.
+Crea un password y cífralo junto con la fecha actual. (Usas el método anterior de cifrado)
+Verificar si no ha caducado la sesión de un minuto.
+Si ha caducado, se pone que ha caducado tantos minutos, segundos...
+Si es antes de un minuto, muestras el password descrifrado sin su fecha y hora, solo el passowrd.
 
 # ENUNCIADO 4: VERIFICAR SI UN DNI ES VÁLIDO
 
