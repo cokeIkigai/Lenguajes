@@ -44,7 +44,7 @@ Verificar si no ha caducado la sesión de un minuto.
 
 Si ha caducado, se pone que ha caducado tantos minutos, segundos...
 
-Si es antes de un minuto, muestras el password descrifrado sin su fecha y hora, solo el passowrd.
+Si es antes de un minuto, muestras el password descífrado sin su fecha y hora, solo el password.
 
 # ENUNCIADO 4: VERIFICAR SI UN DNI ES VÁLIDO
 
