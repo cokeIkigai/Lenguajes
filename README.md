@@ -1,4 +1,4 @@
-# Lenguajes de Programación 🚀
+# 🚀 Lenguajes de Programación 
 
 Repositorio con ejemplos, ejercicios y recursos de distintos lenguajes.
 Cada carpeta contiene material organizado para practicar y aprender de forma rápida.
