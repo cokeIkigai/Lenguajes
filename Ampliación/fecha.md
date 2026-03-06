@@ -164,11 +164,11 @@ Date back = Date.from(i);
 ### 🧩 Ejecicios
 
 1. **Match Day**
-- Comprueba si hoy es el día del partido.
+- Comprueba si hoy es el día del evento.
 - Fecha del evento: 2026-02-12.
 
 2. **Cuenta atrás**
-- Calcula cuántos días faltan desde hoy hasta el partido.
+- Calcula cuántos días faltan/sobran desde hoy hasta el evento.
 - Fecha del evento: 2026-02-12.
 
 3. **Registro de logs**
@@ -179,7 +179,7 @@ Date back = Date.from(i);
 
 5. **Creación de evento**
 - Crea una fecha y hora fija para un evento:
-- 2026-02-12 a las 10:30.
+- texto y luego lo pasas a Fecha: 2026-02-12 a las 10:30.
 
 6. **Evento pasado o futuro**
 - Indica si el evento (2026-02-12) ya ocurrió, es hoy o será en el futuro.
