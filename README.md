@@ -5,7 +5,7 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
   
 ☕ [JAVA](JAVA/ReadmeTemas.md):  Fundamentos, POO, colecciones, métodos, clases y ejercicios prácticos.
 
-📚[GIT](GIT/git.md): Fundamentos básicos del uso de git.
+📚 [GIT](GIT/git.md): Fundamentos básicos del uso de git.
 
 📄 [MARKDOWN](MD/markdown.md): MarkDown, lenguaje ligero para readme más atractivos de leer.
 
