@@ -163,38 +163,25 @@ Date back = Date.from(i);
 
 ### 🧩 Ejecicios
 
-1. **Match Day**
-- Comprueba si hoy es el día del evento.
-- Fecha del evento: 2026-02-12.
+1. **Match Day**: Comprueba si hoy es el día del evento. Fecha del evento: 2026-02-12.
 
-2. **Cuenta atrás**
-- Calcula cuántos días faltan/sobran desde hoy hasta el evento.
-- Fecha del evento: 2026-02-12.
+2. **Cuenta atrás**: Calcula cuántos días faltan/sobran desde hoy hasta el evento. Fecha del evento: 2026-02-12.
 
-3. **Registro de logs**
-- Obtén el instante actual en UTC para guardar un registro del sistema.
+3. **Registro de logs**: Obtén el instante actual en UTC para guardar un registro del sistema.
 
-4. **Hora internacional**
-- Muestra la fecha y hora actual en la zona "Europe/Madrid".
+4. **Hora internacional**: Muestra la fecha y hora actual en la zona "Europe/Madrid".
 
-5. **Creación de evento**
-- Crea una fecha y hora fija para un evento:
-- texto y luego lo pasas a Fecha: 2026-02-12 a las 10:30.
+5. **Creación de evento**: Crea una fecha y hora fija para un evento. Texto y luego lo pasas a Fecha: 2026-02-12 a las 10:30.
 
-6. **Evento pasado o futuro**
-- Indica si el evento (2026-02-12) ya ocurrió, es hoy o será en el futuro.
+6. **Evento pasado o futuro**: Indica si el evento (2026-02-12) ya ocurrió, es hoy o será en el futuro.
 
-7. **Fin de semana**
-- A partir de la fecha 2026-02-14, indica si cae en sábado o domingo.
+7. **Fin de semana**: A partir de la fecha 2026-02-14, indica si cae en sábado o domingo.
 
-8. **Sumar días**
-- A la fecha 2026-02-12 súmale 7 días y muestra la nueva fecha.
+8. **Sumar días**: A la fecha 2026-02-12 súmale 7 días y muestra la nueva fecha.
 
-9. **Restar meses**
-- A la fecha 2026-02-12 réstale 2 meses.
+9. **Restar meses**: A la fecha 2026-02-12 réstale 2 meses.
 
-10. **Conversión universal**
-- Convierte la fecha y hora 2026-02-12T10:30 en un `Instant` usando la zona "Europe/Madrid".
+10. **Conversión universal**: Convierte la fecha y hora 2026-02-12T10:30 en un `Instant` usando la zona "Europe/Madrid".
 
 
 
