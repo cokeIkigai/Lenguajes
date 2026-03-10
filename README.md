@@ -5,6 +5,8 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
 
 ---
 
+### 🕳 [Ampliación](https://github.com/cokeIkigai/Lenguajes/tree/main/Ampliaci%C3%B3n)
+
 ### ☕ [JAVA](JAVA/ReadmeTemas.md)   Fundamentos, POO, colecciones, métodos, clases y ejercicios prácticos.
 
 ### 📚 [GIT](GIT/git.md)  Fundamentos básicos del uso de git.
