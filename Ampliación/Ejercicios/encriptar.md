@@ -49,8 +49,10 @@ Si es antes de un minuto, muestras el password descífrado sin su fecha y hora, 
 
 ## 👮‍♂️ ENUNCIADO 4: Verificar si un DNI es válido
 
-Un DNI consta de 8 números y una letra. Para verificar que es correcto y es válido de suman los números y se divide entre 23, se saca su resto.
+Un DNI consta de 8 números y una letra. Para verificar que es correcto y es válido divide su número entre 23, se saca su resto.
+
 La parte entera del resto, está asociada a una letra. Si es correcto, es válido el DNI.
+
 Se puede usar un Scanner o una cadena predeterminada directamente.
 
 ## 🔐ENUNCIADO 5: Analizador de contraseñas Seguras
