@@ -11,6 +11,6 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
 
 ### 📚 [GIT](GIT/git.md)  Fundamentos básicos del uso de git.
 
-### 📄 [MARKDOWN](MD/markdown.md)  MarkDown, lenguaje ligero para readme más atractivos de leer.
+### 📄 [MARKDOWN](MD/markdown.md)  Lenguaje ligero para readme más atractivos de leer.
 
 #### 🆕 Próximos lenguajes  Se irán añadiendo más carpetas como: Python, C#, SQL, JavaScript, Bash…
