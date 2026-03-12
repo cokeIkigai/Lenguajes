@@ -212,13 +212,71 @@ public class Main {
 ```
 
 ```js
+const BASE_URL = "http://localhost:8080";
+
+// contador de clicks por raza
+const contador = {}
+
+async function cargarRazas(){
+
+    const response = await fetch(BASE_URL + "/dogs/list")
+    const data = await response.json()
+
+    const contenedor = document.getElementById("contenedorRazas")
+    contenedor.innerHTML = ""
+
+    const razas = Object.keys(data.message)
+
+    razas.forEach(raza => {
+
+        const boton = document.createElement("button")
+        boton.textContent = raza
+
+        boton.onclick = () => clickRaza(raza)
+
+        contenedor.appendChild(boton)
+    })
+
+}
+
+async function clickRaza(raza){
+
+    // mostrar raza seleccionada
+    document.getElementById("razaSeleccionada").textContent =
+        "Raza seleccionada: " + raza
+
+
+    // contador simple
+    if(!contador[raza]){
+        contador[raza] = 0
+    }
+
+    contador[raza]++
+
+
+    // mandar contador al backend
+    enviarContador()
+
+
+    // pedir imagen de esa raza
+    const response = await fetch(BASE_URL + "/dogs/image/" + raza)
+    const data = await response.json()
+
+    document.getElementById("resultado").textContent =
+        JSON.stringify(data,null,2)
+
+    const img = document.getElementById("imagenPerro")
+    img.src = data.message
+    img.style.display = "block"
+
+}
+
 function enviarContador(){
+
     // convertir objeto contador a array
     const array = Object.entries(contador).map(([nombre,veces]) => {
         return {nombre,veces}
     })
-   
-    console.log(array)
 
     fetch(BASE_URL + "/dogs/clicks",{
         method:"POST",
@@ -227,6 +285,6 @@ function enviarContador(){
         },
         body: JSON.stringify(array)
     })
- contador = {}
+
 }
 ```
