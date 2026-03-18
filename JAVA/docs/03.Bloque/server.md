@@ -19,77 +19,118 @@ La finalidad no es construir una arquitectura compleja, sino visualizar cómo Ja
 
 
 ```java
-import com.sun.net.httpserver.HttpServer;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
+package controllers;
 
-import java.io.OutputStream;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.sun.net.httpserver.HttpExchange;
+
 import java.io.IOException;
-import java.net.InetSocketAddress;
+import java.io.OutputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
-public class Main {
+public class DogsController {
 
-    private static final HttpClient client = HttpClient.newHttpClient();
+    private final HttpClient client = HttpClient.newHttpClient();
 
-    public static void main(String[] args) throws Exception {
+    public void handle(HttpExchange exchange) throws IOException {
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        String path = exchange.getRequestURI().getPath();
+        String method = exchange.getRequestMethod();
 
-        // Todo el routing aquí
-        server.createContext("/", new HttpHandler() {
-            @Override
-            public void handle(HttpExchange exchange) throws IOException {
+        //  CORS
+        exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+        exchange.getResponseHeaders().add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        exchange.getResponseHeaders().add("Access-Control-Allow-Headers", "Content-Type");
 
-                String path = exchange.getRequestURI().getPath();
+        if (method.equalsIgnoreCase("OPTIONS")) {
+            exchange.sendResponseHeaders(204, -1);
+            return;
+        }
 
-                try {
+        try {
 
-                    String apiUrl;
+            //  GET
+            if (method.equalsIgnoreCase("GET")) {
 
-                    if (path.equals("/dogs/list")) {
-                        apiUrl = "https://dog.ceo/api/breeds/list/all";
-                    }
-                    else if (path.equals("/dogs/random")) {
-                        apiUrl = "https://dog.ceo/api/breeds/image/random";
-                    }
-                    else {
-                        send(exchange, 404, "Ruta no válida");
-                        return;
-                    }
+                String apiUrl;
 
-                    HttpRequest request = HttpRequest.newBuilder()
-                            .uri(URI.create(apiUrl))
-                            .GET()
-                            .build();
+                if (path.equals("/dogs/list")) {
+                    apiUrl = "https://dog.ceo/api/breeds/list/all";
+                }
+                else if (path.equals("/dogs/random")) {
+                    apiUrl = "https://dog.ceo/api/breeds/image/random";
+                }
+                else {
+                    sendResponse(exchange, 404, "Endpoint dogs no válido");
+                    return;
+                }
 
-                    HttpResponse<String> response =
-                            client.send(request, HttpResponse.BodyHandlers.ofString());
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(apiUrl))
+                        .GET()
+                        .build();
 
-                    send(exchange, 200, response.body());
+                HttpResponse<String> response =
+                        client.send(request, HttpResponse.BodyHandlers.ofString());
 
-                } catch (Exception e) {
-                    send(exchange, 500, "Error llamando a la API");
+                sendResponse(exchange, 200, response.body());
+            }
+
+            //  POST (NUEVO)
+            else if (method.equalsIgnoreCase("POST")) {
+
+                if (path.equals("/dogs/favorite")) {
+
+                   
+                    String body = new String(
+                            exchange.getRequestBody().readAllBytes(),
+                            StandardCharsets.UTF_8
+                    );
+
+                    System.out.println("Body recibido: " + body);
+
+                  
+                    JsonObject json = JsonParser.parseString(body).getAsJsonObject();
+
+                    String breed = json.get("breed").getAsString();
+                    String image = json.get("image").getAsString();
+
+                   
+                    System.out.println("Perro favorito: " + breed + " - " + image);
+
+                   
+                    JsonObject responseJson = new JsonObject();
+                    responseJson.addProperty("status", "ok");
+                    responseJson.addProperty("message", "Guardado correctamente");
+
+                    sendResponse(exchange, 200, responseJson.toString());
+                }
+                else {
+                    sendResponse(exchange, 404, "Endpoint POST no válido");
                 }
             }
-        });
 
-        server.setExecutor(null);
-        server.start();
+            else {
+                sendResponse(exchange, 405, "Método no permitido");
+            }
 
-        System.out.println("Servidor activo:");
-        System.out.println("http://localhost:8080/dogs/list");
-        System.out.println("http://localhost:8080/dogs/random");
+        } catch (Exception e) {
+            e.printStackTrace();
+            sendResponse(exchange, 500, "Error en DogsController");
+        }
     }
 
-    private static void send(HttpExchange exchange, int status, String body) throws IOException {
+    private void sendResponse(HttpExchange exchange, int status, String body) throws IOException {
 
         exchange.getResponseHeaders().add("Content-Type", "application/json");
 
         byte[] bytes = body.getBytes();
+
         exchange.sendResponseHeaders(status, bytes.length);
 
         OutputStream os = exchange.getResponseBody();
