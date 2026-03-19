@@ -1,7 +1,9 @@
 # 🧠 Funciones en JavaScript
 ## 📌 ¿Qué es una función?
 
-### 1. Una función es un bloque de código reutilizable que se ejecuta cuando la llamas.
+Una función es un bloque de código reutilizable que se ejecuta cuando la llamas.
+
+### 1. Función y su llamada
 
 ```js
 // función que no devuelve valor
@@ -32,3 +34,46 @@ function sumar(a, b) {
 console.log(sumar(3, 5)); // 8
 ```
 
+ ### 2. Parámetros por defecto
+
+Si no se pasa valor, se usa uno por defecto.
+
+```js
+function saludar(nombre = "Invitado") {
+  console.log("Hola " + nombre);
+}
+
+saludar();        // Hola Invitado
+saludar("Coke");  // Hola Coke
+```
+
+### 3. Funciones anónimas
+
+No tienen nombre, suelen usarse dentro de variables.
+
+```js
+const multiplicar = function(a, b) {
+  return a * b;
+};
+
+console.log(multiplicar(2, 4)); // 8
+```
+
+### 4. Arrow functions (funciones flecha)
+
+Forma moderna y más corta.
+```js
+const restar = (a, b) => {
+  return a - b;
+};
+
+console.log(restar(10, 3)); // 7
+```
+
+👉 Versión corta (retorno implícito):
+
+```js
+const doble = x => x * 2;
+
+console.log(doble(5)); // 10
+```
