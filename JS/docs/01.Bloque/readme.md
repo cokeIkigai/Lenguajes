@@ -2,3 +2,4 @@
 
 - 🌈 [Variables](variables.md)
 - ➕ [Operadores](operadores.md)
+- 🔢 [Funciones](funciones.md)
