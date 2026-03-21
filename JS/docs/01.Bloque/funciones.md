@@ -78,6 +78,21 @@ const doble = x => x * 2;
 console.log(doble(5)); // 10
 ```
 
+### 5. Funciones anónimas autoejecutadas
+
+```js
+
+(function() {
+  console.log("Se ejecuta automáticamente");
+})();
+
+// Versión Arrow
+
+(() => {
+  console.log("También autoejecutada");
+})();
+
+```
 ---
 
 ### 🧪 Ejercicios
