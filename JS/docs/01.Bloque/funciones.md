@@ -3,7 +3,7 @@
 
 Una función es un bloque de código reutilizable que se ejecuta cuando la llamas.
 
-### 1. Función y su llamada
+### ✅ Función y su llamada
 
 ```js
 // función que no devuelve valor
@@ -24,7 +24,7 @@ despedirse()
 
 ---
 
-### 2. Funciones con parámetros
+### ✅ Funciones con parámetros
 
 Permiten recibir datos para trabajar con ellos.
 
@@ -38,7 +38,7 @@ console.log(sumar(3, 5)); // 8
 
 ---
 
-### 3. Parámetros por defecto
+### ✅ Parámetros por defecto
 
 Si no se pasa valor, se usa uno por defecto.
 
@@ -53,7 +53,7 @@ saludar("Coke");  // Hola Coke
 
 ---
 
-### 4. Funciones anónimas
+### ✅ Funciones anónimas
 
 No tienen nombre, suelen usarse dentro de variables.
 
@@ -67,7 +67,7 @@ console.log(multiplicar(2, 4)); // 8
 
 ---
 
-### 5. Arrow functions (funciones flecha)
+### ✅ Arrow functions (funciones flecha)
 
 Forma moderna y más corta.
 ```js
@@ -88,7 +88,7 @@ console.log(doble(5)); // 10
 
 ---
 
-### 6. Funciones anónimas autoejecutadas
+### ✅ Funciones anónimas autoejecutadas
 
 ```js
 
