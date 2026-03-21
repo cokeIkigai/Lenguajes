@@ -1,51 +1,124 @@
-📚 Funciones útiles en JavaScript (guía rápida)
-🔹 Arrays (las más usadas)
+# 📚 Funciones útiles
+
+Continuamos con otras funciones propias de JavaScript que permiten resolver tareas comunes de forma directa, sin necesidad de crear soluciones desde cero. Estas funciones ya están incorporadas en el lenguaje y están diseñadas para trabajar de manera más eficiente, clara y reutilizable, evitando repetir código innecesario.
+
+## 🔹 Find() | Some() | Every()
+
+```js
 const arr = [1, 2, 3, 4];
-map → transformar
-arr.map(x => x * 2);
-filter → filtrar
-arr.filter(x => x > 2);
-reduce → acumular
-arr.reduce((acc, x) => acc + x, 0);
-forEach → recorrer
-arr.forEach(x => console.log(x));
-find → primer elemento que cumple
-arr.find(x => x > 2);
-some → alguno cumple
-arr.some(x => x > 3);
-every → todos cumplen
-arr.every(x => x > 0);
-🔹 Strings
+
+// 1º elemento que cumple
+const encontrado = arr.find(x => x > 2); 
+console.log(encontrado); // 3
+
+// Alguno cumple
+const hayMayorQue3 = arr.some(x => x > 3);
+console.log(hayMayorQue3); // true
+
+// Todos cumplen
+const todosMayoresQue0 = arr.every(x => x > 0);
+console.log(todosMayoresQue0); // true
+```
+
+---
+
+## 🔹 Strings: trim() | toUpperCase() / toLowerCase() | includes() | split()
+
+```js
 const texto = " Hola Mundo ";
-trim() → quitar espacios
-texto.trim();
-toUpperCase() / toLowerCase()
-texto.toUpperCase();
-includes()
-texto.includes("Mundo");
-split()
-texto.split(" ");
-🔹 Números
-parseInt() / parseFloat()
-parseInt("10");
-Number()
-Number("123");
-toFixed()
-(3.1416).toFixed(2); // "3.14"
-🔹 Objetos
+
+// Quitar espacios al inicio y final
+const sinEspacios = texto.trim();
+console.log(sinEspacios); // "Hola Mundo"
+
+// Mayúscula / minúscula
+console.log(texto.toUpperCase()); // " HOLA MUNDO "
+console.log(texto.toLowerCase()); // " hola mundo "
+
+// Comprobar si contiene algo
+console.log(texto.includes("Mundo")); // true
+console.log(texto.includes("tres"));  // false
+
+// Dividir en array
+const palabras = texto.split(" ");
+console.log(palabras); // ["", "Hola", "Mundo", ""]
+```
+---
+
+## 🔹 Números: parseInt() | parseFloat() | Number() | toFixed()
+
+```js
+// Convierte a entero
+console.log(parseInt("10"));      // 10
+console.log(parseInt("10.9"));    // 10
+console.log(parseInt("10px"));    // 10
+
+// Convierte a decimal
+console.log(parseFloat("10.5"));  // 10.5
+console.log(parseFloat("3.14px"));// 3.14
+
+// Conversión estricta
+console.log(Number("123"));       // 123
+console.log(Number("10.5"));      // 10.5
+console.log(Number("10px"));      // NaN ❗
+
+// Limitar decimales (devuelve string)
+console.log((3.1416).toFixed(2)); // "3.14"
+console.log((5).toFixed(2));      // "5.00"
+```
+
+## 🔹 Objetos: keys() | values() | entries()
+
+```js
 const obj = { a: 1, b: 2 };
-Object.keys()
-Object.keys(obj); // ["a","b"]
-Object.values()
-Object.values(obj); // [1,2]
-Object.entries()
-Object.entries(obj);
-🔹 JSON
-JSON.parse('{"a":1}');
-JSON.stringify({a:1});
-🔹 Utilidades
-console.log() → debug
-setTimeout()
-setTimeout(() => console.log("Hola"), 1000);
-setInterval()
-setInterval(() => console.log("Tick"), 1000);
+
+const claves = Object.keys(obj);
+console.log(claves); // ["a", "b"]
+
+const valores = Object.values(obj);
+console.log(valores); // [1, 2]
+
+const entradas = Object.entries(obj);
+console.log(entradas); // [["a", 1], ["b", 2]]
+
+// Uso típico con entries
+entradas.forEach(([clave, valor]) => {
+  console.log(clave, valor);
+});
+```
+
+---
+
+## 🔹 JSON:  parse() | stringify()
+
+```js
+// Texto a objeto
+const obj = JSON.parse('{"a":1}');
+console.log(obj); // { a: 1 }
+
+// Objeto a texto
+const texto = JSON.stringify({ a: 1 });
+console.log(texto); // '{"a":1}'
+```
+
+---
+
+## 🔹 Utilidades ejecución tiempo: setTimeout() | setInterval() | clearInterval()
+
+```js
+
+//Ejecutar una vez después de X ms
+setTimeout(() => {
+  console.log("Hola después de 1 segundo");
+}, 1000);
+
+// Ejecutar cada X ms
+const intervalo = setInterval(() => {
+  console.log("Tick");
+}, 1000);
+
+// Parar el intervalo
+setTimeout(() => {
+  clearInterval(intervalo);
+}, 5000);
+```
