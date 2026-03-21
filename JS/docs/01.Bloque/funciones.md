@@ -22,6 +22,8 @@ saludar()
 despedirse()
 ```
 
+---
+
 ### 2. Funciones con parámetros
 
 Permiten recibir datos para trabajar con ellos.
@@ -34,7 +36,9 @@ function sumar(a, b) {
 console.log(sumar(3, 5)); // 8
 ```
 
- ### 2. Parámetros por defecto
+---
+
+### 3. Parámetros por defecto
 
 Si no se pasa valor, se usa uno por defecto.
 
@@ -47,7 +51,9 @@ saludar();        // Hola Invitado
 saludar("Coke");  // Hola Coke
 ```
 
-### 3. Funciones anónimas
+---
+
+### 4. Funciones anónimas
 
 No tienen nombre, suelen usarse dentro de variables.
 
@@ -59,7 +65,9 @@ const multiplicar = function(a, b) {
 console.log(multiplicar(2, 4)); // 8
 ```
 
-### 4. Arrow functions (funciones flecha)
+---
+
+### 5. Arrow functions (funciones flecha)
 
 Forma moderna y más corta.
 ```js
@@ -78,7 +86,9 @@ const doble = x => x * 2;
 console.log(doble(5)); // 10
 ```
 
-### 5. Funciones anónimas autoejecutadas
+---
+
+### 6. Funciones anónimas autoejecutadas
 
 ```js
 
@@ -93,6 +103,7 @@ console.log(doble(5)); // 10
 })();
 
 ```
+
 ---
 
 ### 🧪 Ejercicios
