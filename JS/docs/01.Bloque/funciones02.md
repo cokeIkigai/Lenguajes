@@ -150,16 +150,13 @@ console.log(arr); // [1, 99, 2, 3]
 ```js
 const arr = [1, 2, 3];
 
-arr.splice(1, 1, 50);
-
-console.log(arr); // [1, 50, 3]
+arr.splice(1, 1, 50); // [1, 50, 3]
 ```
 
 ### 🔹 Qué devuelve
 ```js
 const arr = [1, 2, 3];
 
-const eliminado = arr.splice(1, 1);
+const eliminado = arr.splice(1, 1); // [2]
 
-console.log(eliminado); // [2]
 ```
