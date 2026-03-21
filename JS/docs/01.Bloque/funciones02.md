@@ -66,13 +66,13 @@ Number("10px");      // NaN ❗
 ## 🔹 Objetos: keys() | values() | entries()
 
 ```js
-const obj = { a: 1, b: 2 };
+const obj = { nombre: "John", edad: 32 };
 
-const claves = Object.keys(obj); // ["a", "b"]
+const claves = Object.keys(obj); // ["nombre", "edad"]
 
-const valores = Object.values(obj); // [1, 2]
+const valores = Object.values(obj); // ["John", 32]
 
-const entradas = Object.entries(obj); // [["a", 1], ["b", 2]]
+const entradas = Object.entries(obj); // [["nombre", "edad"], ["John", 32]]
  
 // Uso típico con entries
 entradas.forEach(([clave, valor]) => {
