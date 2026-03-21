@@ -77,3 +77,12 @@ const doble = x => x * 2;
 
 console.log(doble(5)); // 10
 ```
+
+---
+
+### 🧪 Ejercicios
+1. Haz una función que reciba un número y devuelva su doble.
+2. Haz una función que reciba dos números y devuelva su suma.
+3. Haz una función que reciba un texto y devuelva su longitud.
+4. Haz una función que reciba un número y diga si es positivo, negativo o cero.
+5. Haz una función que reciba un número y devuelva true si es par y false si es impar.
