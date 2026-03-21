@@ -113,3 +113,53 @@ setTimeout(() => {
   clearInterval(intervalo);
 }, 5000);
 ```
+
+---
+
+## 📌 splice() 
+splice() sirve para modificar un array directamente:
+
+- Eliminar elementos
+- Añadir elementos
+- Reemplazar elementos
+
+## 🔹 Sintaxis
+```js
+array.splice(inicio, cantidad, elemento1, elemento2...)
+```
+
+## 🔹 Eliminar elementos
+```js
+const arr = [1, 2, 3, 4];
+
+arr.splice(1, 2);
+
+console.log(arr); // [1, 4]
+```
+
+## 🔹 2. Añadir elementos
+```js
+const arr = [1, 2, 3];
+
+arr.splice(1, 0, 99);
+
+console.log(arr); // [1, 99, 2, 3]
+```
+
+## 🔹 3. Reemplazar elementos
+```js
+const arr = [1, 2, 3];
+
+arr.splice(1, 1, 50);
+
+console.log(arr); // [1, 50, 3]
+```
+
+## 🔹 4. Qué devuelve
+```js
+const arr = [1, 2, 3];
+
+const eliminado = arr.splice(1, 1);
+
+console.log(eliminado); // [2]
+```
