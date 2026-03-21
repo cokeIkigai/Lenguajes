@@ -62,6 +62,7 @@ Number("10px");      // NaN ❗
 (3.1416).toFixed(2); // "3.14"
 (5).toFixed(2);      // "5.00"
 ```
+---
 
 ## 🔹 Objetos: keys() | values() | entries()
 
