@@ -143,3 +143,52 @@ console.log(undefined == false);  // false
 console.log(0 == null);           // false
 console.log(0 == undefined);      // false
 ```
+
+---
+
+# 🧠 Paradojas de JavaScript con ==
+
+
+---
+
+```js
+
+// El triángulo raro
+console.log([] == 0);   // true
+console.log(0 == "0");  // true
+console.log([] == "0"); // false ❗
+
+// El array vacío engaña
+console.log([] == false); // true
+console.log([] == ![]);   // true ❗
+
+// Boolean vs string vs número
+console.log(true == "1");   // true
+console.log("1" == 1);      // true
+console.log(true == 1);     // true
+console.log(true == "true"); // false ❗
+
+// null y undefined
+console.log(null == undefined); // true
+console.log(null == 0);         // false
+console.log(undefined == 0);    // false
+
+// Objetos y arrays
+console.log([] == []);   // false ❗
+console.log({} == {});   // false ❗
+
+// Todo acaba siendo 0
+console.log("" == 0);   // true
+console.log([] == 0);   // true
+console.log("" == []);  // true ❗
+
+// Cadena de incoherencias
+console.log([] == false); // true
+console.log(false == ""); // true
+console.log([] == "");    // true ❗
+
+// Objetos “rebeldes”
+console.log({} == false); // false
+console.log({} == 0);     // false
+console.log({} == "");    // false
+```
