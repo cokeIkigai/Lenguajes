@@ -56,7 +56,7 @@ parseFloat("3.14px");// 3.14
 // Conversión estricta
 Number("123");       // 123
 Number("10.5");      // 10.5
-Number("10px");      // NaN ❗
+Number("10px");      // NaN 
 
 // Limitar decimales (devuelve string)
 (3.1416).toFixed(2); // "3.14"
