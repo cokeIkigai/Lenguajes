@@ -117,46 +117,70 @@ setTimeout(() => {
 ---
 
 ## 📌 splice() 
+
 splice() sirve para modificar un array directamente:
 
 - Eliminar elementos
 - Añadir elementos
 - Reemplazar elementos
 
-### 🔹 Sintaxis
+---
+**ÍNDICES**
+
 ```js
-array.splice(inicio, cantidad, elemento1, elemento2...)
+Índices:
+["angel", "clown", "mandarin", "sturgeon"]
+   0         1         2           3
 ```
 
-### 🔹 Eliminar elementos
+## Estructura completa
+
 ```js
-const arr = [1, 2, 3, 4];
-
-arr.splice(1, 2);
-
-console.log(arr); // [1, 4]
+array.splice(inicio, cantidad, nuevosElementos...)
 ```
 
-### 🔹 Añadir elementos
+## 🔹 UN Parámetro
+
+Con UN solo parámetro lo que hace es empezar desde dicha posición y los `elimina` del array principal y este `crea` uno nuevo con los elementos eliminados.
+
 ```js
-const arr = [1, 2, 3];
+const arr = [1, 2, 3, 4, 5];
 
-arr.splice(1, 0, 99);
+const eliminados = arr.splice(2);
 
-console.log(arr); // [1, 99, 2, 3]
+console.log(arr);        // [1, 2]
+console.log(eliminados); // [3, 4, 5]
 ```
 
-### 🔹 Reemplazar elementos
-```js
-const arr = [1, 2, 3];
+## 🔹 DOS Parámetros
 
-arr.splice(1, 1, 50); // [1, 50, 3]
+Con DOS parámetros lo que hace es empezar desde una posición y elimina una cantidad concreta de elementos del array principal, creando un nuevo array con los elementos eliminados.
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+const eliminados = arr.splice(1, 2);
+
+console.log(arr);        // [1, 4, 5]
+console.log(eliminados); // [2, 3]
 ```
+## 🔹 TRES Parámetros
 
-### 🔹 Qué devuelve
+Con TRES parámetros lo que hace es empezar desde una posición, elimina una cantidad concreta de elementos del array principal y añade nuevos elementos en esa misma posición, creando un nuevo array con los elementos eliminados.
+
 ```js
-const arr = [1, 2, 3];
+const arr = [1, 2, 3, 4, 5];
 
-const eliminado = arr.splice(1, 1); // [2]
+const eliminados = arr.splice(1, 2, "A", "B");
 
+console.log(arr);        // [1, "A", "B", 4, 5]
+console.log(eliminados); // [2, 3]
+```
+--- 
+## 🎯 Traducción mental 
+
+```js
+splice(i, 0, x) → meter sin borrar
+splice(i, 1) → borrar uno
+splice(i, 1, x) → cambiar uno por otro
 ```
