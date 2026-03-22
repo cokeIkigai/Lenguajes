@@ -79,6 +79,10 @@ const entradas = Object.entries(obj); // [["nombre", "edad"], ["John", 32]]
 entradas.forEach(([clave, valor]) => {
   console.log(clave, valor);
 });
+
+// Desde un Array a Object
+const nuevoObj = Object.fromEntries(entradas); // { nombre: "John", edad: 32 }
+
 ```
 ---
 
