@@ -129,7 +129,7 @@ splice() sirve para modificar un array directamente:
 - Reemplazar elementos
 
 ---
-**ÍNDICES**
+**Índices**
 
 ```js
 Índices:
@@ -137,7 +137,7 @@ splice() sirve para modificar un array directamente:
    0         1         2           3
 ```
 
-## Estructura completa
+**Estructura completa**
 
 ```js
 array.splice(inicio, cantidad, nuevosElementos...)
