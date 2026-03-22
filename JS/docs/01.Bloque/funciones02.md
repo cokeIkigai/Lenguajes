@@ -38,6 +38,9 @@ texto.includes("tres");  // false
 // Dividir en array
 const palabras = texto.split(" "); // ["", "Hola", "Mundo", ""]
 
+// Unir partes de un Array
+console.log(texto.join(" ")); // " Hola Mundo "
+
 ```
 ---
 
