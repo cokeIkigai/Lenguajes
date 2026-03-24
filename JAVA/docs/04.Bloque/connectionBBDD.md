@@ -29,7 +29,7 @@ No usan un modelo tabular fijo. Son más `flexibles` y escalan horizontalmente:
 
 Para instalar postgre en múltiples Sistemas operativos debes descargarlo del instalador oficial [PostgreLink](https://www.postgresql.org/download)
 
-- **Ejecutar** el instalador y seleccionar: `PostgreSQL Server` y `pgAdmin4`
+- **Ejecutar** el instalador y seleccionar el instalador del Sistema operativo que estés. Te instala postgre y pg4admin
 - **pgAdmin4** es la herramienta visual para que no se haga todo desde la `consola` y permite realizar múltiples acciones sin comandos.
 - **Puerto** → 5432.
 
