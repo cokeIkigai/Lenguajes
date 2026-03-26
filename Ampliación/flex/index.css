@@ -1,0 +1,28 @@
+#contenedor {
+    background-color: rgb(71, 67, 67);
+    width: auto;
+    height: 400px;
+    display: flex;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+}
+
+#first {
+    background-color: rgb(255, 0, 0);
+    width: 60px;
+    height: 60px;
+
+}
+
+#second {
+    background-color: rgb(47, 0, 255);
+    width: 40px;
+    height: 40px;
+}
+
+#third {
+    background-color: rgb(0, 253, 4);
+}
