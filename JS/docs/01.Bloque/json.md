@@ -12,7 +12,7 @@ Tiene una estructura específica formada por pares **clave-valor** y listas orde
 
  ---
 
- ## Configurar datos de un JSON
+## 🔄Configurar datos de un JSON
 
 JSON es el formato en el que viajan los datos, pero en JavaScript siempre trabajamos con objetos.
 
@@ -25,17 +25,14 @@ JSON es el formato en el que viajan los datos, pero en JavaScript siempre trabaj
   "lenguajes": ["Java", "JavaScript", "SQL"]
 }
 ```
-🔄 Pasar JSON a objeto JavaScript
-
-Para poder trabajar con esos datos en JavaScript, hay que convertirlos:
-
-**Trabajar con ello** (Deserializar)
+---
+* **Trabajar con ello** (Deserializar)
 ```js
 const texto = '{ "nombre": "Guille", "edad": 32, "activo": true }';
 const usuario = JSON.parse(texto);
 console.log(usuario);
 ```
-**Enviarlo** (Serializar)
+* **Enviarlo** (Serializar)
 ```js
 const objeto = { "nombre": "Zoe", "edad": 6, "activo": true };
 const usuario = JSON.stringify(objeto);
@@ -48,15 +45,34 @@ console.log(usuario);
 
 Vamos a trabajar con JSON, pero es importante entender que **puede venir de diferentes formas**:
 
-* Desde un archivo `.json`.
-* Desde una API (lo más común en la realidad).
-* Creado en el código como objeto.
+* Fichero externo.
+* Servidor (backend).
+* Creado en el código como objeto
 * Creado en el código como texto (JSON real).
 
 ---
+### 🟢 Código (objeto)
 
-### 🟢 Desde un archivo `.json`
-Datos guardados en un fichero externo.
+Ya es un objeto JavaScript listo para usar. Es el que usaremos para practicar al inicio.
+
+```js
+const usuario = {
+  nombre: "Coke",
+  edad: 40,
+  activo: true
+};
+```
+--- 
+
+### 🟢 Código (JSON)
+
+Aquí sí es JSON real (texto)
+```js
+const texto = '{ "nombre": "Coke", "edad": 40 }';
+const usuario = JSON.parse(texto);
+```
+---
+### 🟢 Fichero externo.
 
 > Esto lo usamos para practicar, no es lo más habitual en aplicaciones reales.
 
@@ -68,60 +84,54 @@ console.log(json);
 
 ---
 
-### 🟢 Los datos vienen de un servidor (backend).
+### 🟢 Servidor (backend).
 Es lo que se usa en aplicaciones reales (frontend ↔ backend)
 ```js
 const json = await fetch('https://api.ejemplo.com/usuarios')
   .then(res => res.json());
 ```
 --- 
+## ⚒️ TRABAJAR CON UN JSON EN JAVASCRIPT
 
-### 🟢 Creado en el código como objeto
+Vamos a ver cómo **leer**, **extraer**, **modificar** y **añadir** datos de un JSON después de convertirlo en un objeto de JavaScript.
 
-Ya es un objeto JavaScript listo para usar. Es el que usaremos para practicar al inicio.
-
+### 🔴 Acceder a las claves:
 ```js
-const usuario = {
-  nombre: "Coke",
-  edad: 40,
-  activo: true
+ ```js
+let data = {
+  "nombre": "John",
+  "edad": 35,
+  "activo": true,
+  "lenguajes": ["Java", "JavaScript", "SQL"]
 };
-```
 
---- 
+// Acceso a propiedades
+let nombre = data.nombre; 
+let edad = data["edad"];
+let activo = data["activo"];
 
-### 🟢 Creado en el código como texto (JSON real)
-Aquí sí es JSON real (texto)
-```js
-const texto = '{ "nombre": "Coke", "edad": 40 }';
-const usuario = JSON.parse(texto);
+let clave = "lenguajes";
+let lenguajes = data[clave];
+
+console.log(nombre);      // John
+console.log(edad);        // 35
+console.log(activo);      // true
+console.log(lenguajes);   // ["Java", "JavaScript", "SQL"]
 ```
 
 ---
 
-// Acceso a cada clave:
+### 🟡 Modificar valores:
 
-let nombre = json.nombre; // "John"
-let edad = json.edad;     // 35
-let activo = json.activo; // true 
-let lenguajes = json.lenguajes; // ["Java", "JavaScript", "SQL"]
-
-// acceso a arays o listas es con bucleso map
-console.log(nombre);
-console.log(edad);
-console.log(activo);
-console.log(lenguajes);
-
-// Modificar valores
-
-json.nombre ="Cambio";
+```js
+json.nombre = "Luis";
 console.log(json);
+```
+---
 
-// Añadir claves con valores
+### 🔵 Añadir claves:
 
+```js
 json.categoria = null;
 console.log(json)
-
 ```
-
- 
