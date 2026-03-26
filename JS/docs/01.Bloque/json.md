@@ -29,16 +29,16 @@ JSON es el formato en el que viajan los datos, pero en JavaScript siempre trabaj
 
 Para poder trabajar con esos datos en JavaScript, hay que convertirlos:
 
-**Trabajar con ello**
+**Trabajar con ello** (Deserializar)
 ```js
 const texto = '{ "nombre": "Guille", "edad": 32, "activo": true }';
 const usuario = JSON.parse(texto);
 console.log(usuario);
 ```
-**Enviarlo**
+**Enviarlo** (Serializar)
 ```js
-const texto = { "nombre": "Zoe", "edad": 6, "activo": true };
-const usuario = JSON.stringify(texto);
+const objeto = { "nombre": "Zoe", "edad": 6, "activo": true };
+const usuario = JSON.stringify(objeto);
 console.log(usuario);
 ```
 
@@ -96,6 +96,8 @@ Aquí sí es JSON real (texto)
 const texto = '{ "nombre": "Coke", "edad": 40 }';
 const usuario = JSON.parse(texto);
 ```
+
+---
 
 // Acceso a cada clave:
 
