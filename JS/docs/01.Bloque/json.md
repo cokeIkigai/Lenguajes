@@ -14,6 +14,8 @@ Tiene una estructura específica formada por pares **clave-valor** y listas orde
 
  ## Configurar datos de un JSON
 
+JSON es el formato en el que viajan los datos, pero en JavaScript siempre trabajamos con objetos.
+
  **data.json:**
  ```js
  {
@@ -22,6 +24,22 @@ Tiene una estructura específica formada por pares **clave-valor** y listas orde
   "activo": true,
   "lenguajes": ["Java", "JavaScript", "SQL"]
 }
+```
+🔄 Pasar JSON a objeto JavaScript
+
+Para poder trabajar con esos datos en JavaScript, hay que convertirlos:
+
+**Trabajar con ello**
+```js
+const texto = '{ "nombre": "Guille", "edad": 32, "activo": true }';
+const usuario = JSON.parse(texto);
+console.log(usuario);
+```
+**Enviarlo**
+```js
+const texto = { "nombre": "Zoe", "edad": 6, "activo": true };
+const usuario = JSON.stringify(texto);
+console.log(usuario);
 ```
 
 ---
