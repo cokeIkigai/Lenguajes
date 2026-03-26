@@ -20,6 +20,14 @@ const crearBotones = (contenedor, opciones, titulo) => {
         btn.textContent = nombreFuncion;
         contenedor.appendChild(btn);
     }
+    
+    // Con MAP
+    // opciones.map((nombreFuncion) => {
+    //     let btn = document.createElement("button");
+    //     btn.setAttribute("onclick", nombreFuncion + "()");
+    //     btn.textContent = nombreFuncion;
+    //     contenedor.appendChild(btn);
+    // })
 }
 
 crearBotones(btnJustify, justify, "JUSTIFY-CONTENT");
