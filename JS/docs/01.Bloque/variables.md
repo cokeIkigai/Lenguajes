@@ -71,7 +71,8 @@ dato = true;      // boolean
 
 Para conocer que tipo de valor tiene una variable lo podemos saber asi:
 
-```let dato;
+```js
+  let dato;
   dato = 10;        
   console.log(typeof dato) // number
 
