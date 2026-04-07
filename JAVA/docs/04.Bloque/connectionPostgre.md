@@ -1,9 +1,13 @@
 # Conectar a POSTGRE
 
 **1.**  Creamos un proyecto desde intellij con `Maven`. 
+
 **2.**  Deberemos tener una base de datos con una tabla de `Usuario`.
+
 **3.**  Tendremos un archivo `Main` que va a ejecutar la traida de todos los Usuario.
+
 **4.**  Crearemos el archivo `Usuario` donde estará el CRUD de traer los datos de la base de datos.
+
 **5.**  Crearemos un archivo donde se realiza la connexión a la base de datos Postgre
 
 ---
