@@ -33,6 +33,35 @@ console.log(edad);
 ```
 
 ---
+## ✏️ Camabiar nombre (alias)
+```js
+const persona = {
+  nombre: "Ana"
+};
+
+const { nombre: nombreUsuario } = persona;
+
+console.log(nombreUsuario); // Ana
+```
+---
+
+## Destructuring anidado
+
+Para objetos dentro de objetos.
+```js
+const usuario = {
+  nombre: "Ana",
+  direccion: {
+    ciudad: "Madrid"
+  }
+};
+
+const { direccion: { ciudad } } = usuario;
+
+console.log(ciudad); // Madrid
+```
+
+---
 
 ## 🔢 ARRAYS
 
@@ -42,17 +71,19 @@ const colores = ["rojo", "verde", "azul"];
 const [a, b, c] = colores;
 
 console.log(a); // rojo
-console.log(b); // verde
-console.log(c); // azul
+```
 
+Saltar posiciones 
+```js
 // Con un hueco
-const colores2 = ["amarillo", "morado", "negro"];
+const colores = ["amarillo", "morado", "negro"];
 
-const [primero, , tercero] = colores2;
+const [primero, , tercero] = colores;
 
 console.log(primero); // amarillo
-console.log(tercero); // negro
-
+```
+Valores por defecto
+```js
 // Añadir nuevos elementos al array 
 const numeros = [10];
 
@@ -75,7 +106,6 @@ const numeros = [1, 2, 3, 4, 5];
 const [primero, segundo, ...resto] = numeros;
 
 console.log(primero); // 1
-console.log(segundo); // 2
 console.log(resto);   // [3, 4, 5]
 ```
 
@@ -95,6 +125,16 @@ console.log(resto);  // { edad: 30, ciudad: "Madrid" }
 ```
 ---
 
+Intercambiar variables
+
+```js
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+```
+---
+
 ## DESTRUCTURING EN FUNCIONES
 
 Muy útil cuando una función recibe un objeto.
@@ -110,4 +150,11 @@ function mostrar({ nombre, edad }) {
 }
 
 mostrar(persona);
+```
+---
+## Atención con ERROR TÍPICO
+
+```js
+const { nombre } = undefined; //  ERROR
+const { nombre } = objeto || {}; // Correcto !
 ```
