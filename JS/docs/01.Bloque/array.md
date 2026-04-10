@@ -122,9 +122,4 @@ Es procesar datos
 
 ---
 
-### 🧪 Ejercicios
-- Haz un array con 5 números y muestra el primero y el último.
-- Añade un número al final y otro al inicio.
-- Recorre el array y muestra todos los valores.
-- Crea un nuevo array con los números multiplicados por 2 (map).
-- Filtra solo los números mayores que 10 (filter).
+[Ejercicios](ejerciciosArray.md)
