@@ -1,10 +1,10 @@
 # README
 
 - [Atajos Intellij](JAVA/Atajos/Intellij.md)
-- [Atajos Intellij](JAVA/Atajos/atajosVSC.md)
-- [Atajos Intellij](JAVA/Refactorizar/refactor01.md)
-- [Atajos Intellij](JAVA/Refactorizar/refactor02.md)
-- [Atajos Intellij](JAVA/Tiempo/fecha.md)
-- [Atajos Intellij](JAVA/Tiempo/timer.md)
+- [Atajos Visual Studio](JAVA/Atajos/atajosVSC.md)
+- [Refactorizar](JAVA/Refactorizar/refactor01.md)
+- [Refactorizar2](JAVA/Refactorizar/refactor02.md)
+- [fechas](JAVA/Tiempo/fecha.md)
+- [timer](JAVA/Tiempo/timer.md)
 
 
