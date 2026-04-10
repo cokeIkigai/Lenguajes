@@ -16,4 +16,4 @@ const compras = [100, 200, 50, 300];
 7. Crea un nuevo array con las ventas mayores que 10.
 8. Calcula la suma total de compras.
 9. Crea un nuevo array donde cada valor de ventas tenga sumado 5.
-10 Filtra las ventas mayores que 10 y después multiplícalas por 2.
+10. Filtra las ventas mayores que 10 y después multiplícalas por 2.
