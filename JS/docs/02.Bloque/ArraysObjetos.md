@@ -36,7 +36,7 @@ usuarios.forEach(u => {
 ```
 --- 
 
-🧪 Ejercicios
+## 🧪 Ejercicios
 
 Obtenemos estos datos de información de una base de datos:
 
