@@ -122,4 +122,4 @@ Es procesar datos
 
 ---
 
-[Ejercicios](ejerciciosArray.md)
+[Ejercicios](ejercicioArray.md)
