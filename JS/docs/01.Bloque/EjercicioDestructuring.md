@@ -1,83 +1,46 @@
-## 📜Ejercicios
-
-**1. Extrae marca y modelo usando destructuring y muéstralos por consola.**
-```js
-const coche = {
-  marca: "Toyota",
-  modelo: "Corolla"
-};
-```
-
-**2. Guarda nombre en una variable llamada nombreAlumno.**
+# 📜 Ejercicios
 
 ```js
-const alumno = {
-  nombre: "Carlos"
-};
-```
-
-**3. Extrae los tres valores en variables a, b, c.**
-
-```js
-const numeros = [5, 10, 15];
-```
-
-
-
-**4. Extrae solo la primera y la tercera fruta.**
-
-```js
-const frutas = ["manzana", "pera", "plátano"];
-```
-
-**5. Extrae dos variables, donde la segunda tenga valor por defecto 200.**
-
-```js
-const datos = [100];
-```
-
-
-**6. Extrae nombre y guarda el resto en otra variable.**
-```js
-const persona = {
-  nombre: "Lucía",
-  edad: 25,
-  ciudad: "Sevilla"
-};
-```
-
-**7. Extrae directamente la ciudad.**
-
-```js
-const pedido = {
-  id: 1,
-  cliente: {
-    nombre: "Pedro",
-    direccion: {
-      ciudad: "Valencia"
-    }
+const tienda = {
+  nombre: "TechStore",
+  configuracion: {
+    idioma: "es",
+    moneda: "EUR"
+  },
+  productoDestacado: {
+    nombre: "Laptop",
+    precio: 1200
+  },
+  usuarios: [
+    { id: 1, nombre: "Ana", email: "ana@email.com" },
+    { id: 2, nombre: "Luis", email: "luis@email.com" }
+  ],
+  pedido: {
+    id: 101,
+    cliente: {
+      nombre: "Carlos",
+      direccion: {
+        ciudad: "Madrid",
+        cp: "28001"
+      }
+    },
+    productos: ["ratón", "teclado", "monitor"]
   }
 };
-```
 
-**8. Intercambia sus valores sin usar variable auxiliar.**
+let usuarioLogueado = undefined;
 
-```js
 let x = 10;
 let y = 20;
 ```
 
-**9. Crea una función que reciba el objeto y muestre nombre y precio usando destructuring en los parámetros.**
-
-```js
-const producto = {
-  nombre: "Laptop",
-  precio: 1200
-};
-```
-
-**10. Usa destructuring sin que dé error y muestra nombre (aunque sea undefined).**
-
-```js
-let usuario = undefined;
-```
+1. Extrae idioma y moneda sin usar `.`.
+2. Extrae nombre y precio del productoDestacado y muéstralos por consola.
+3. Extrae el nombre del primer usuario del array usuarios.
+4. Extrae el primer producto y guarda el resto en otra variable.
+5. Extrae directamente la ciudad del cliente sin crear variables intermedias.
+6. Del primer usuario, extrae email y guarda el resto en otro objeto (simulando quitar datos sensibles).
+7. Extrae idioma y una variable tema con valor por defecto "light" desde configuracion.
+8. Intercambia los valores de x e y.
+9. Crea una función mostrarProducto que reciba productoDestacado y muestre nombre y precio usando destructuring en parámetros.
+10. Extrae nombre de usuarioLogueado sin que el código falle.
