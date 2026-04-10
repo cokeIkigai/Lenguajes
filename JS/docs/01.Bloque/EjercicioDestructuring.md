@@ -25,22 +25,21 @@ const tienda = {
       }
     },
     productos: ["ratón", "teclado", "monitor"]
+  },
+  filtros: {
+    precioMin: 50,
+    precioMax: 10 
   }
 };
-
-let usuarioLogueado = undefined;
-
-let x = 10;
-let y = 20;
 ```
 
 1. Extrae idioma y moneda sin usar `.`.
 2. Extrae nombre y precio del productoDestacado y muéstralos por consola.
 3. Extrae el nombre del primer usuario del array usuarios.
 4. Extrae el primer producto y guarda el resto en otra variable.
-5. Extrae directamente la ciudad del cliente sin crear variables intermedias.
+5. Extrae directamente la ciudad del cliente.
 6. Del primer usuario, extrae email y guarda el resto en otro objeto (simulando quitar datos sensibles).
 7. Extrae idioma y una variable tema con valor por defecto "light" desde configuracion.
 8. Intercambia los valores de x e y.
 9. Crea una función mostrarProducto que reciba productoDestacado y muestre nombre y precio usando destructuring en parámetros.
-10. Extrae nombre de usuarioLogueado sin que el código falle.
+10. Intercambia los valores de precioMin y precioMax usando destructuring.
