@@ -9,7 +9,7 @@ Cada carpeta contiene material organizado para practicar y aprender de forma rá
 
 ### ☕ [JAVA](JAVA/ReadmeTemas.md)   Fundamentos, POO, colecciones, métodos, clases y ejercicios prácticos.
 
-### 🏎️ [JavaScript](JS/readme.md) 
+### 🏎️ [JavaScript](JS/readme.md)  Fundamentos, variables, arrays, destructuring, acceso a Json, ...
 
 ### 📚 [GIT](GIT/git.md)  Fundamentos básicos del uso de git.
 
