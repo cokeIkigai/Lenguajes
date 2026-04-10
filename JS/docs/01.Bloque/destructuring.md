@@ -151,10 +151,79 @@ function mostrar({ nombre, edad }) {
 
 mostrar(persona);
 ```
+
 ---
+
 ## Atención con ERROR TÍPICO
 
 ```js
 const { nombre } = undefined; //  ERROR
 const { nombre } = objeto || {}; // Correcto !
 ```
+
+---
+
+## 📜Ejercicios
+
+1. Extrae marca y modelo usando destructuring y muéstralos por consola.
+
+const coche = {
+  marca: "Toyota",
+  modelo: "Corolla"
+};
+
+
+2. Guarda nombre en una variable llamada nombreAlumno.
+
+const alumno = {
+  nombre: "Carlos"
+};
+
+3. Extrae los tres valores en variables a, b, c.
+
+const numeros = [5, 10, 15];
+
+
+4. Extrae solo la primera y la tercera fruta.
+
+const frutas = ["manzana", "pera", "plátano"];
+
+5. Extrae dos variables, donde la segunda tenga valor por defecto 200.
+
+const datos = [100];
+
+6. Extrae nombre y guarda el resto en otra variable.
+
+const persona = {
+  nombre: "Lucía",
+  edad: 25,
+  ciudad: "Sevilla"
+};
+
+7. Extrae directamente la ciudad.
+
+const pedido = {
+  id: 1,
+  cliente: {
+    nombre: "Pedro",
+    direccion: {
+      ciudad: "Valencia"
+    }
+  }
+};
+
+8. Intercambia sus valores sin usar variable auxiliar.
+
+let x = 10;
+let y = 20;
+
+9. Crea una función que reciba el objeto y muestre nombre y precio usando destructuring en los parámetros.
+
+const producto = {
+  nombre: "Laptop",
+  precio: 1200
+};
+
+10. Usa destructuring sin que dé error y muestra nombre (aunque sea undefined).
+
+let usuario = undefined;
