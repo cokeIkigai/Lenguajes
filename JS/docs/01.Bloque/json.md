@@ -98,7 +98,6 @@ Vamos a ver cómo **leer**, **extraer**, **modificar** y **añadir** datos de un
 ### 🔴 Acceder a las claves:
 
 ```js
- ```js
 let data = {
   "nombre": "John",
   "edad": 35,
