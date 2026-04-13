@@ -96,6 +96,7 @@ const json = await fetch('https://api.ejemplo.com/usuarios')
 Vamos a ver cómo **leer**, **extraer**, **modificar** y **añadir** datos de un JSON después de convertirlo en un objeto de JavaScript.
 
 ### 🔴 Acceder a las claves:
+
 ```js
  ```js
 let data = {
