@@ -1,3 +1,14 @@
-## 02. Bloque
+## 📁 02. Bloque
 
 - 📕 [ArrayObjetos](./ArraysObjetos.md)
+
+
+
+<!-- 
+
+- 🌈 []()
+- ➕ []()
+- 🔢 []()
+- 🔢 []()
+- 🔢 []()
+- ⚒️ []() ->
