@@ -94,6 +94,52 @@ console.log(b); // 20
 ```
 ---
 
+## 🗄️ OPERADOR ... SPREAD
+
+Sirve para expandir el resto de valores
+
+**Copiar arrays**
+```js
+const numeros = [1, 2, 3];
+const copia = [...numeros];
+console.log(copia); // [1, 2, 3]
+```
+
+**Unir arrays**
+
+```js
+const a = [1, 2];
+const b = [3, 4];
+const combinado = [...a, ...b];
+console.log(combinado); // [1,2,3,4]
+```
+
+**Copiar objetos**
+
+```js
+const usuario = { nombre: "Ana", edad: 25 };
+const copiaUsuario = { ...usuario };
+console.log(copiaUsuario);
+```
+
+**Sobrescribir propiedades**
+
+```js
+const usuario = { nombre: "Ana", edad: 25 };
+const actualizado = { ...usuario, edad: 30 };
+console.log(actualizado); // edad cambia a 30
+```
+
+**Pasar parámetros a una función**
+
+```js
+const numeros = [10, 20, 30];
+let suma= (a, b, c) =>  a + b + c;
+console.log(suma(...numeros)); // 60
+```
+
+---
+
 ## 🗄️ OPERADOR REST ...
 
 Sirve para recoger el resto de valores.
