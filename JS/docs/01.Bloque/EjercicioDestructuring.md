@@ -40,6 +40,6 @@ const tienda = {
 5. Extrae directamente la ciudad del cliente.
 6. Del primer usuario, extrae email y guarda el resto en otro objeto (simulando quitar datos sensibles).
 7. Extrae idioma y una variable tema con valor por defecto "light" desde configuracion.
-8. Intercambia los valores de x e y.
+8. Contar productos del pedido
 9. Crea una función mostrarProducto que reciba productoDestacado y muestre nombre y precio usando destructuring en parámetros.
 10. Intercambia los valores de precioMin y precioMax usando destructuring.
