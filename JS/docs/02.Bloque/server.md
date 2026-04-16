@@ -40,6 +40,7 @@ req.on("end", () => { /* fin de datos */ })        // termina recepción
 req.socket                                         // info de conexión (IP, puerto)
 req.socket.remoteAddress                           // IP del cliente
 req.complete                                       // true/false → si la petición terminó correctamente
+```
 ---
 
 ## 📤 ¿Qué es una respuesta?
