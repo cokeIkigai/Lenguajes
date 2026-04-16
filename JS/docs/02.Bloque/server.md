@@ -153,10 +153,6 @@ const server = http.createServer((req, res) => {
     if (req.url === "/usuarios" && req.method === "POST") {
         let body = "";
 
-        req.on("data", chunk => {
-            body += chunk;
-        });
-
         req.on("end", () => {
             const nuevoUsuario = JSON.parse(body);
 
