@@ -1,18 +1,22 @@
-# Proyecto API Películas (Express)
+# 📕 Proyecto API Películas (Express)
 
 Para poder ejecutar y arrancar este proyecto se deben seguir los suignetes pasos:
 
-1. Crear el proyecto, carpeta
-2. git init -y
-3. npm i nodemon express
-4. Añadir en el archivo package.json en la parte de script.
+**1º.** Crear el proyecto, carpeta
+
+**2º.** git init -y
+
+**3º.** npm i nodemon express
+
+**4º.** Añadir en el archivo package.json en la parte de script.
    ```
    "dev": "nodemon server.js"
    ```
-5. Ejecutar el servidor con:
+**5. Ejecutar el servidor con:**
    ```
     npm run dev
    ```
+---
 
 **server.js**
 
@@ -41,7 +45,10 @@ app.use((req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor en http://localhost:${PORT}`);
 });
+
 ```
+
+---
 
 **routes/peliculasRoutes.js**
 
@@ -62,6 +69,8 @@ router.post("/peliculas", peliculasController.createPelicula);
 
 module.exports = router;
 ```
+
+---
 
 **controllers/peliculasController.js**
 
@@ -134,6 +143,8 @@ const peliculasController = {
 
 module.exports = peliculasController;
 ```
+
+---
 
 **data/peliculas.js**
 
