@@ -2,7 +2,7 @@
 
 Express es un **framework** para `Node.js` que simplifica la creación de servidores y APIs.
 
-En lugar de manejar manualmente las URLs y métodos con if y código repetitivo, Express permite definir rutas de forma directa, como “cuando llegue una petición aquí, ejecuta esta función”.
+En lugar de manejar manualmente las URLs y métodos con if y código repetitivo, Express permite definir rutas de forma directa, como “cuando llegue una petición aquí, ejecuta esta función”. 
 
 Además, facilita trabajar con peticiones y respuestas (JSON, parámetros, body) y ayuda a organizar el código en partes más claras como rutas y controladores.
 
@@ -20,7 +20,7 @@ if (req.url === "/peliculas" && req.method === "GET") {...}
 **📖 CON Express:**
 
 ```js
-app.get("/peliculas", (req, res) => { res.json(peliculas); });
+app.get("/peliculas", (req, res) => { // codigo; res.json(peliculas); });
 ```
 
 ---
@@ -37,25 +37,25 @@ const express = require("express");
 const app = express();
 
 // app.get → obtener datos
-app.get("/usuarios", (req, res) => { res.send("GET"); });
+app.get("/usuarios", (req, res) => { // codigo; res.send("GET"); });
 
 // app.post → crear datos
-app.post("/usuario", (req, res) => { res.send("POST"); });
+app.post("/usuario", (req, res) => { // codigo; res.send("POST"); });
 
 // app.put → actualizar completamente
-app.put("/usuario/:id", (req, res) => { res.send("PUT"); });
+app.put("/usuario/:id", (req, res) => { // codigo; res.send("PUT"); });
 
 // app.patch → actualizar parcialmente
-app.patch("/usuario/:id", (req, res) => { res.send("PATCH"); });
+app.patch("/usuario/:id", (req, res) => { // codigo; res.send("PATCH"); });
 
 // app.delete → borrar
-app.delete("/usuario/:id", (req, res) => { res.send("DELETE"); });
+app.delete("/usuario/:id", (req, res) => { // codigo; res.send("DELETE"); });
 
 // app.use → middleware (se ejecuta antes de las rutas)
-app.use((req, res, next) => { next();});
+app.use((req, res, next) => { // codigo; next();});
 
 // app.all → cualquier método HTTP
-app.all("/endpoint", (req, res) => { res.send("ALL");});
+app.all("/endpoint", (req, res) => { // codigo; res.send("ALL");});
 
 // app.listen → arrancar servidor
 app.listen(3000, () => {console.log("Servidor iniciado");});
