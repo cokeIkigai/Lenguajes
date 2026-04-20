@@ -18,7 +18,7 @@ Para poder ejecutar y arrancar este proyecto se deben seguir los suignetes pasos
    ```
 ---
 
-**server.js**
+🔹 **server.js**
 
 ```js
 const express = require("express");
@@ -50,7 +50,7 @@ app.listen(PORT, () => {
 
 ---
 
-**routes/peliculasRoutes.js**
+🔹 **routes/peliculasRoutes.js**
 
 ```js
 const express = require("express");
@@ -72,7 +72,7 @@ module.exports = router;
 
 ---
 
-**controllers/peliculasController.js**
+🔹 **controllers/peliculasController.js**
 
 ```js
 const peliculas = require("../data/peliculas");
@@ -146,7 +146,7 @@ module.exports = peliculasController;
 
 ---
 
-**data/peliculas.js**
+🔹 **data/peliculas.js**
 
 ```js
 const peliculas = [
