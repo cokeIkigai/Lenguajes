@@ -1,5 +1,19 @@
 # Proyecto API Películas (Express)
 
+Para poder ejecutar y arrancar este proyecto se deben seguir los suignetes pasos:
+
+1. Crear el proyecto, carpeta
+2. git init -y
+3. npm i nodemon express
+4. Añadir en el archivo package.json en la parte de script.
+   ```
+   "dev": "nodemon server.js"
+   ```
+5. Ejecutar el servidor con:
+   ```
+    npm run dev
+   ```
+
 **server.js**
 
 ```js
@@ -144,10 +158,7 @@ const peliculas = [
   { id: 17, titulo: "Star Wars: A New Hope", director: "George Lucas", anio: 1977 },
   { id: 18, titulo: "The Empire Strikes Back", director: "Irvin Kershner", anio: 1980 },
   { id: 19, titulo: "Jurassic Park", director: "Steven Spielberg", anio: 1993 },
-  { id: 20, titulo: "The Social Network", director: "David Fincher", anio: 2010 },
-  { id: 21, titulo: "Whiplash", director: "Damien Chazelle", anio: 2014 },
-  { id: 22, titulo: "Parasite", director: "Bong Joon-ho", anio: 2019 },
-  { id: 23, titulo: "Joker", director: "Todd Phillips", anio: 2019 }
+  { id: 20, titulo: "The Social Network", director: "David Fincher", anio: 2010 }
 ];
 
 module.exports = peliculas;
