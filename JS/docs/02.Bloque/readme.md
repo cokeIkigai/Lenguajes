@@ -1,9 +1,9 @@
 ## 📁 02. Bloque
 
 - 📕 [ArrayObjetos](./ArraysObjetos.md)
-- 🌈 [Server](./server.md)
+- 🌈 [Server parte 1](./server.md)
 - 📩 [Postman](./postman.md)
-- 🌈 [Server2](./server2.md)
+- 🌈 [Server parte 2](./server2.md)
 
 
 <!-- 
