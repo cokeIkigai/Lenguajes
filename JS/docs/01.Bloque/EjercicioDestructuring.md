@@ -45,7 +45,7 @@ const tienda = {
 10. Intercambia los valores de precioMin y precioMax usando destructuring.
 
 ---
-
+<!--
 Correción
 
 ```js
@@ -102,3 +102,4 @@ mostrarProducto(tienda);
 let { filtros: { precioMin, precioMax } } = tienda;
 [precioMin, precioMax] = [precioMax, precioMin];
 ```
+->
