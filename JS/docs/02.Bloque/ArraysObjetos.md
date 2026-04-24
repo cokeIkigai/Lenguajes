@@ -156,4 +156,13 @@ let res; for (const p of productos) p.nombre==="Teclado" ? res=p : null
 productos.map(p => p.nombre === "Teclado" ? p : null)
 ```
 
+### Resumen
+
+**Posición conocida** → [i]: cuando sabes el índice exacto y accedes directamente sin recorrer.
+**Acción sin devolver** → forEach: cuando ejecutas algo por cada elemento sin crear nuevo array (no permite break, recorre todo siempre).
+**Recorrer con control** → for...of: cuando necesitas iterar y poder usar break / continue (puedes detener el bucle cuando quieras)
+**Filtrar (varios)** → filter: cuando quieres quedarte con los elementos que cumplen una condición (recorre todo el array y devuelve uno nuevo).
+**Transformar (todos)** → map: cuando quieres modificar cada elemento y obtener un nuevo array (recorre todo el array).
+**Buscar uno** → find: cuando necesitas un único elemento que cumpla una condición (se detiene al encontrarlo).
+
 ->
