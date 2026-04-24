@@ -64,3 +64,96 @@ const productos = [
 12. muestra el producto cuyo nombre sea "Teclado".
 ---
 
+<!--
+
+```js
+// 1. Accede al primer producto del array y muestra su nombre.
+productos[0].nombre //* 
+const [{ nombre }] = productos
+productos.forEach((_, i) => i === 0 ? productos[i].nombre : null)
+for (const p of productos) { p.nombre; break; }
+productos.map(p => p.nombre)[0]
+productos.filter((_, i) => i === 0)[0].nombre
+productos.find((_, i) => i === 0).nombre
+
+// 2. Accede al tercer producto del array y muestra su precio.
+productos[2].precio //* 
+const [,,{ precio }] = productos
+productos.forEach((_, i) => i === 2 ? productos[i].precio : null)
+let i2=0; for (const p of productos) { i2===2 ? p.precio : null; if(i2++===2) break; }
+productos.map(p => p.precio)[2]
+productos.filter((_, i) => i === 2)[0].precio
+productos.find((_, i) => i === 2).precio
+
+// 3. Muestra únicamente el nombre de cada producto.
+productos.forEach(p => p.nombre) //* 
+for (const p of productos) p.nombre
+productos.map(p => p.nombre)
+productos.filter(() => true).map(p => p.nombre)
+productos.find(p => p.nombre)
+
+// 4. Muestra el nombre y el precio de cada producto.
+productos.forEach(p => ({ nombre: p.nombre, precio: p.precio })) //* 
+for (const p of productos) ({ nombre: p.nombre, precio: p.precio })
+productos.map(p => ({ nombre: p.nombre, precio: p.precio }))
+productos.filter(() => true).map(p => ({ nombre: p.nombre, precio: p.precio }))
+productos.find(p => p.nombre)
+
+// 5. Muestra solo los productos cuyo precio sea mayor que 20.
+productos.filter(p => p.precio > 20) //* 
+productos.forEach(p => p.precio > 20 ? p : null)
+for (const p of productos) p.precio > 20 ? p : null
+productos.map(p => p.precio > 20 ? p : null)
+productos.find(p => p.precio > 20)
+
+// 6. Muestra solo los productos que estén activos.
+productos.filter(p => p.activo) //* 
+productos.forEach(p => p.activo ? p : null)
+for (const p of productos) p.activo ? p : null
+productos.map(p => p.activo ? p : null)
+productos.find(p => p.activo)
+
+// 7. Cambia el precio del producto "Ratón" a 18.
+productos.find(p => p.nombre === "Ratón").precio = 18 //* 
+productos.forEach(p => p.nombre === "Ratón" ? (p.precio = 18) : null)
+for (const p of productos) p.nombre==="Ratón" ? (p.precio=18) : null
+productos.map(p => p.nombre === "Ratón" ? { ...p, precio: 18 } : p)
+productos.filter(p => p.nombre === "Ratón")
+
+// 8. Aumenta en 5 unidades el stock de todos los productos.
+productos.map(p => ({ ...p, stock: p.stock + 5 })) //* 
+productos.forEach(p => p.stock += 5)
+for (const p of productos) p.stock += 5
+productos.filter(() => true).map(p => ({ ...p, stock: p.stock + 5 }))
+productos.find(p => p.stock)
+
+// 9. Añade una nueva clave llamada iva con valor 21 a cada producto.
+productos.map(p => ({ ...p, iva: 21 })) //* 
+productos.forEach(p => p.iva = 21)
+for (const p of productos) p.iva = 21
+productos.filter(() => true).map(p => ({ ...p, iva: 21 }))
+productos.find(p => p.iva)
+
+// 10. Añade una nueva clave llamada caro con valor true si el precio es mayor que 100, o false en caso contrario.
+productos.map(p => ({ ...p, caro: p.precio > 100 })) //* 
+productos.forEach(p => p.caro = p.precio > 100)
+for (const p of productos) p.caro = p.precio > 100
+productos.filter(() => true).map(p => ({ ...p, caro: p.precio > 100 }))
+productos.find(p => p.caro)
+
+// 11. Muestra cuántos productos hay en total en el array.
+productos.length //* 
+let total=0; productos.forEach(() => total++)
+let total2=0; for (const _ of productos) total2++
+productos.map(() => 1).length
+productos.filter(() => true).length
+
+// 12. Muestra el producto cuyo nombre sea "Teclado".
+productos.find(p => p.nombre === "Teclado") //* 
+productos.filter(p => p.nombre === "Teclado")[0]
+productos.forEach(p => p.nombre === "Teclado" ? p : null)
+let res; for (const p of productos) p.nombre==="Teclado" ? res=p : null
+productos.map(p => p.nombre === "Teclado" ? p : null)
+```
+
+->
