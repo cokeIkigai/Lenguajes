@@ -56,15 +56,12 @@ console.log(idioma, moneda);
 
 // 2. Extrae nombre y precio del productoDestacado y muÃ©stralos por consola.
 
-const { productoDestacado: { nombre }, productoDestacado: { precio } } = tienda;
+const { productoDestacado: { nombre , precio } } = tienda;
 console.log(nombre, precio);
 
 // 3. Extrae el nombre del primer usuario del array usuarios.
 
-// const [a, b] = tienda.usuarios;
-
 const { usuarios: [{ nombre: nombreUsuario }] } = tienda;
-
 console.log(nombreUsuario);
 
 // 4. Extrae el primer producto y guarda el resto en otra variable.
@@ -83,7 +80,6 @@ const { usuarios: [{ email, ...datosSensibles }] } = tienda;
 
 console.log(email);
 console.log(datosSensibles);
-
 
 // 7. Extrae idioma y una variable tema con valor por defecto "light" desde configuracion.
 
