@@ -64,6 +64,7 @@ const http = require("http");
 
 const server = http.createServer((req, res) => {
     console.log(req.url);
+console.log(req);
     res.end("Servidor funcionando");
 });
 
@@ -72,7 +73,18 @@ server.listen(3000, () => {
 });
 ```
 
-**Extendido**
+**Abrimos la Terminal:**
+
+- Buscamos la carpeta o la ruta de nuestro archivo en la terminal.
+- Ejecutamos con el comando `node server.js`
+
+```consola 
+C:\Users\jorge.sanchez\Downloads\js> node server.js
+```
+
+--- 
+
+**Extendido + EndPoints**
 
 ```js
 const http = require("http");
