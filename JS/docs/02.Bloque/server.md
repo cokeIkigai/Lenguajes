@@ -2,10 +2,21 @@
 
 Un servidor es un programa (o máquina) que está escuchando continuamente y preparado para responder cuando alguien le pide algo. Un servidor no hace nada hasta que alguien le pide algo
 
-- Está activo en un puerto (ej: 3000)
 - Espera solicitudes de clientes (navegador, app, etc.)
 - Devuelve una respuesta
-
+- Puertos predeterminados:
+    - Node.js (http/Express) → sin puerto fijo (típico: 3000)
+    - Java (Spring Boot) → 8080
+    - Tomcat → 8080
+    - Live Server → 5500
+    - PHP (XAMPP/WAMP) → 80
+    - .NET → 5000 (HTTP), 5001 (HTTPS)
+    - Python (Flask/Django dev) → 5000 / 8000
+    - MySQL / MariaDB → 3306
+    - PostgreSQL → 5432
+    - MongoDB → 27017
+    - SQL Server → 1433
+    - Oracle DB → 1521
 
 ## 🔁 Tipos de peticiones HTTP (métodos)
 
@@ -176,6 +187,7 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
     console.log("Servidor en http://localhost:3000");
 });
+
 ```
 
 
