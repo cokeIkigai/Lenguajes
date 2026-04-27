@@ -75,6 +75,8 @@ server.listen(3000, () => {
 
 **Abrimos la Terminal:**
 
+
+- `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 - Buscamos la carpeta o la ruta de nuestro archivo en la terminal.
 - Ejecutamos con el comando `node server.js`
 
