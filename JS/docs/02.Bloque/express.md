@@ -35,6 +35,7 @@ Aquí es donde vamos a utilizar nuestro servidor, donde antes lo recogíamos en 
 const express = require("express");
 
 const app = express();
+app.use(express.json());
 
 // app.get → obtener datos
 app.get("/usuarios", (req, res) => { // codigo; res.send("GET"); });
