@@ -208,3 +208,35 @@ res.cork();                                            // Agrupa escrituras (opt
 res.uncork();                                          // Envía lo acumulado
 res.destroy();                                         // Cierra la conexión abruptamente
 ```
+
+## Crear Proyecto desde cero
+
+Vamos a la carpeta donde está nuestro proyecto
+
+```bash
+npm init -y
+```
+
+Al poner -y damos por confirmar los valores predeterminado
+
+Se nos creará el archivo `package.json`, es el archivo de configuración de un proyecto Node.js.
+
+```
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+}
+```
+
+Para ejecutar nuestro proyecto
+
+
