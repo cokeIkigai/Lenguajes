@@ -239,4 +239,10 @@ Se nos creará el archivo `package.json`, es el archivo de configuración de un 
 
 Para ejecutar nuestro proyecto
 
+```bach
+node server.js
+nodemon server.js
+```
+
+
 
