@@ -270,7 +270,9 @@ server.listen(3000, () => {
 node server.js
 ```
 
-**4. Extra: Diferente arranque**
+---
+
+✨**4. Extra: Diferente arranque**
 
 Para no estar todo el rato añadiendo 'node server.js' para arrancar el servidor se le añade al `package.json` dentro de la clave scripts una línea más.
 
