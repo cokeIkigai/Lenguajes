@@ -87,7 +87,10 @@ C:\Users\jorge.sanchez\Downloads\js> node server.js
 
 ```js
 const http = require("http");
-
+let usuarios = [
+  { id: 1, nombre: "Ana" },
+  { id: 2, nombre: "Luis" },
+];
 const server = http.createServer((req, res) => {
   // 🔹 Ruta raíz
   if (req.url === "/" && req.method === "GET") {
@@ -99,11 +102,6 @@ const server = http.createServer((req, res) => {
 
   // 🔹 Lista de usuarios (JSON)
   if (req.url === "/usuarios" && req.method === "GET") {
-    const usuarios = [
-      { id: 1, nombre: "Ana" },
-      { id: 2, nombre: "Luis" },
-    ];
-
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify(usuarios));
@@ -131,7 +129,7 @@ const server = http.createServer((req, res) => {
 
     req.on("end", () => {
       const nuevoUsuario = JSON.parse(body);
-
+      console.log(nuevoUsuario);
       res.statusCode = 201;
       res.setHeader("Content-Type", "application/json");
       res.end(
@@ -142,7 +140,7 @@ const server = http.createServer((req, res) => {
       );
     });
 
-    return; 
+    return;
   }
 
   // 🔹 Ruta no encontrada
