@@ -5,18 +5,13 @@ Un servidor es un programa (o máquina) que está escuchando continuamente y pre
 - Espera solicitudes de clientes (navegador, app, etc.)
 - Devuelve una respuesta
 - Puertos predeterminados:
-    - Node.js (http/Express) → sin puerto fijo (típico: 3000)
+    - Node.js  → 3000)
     - Java (Spring Boot) → 8080
-    - Tomcat → 8080
     - Live Server → 5500
-    - PHP (XAMPP/WAMP) → 80
-    - .NET → 5000 (HTTP), 5001 (HTTPS)
-    - Python (Flask/Django dev) → 5000 / 8000
     - MySQL / MariaDB → 3306
     - PostgreSQL → 5432
     - MongoDB → 27017
     - SQL Server → 1433
-    - Oracle DB → 1521
 
 ## 🔁 Tipos de peticiones HTTP (métodos)
 
