@@ -285,7 +285,7 @@ Se suele utilizar dado que en un proyecto grande uno no sabe o no encuentra dond
 },
 ```
 
-Arracamos el servidor con ```npm start```
+Arracamos el servidor con ```npm run start```
 
 
 
