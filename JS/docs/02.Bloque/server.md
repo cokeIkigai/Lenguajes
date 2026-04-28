@@ -94,65 +94,70 @@ C:\Users\jorge.sanchez\Downloads\js> node server.js
 const http = require("http");
 
 const server = http.createServer((req, res) => {
+  // 🔹 Ruta raíz
+  if (req.url === "/" && req.method === "GET") {
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.end("Servidor funcionando");
+    return;
+  }
 
-    // 🔹 Ruta raíz
-    if (req.url === "/" && req.method === "GET") {
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "text/plain; charset=utf-8");
-        res.end("Servidor funcionando");
-        return;
-    }
+  // 🔹 Lista de usuarios (JSON)
+  if (req.url === "/usuarios" && req.method === "GET") {
+    const usuarios = [
+      { id: 1, nombre: "Ana" },
+      { id: 2, nombre: "Luis" },
+    ];
 
-    // 🔹 Lista de usuarios (JSON)
-    if (req.url === "/usuarios" && req.method === "GET") {
-        const usuarios = [
-            { id: 1, nombre: "Ana" },
-            { id: 2, nombre: "Luis" }
-        ];
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify(usuarios));
+    return;
+  }
 
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify(usuarios));
-        return;
-    }
+  // 🔹 Usuario por id (query param)
+  if (req.url.startsWith("/usuario") && req.method === "GET") {
+    const url = new URL(req.url, "http://localhost");
+    const id = url.searchParams.get("id");
 
-    // 🔹 Usuario por id (query param)
-    if (req.url.startsWith("/usuario") && req.method === "GET") {
-        const url = new URL(req.url, "http://localhost");
-        const id = url.searchParams.get("id");
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ mensaje: `Usuario solicitado con id ${id}` }));
+    return;
+  }
 
-        res.statusCode = 200;
-        res.setHeader("Content-Type", "application/json");
-        res.end(JSON.stringify({ mensaje: `Usuario solicitado con id ${id}` }));
-        return;
-    }
+  // 🔹 Crear usuario (POST)
+  if (req.url === "/usuarios" && req.method === "POST") {
+    let body = "";
 
-    // 🔹 Crear usuario (POST)
-    if (req.url === "/usuarios" && req.method === "POST") {
-        let body = "";
+    req.on("data", (chunk) => {
+      body += chunk;
+    });
 
-        req.on("end", () => {
-            const nuevoUsuario = JSON.parse(body);
+    req.on("end", () => {
+      const nuevoUsuario = JSON.parse(body);
 
-            res.statusCode = 201;
-            res.setHeader("Content-Type", "application/json");
-            res.end(JSON.stringify({
-                mensaje: "Usuario creado",
-                usuario: nuevoUsuario
-            }));
-        });
+      res.statusCode = 201;
+      res.setHeader("Content-Type", "application/json");
+      res.end(
+        JSON.stringify({
+          mensaje: "Usuario creado",
+          usuario: nuevoUsuario,
+        }),
+      );
+    });
 
-        return;
-    }
+    return; 
+  }
 
-    // 🔹 Ruta no encontrada
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "text/plain");
-    res.end("Ruta no encontrada");
+  // 🔹 Ruta no encontrada
+  res.statusCode = 404;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Ruta no encontrada");
 });
 
 server.listen(3000, () => {
-    console.log("Servidor en http://localhost:3000");
+  console.log("Servidor en http://localhost:3000");
 });
 
 ```
