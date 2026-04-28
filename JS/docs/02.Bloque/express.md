@@ -56,6 +56,8 @@ app.delete("/usuario/:id", (req, res) => {  res.send("DELETE"); });
 app.listen(3000, () => {console.log("Servidor iniciado");});
 ```
 
+## Ejercicio
+
 1. Crear un endpoint que devuelva todos los usuarios
 2. Crear un endpoint que devuelva todas las películas
 3. Crear un endpoint que devuelva un usuario a partir de su id
