@@ -283,9 +283,7 @@ Se suele utilizar dado que en un proyecto grande uno no sabe o no encuentra dond
 },
 ```
 
-```bach
-npm start
-```
+Arracamos el servidor: ``` npm start```
 
 
 
