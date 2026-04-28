@@ -59,6 +59,8 @@ res.end("fin");                                    // Terminar respuesta
 
 ## Crear Servidor JS
 
+**server.js**
+
 ```js
 const http = require("http");
 
@@ -208,10 +210,15 @@ res.cork();                                            // Agrupa escrituras (opt
 res.uncork();                                          // Envía lo acumulado
 res.destroy();                                         // Cierra la conexión abruptamente
 ```
+---
 
 ## Crear Proyecto desde cero
 
-Vamos a la carpeta donde está nuestro proyecto
+**1. Inicializar**
+
+Vamos a la carpeta donde está nuestro proyecto y utilizamos la terminal desde `bash`.
+
+En la ruta de la carpeta que será nuestro proyecto metemos este comando:
 
 ```bash
 npm init -y
@@ -237,11 +244,47 @@ Se nos creará el archivo `package.json`, es el archivo de configuración de un 
 }
 ```
 
-Para ejecutar nuestro proyecto
+**2. Crear server**
+
+Creamos el archivo serve.js y añadimos el código que tenemos en la teoría.
+
+```js
+// Paquete para gestionar peticiones http
+const http = require("http");
+
+// Recoje las peticiones que se vayan pidiendo a ese puerto
+const server = http.createServer((req, res) => {
+    console.log(req.url);
+    res.end("Servidor funcionando");
+});
+
+// Servidor escucha las peticiones en ese puerto
+server.listen(3000, () => {
+    console.log("Servidor en http://localhost:3000");
+});
+```
+
+**3. Ejecutar nuestro proyecto**
 
 ```bach
 node server.js
-nodemon server.js
+```
+
+**4. Extra: Diferente arranque**
+
+Para no estar todo el rato añadiendo 'node server.js' para arrancar el servidor se le añade al `package.json` dentro de la clave scripts una línea más.
+
+Se suele utilizar dado que en un proyecto grande uno no sabe o no encuentra donde arrancar y ahora con el nuevo comando una vez que se configura no hace falta saber qué archivo es.
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"  // <- ESTA es la línea. Se le puede poner con otro nombre de clave. "test": o "prod"
+},
+```
+
+```bach
+npm start
 ```
 
 
