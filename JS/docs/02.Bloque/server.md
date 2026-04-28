@@ -5,7 +5,7 @@ Un servidor es un programa (o máquina) que está escuchando continuamente y pre
 - Espera solicitudes de clientes (navegador, app, etc.)
 - Devuelve una respuesta
 - Puertos predeterminados:
-    - Node.js  → 3000)
+    - Node.js  → 3000
     - Java (Spring Boot) → 8080
     - Live Server → 5500
     - MySQL / MariaDB → 3306
