@@ -285,5 +285,36 @@ Se suele utilizar dado que en un proyecto grande uno no sabe o no encuentra dond
 
 Arracamos el servidor con ```npm run start```
 
+---
+
+## Ejercicio:
+
+1. Crear un endpoint que devuelva todos los usuarios
+2. Crear un endpoint que devuelva todas las películas
+
+3. Crear un endpoint que permita crear un nuevo usuario a partir de un JSON recibido
+4. Crear un endpoint que permita crear una nueva película a partir de un JSON recibido
+
+5. Crear un endpoint que permita actualizar completamente un usuario a partir de su id
+6. Crear un endpoint que permita actualizar parcialmente un usuario.
+
+7. Crear un endpoint que permita eliminar un usuario a partir de su id.
+8. Crear un endpoint que permita eliminar un película a partir de su id.
+
+```js
+let usuarios = [
+  { id: 1, nombre: "Ana", edad: 22, email: "ana@email.com", activo: true },
+  { id: 2, nombre: "Luis", edad: 30, email: "luis@email.com", activo: false },
+  { id: 3, nombre: "Marta", edad: 27, email: "marta@email.com", activo: true },
+];
+```
+```js
+let peliculas = [
+  { id: 1, titulo: "Matrix", anio: 1999, director: "Lana Wachowski", genero: "Ciencia ficción", duracion: 136 },
+  { id: 2, titulo: "Gladiator", anio: 2000, director: "Ridley Scott", genero: "Acción", duracion: 155 },
+  { id: 3, titulo: "Interstellar", anio: 2014, director: "Christopher Nolan", genero: "Ciencia ficción", duracion: 169 },
+];
+```
+
 
 
